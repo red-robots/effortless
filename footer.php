@@ -14,9 +14,24 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrapper">
+		<div class="wrapper full-width-wrapper">
 			<div class="site-info">
-			</div><!-- .site-info -->
+                <nav class="account">
+                    <?php wp_nav_menu( array( 'theme_location' => 'account' ) ); ?>
+                </nav>
+                <? $email = get_field("email","option");
+                if($email):?>
+                    <div class="email">
+                        <?php echo $email;?>
+                    </div><!--.email-->
+                <?php endif;?>
+                <nav class="sitemapbw">
+                    <?php wp_nav_menu( array( 'theme_location' => 'sitemapbw' ) ); ?>
+                </nav>
+            </div><!-- .site-info -->
+            <div class="email-signup">
+                <!--insert email signup here-->
+            </div><!--.email-signup-->
 		</div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
