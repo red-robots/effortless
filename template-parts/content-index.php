@@ -127,15 +127,4 @@
             <?php endif;//if for tag or copy or button text and link?>
         </section><!--.row-5-->
     <?php endif;//if for tag or image or copy or button text and link?>
-    <?php $image = get_field("row_6_image");?>
-    <?php if($image):?>
-        <section class="row-6">
-            <?php if($image):?>
-                <div class="column-1">
-                    <img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
-                </div><!--.image .wrapper-->
-            <?php endif;//if for image?>
-            <!--insert post here-->
-        </section><!--.row-6-->
-    <?php endif;//if for tag or image or copy or button text and link?>
 </article><!-- #post-## -->
