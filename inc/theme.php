@@ -27,7 +27,13 @@ function loginpage_custom_link() {
 	return the_permalink();
 }
 add_filter('login_headerurl','loginpage_custom_link');
-
+/*-------------------------------------
+	Font Awesome
+---------------------------------------*/
+function mytheme_fontawesome() {
+    echo '<script src="https://use.fontawesome.com/4945cee666.js"></script>';
+}
+add_action('wp_head', 'mytheme_fontawesome');
 /*-------------------------------------
 	Favicon.
 ---------------------------------------*/

@@ -1,28 +1,144 @@
-.sticky {
-	display: block;
-}
+.template-index {
+  > .row-1 {
+    margin-bottom: 15px;
+    position: relative;
+    img {
+      width: 100%;
+      display: block;
+    }
+    .overlay {
+      @media screen and (min-width: $mobilelandscapewidth) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      .tag {
 
-.hentry {
-	margin: 0 0 1.5em;
-}
+      }
+      .copy {
 
-.byline,
-.updated:not(.published){
-	display: none;
-}
+      }
+      .button {
+        position: relative;
+        a.surrounding {
+        }
+      }
+    }
+  }
+  > .row-2 {
+    margin-bottom: 15px;
+    background-color: $color__eff-light-grey;
+    @media screen and (min-width: $mobilelandscapewidth) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+    > .column-1 {
+      width: 100%;
+      @media screen and (min-width: $mobilelandscapewidth) {
+        width: 25%;
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    > .column-2 {
+      width: 100%;
+      position: relative;
+      @media screen and (min-width: $mobilelandscapewidth) {
+        width: 75%;
+      }
+      .tag {
 
-.single .byline,
-.group-blog .byline {
-	display: inline;
-}
+      }
+      .copy {
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
+      }
+      .button {
+        position: relative;
+        a.surrounding {
 
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+        }
+      }
+    }
+  }
+  > .row-3, > .row-4, > .row-5 {
+    margin-bottom: 15px;
+    background-color: $color__eff-blue;
+    @media screen and (min-width: $mobilelandscapewidth) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+    &:last-child {
+      margin-bottom: $margin-extra-large;
+    }
+    > .column-1 {
+      order: 2;
+      width: 50%;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    > .column-2 {
+      order: 1;
+      width: 50%;
+      .tag {
+      }
+      .copy {
+
+      }
+    }
+  }
+  > .row-3 {
+    > .column-1 {
+      img {
+
+      }
+    }
+    > .column-2 {
+      .tag {
+      }
+      .copy {
+
+      }
+    }
+  }
+  > .row-4 {
+    > .column-1 {
+      order: 1;
+      img {
+
+      }
+    }
+    > .column-2 {
+      order: 2;
+      .tag {
+      }
+      .copy {
+
+      }
+    }
+  }
+  > .row-4 {
+    > .column-1 {
+      img {
+
+      }
+    }
+    > .column-2 {
+      .tag {
+      }
+      .copy {
+
+      }
+    }
+  }
 }

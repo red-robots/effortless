@@ -19,7 +19,7 @@
                 <nav class="account">
                     <?php wp_nav_menu( array( 'theme_location' => 'account' ) ); ?>
                 </nav>
-                <? $email = get_field("email","option");
+                <?php $email = get_field("email","option");
                 if($email):?>
                     <div class="email">
                         <?php echo $email;?>
