@@ -17,19 +17,19 @@
             <h1><?php echo get_the_title();?></h1>
 		</header><!--.template-header-->
 	<?php endif;?>
-	<section class="row-2">
+	<section class="row-2 clear-bottom">
 		<?php $image = get_field("row_2_image");
 		$rows = get_field("row_2_blockquote");
-        if($rows) {
+        if($rows) :
             $max = count($rows) - 1;
-            if ($max === -1) {
+            if ($max === -1) :
                 $blockquote = false;
-            } else {
+            else :
                 $blockquote = $rows[rand(0, $max)]['quote'];
-            }
-        } else {
+            endif;
+        else :
             $blockquote = false;
-        }
+        endif;
 		if($image):?>
 			<div class="image wrapper column-1">
 				<img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">

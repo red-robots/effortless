@@ -6,7 +6,10 @@
   }
 
 }
-
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
 .copy {
   > *:first-child {
     margin-top: 0;
@@ -17,7 +20,22 @@
     padding-bottom: 0;
   }
   p {
+    font-size: 18px;
     margin: $margin-medium 0;
+    color: $color__eff-brown;
+  }
+  h1, h2, h3 {
+    margin: $margin-medium 0;
+    color: $color__eff-blue;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
   }
   a {
     &:hover {
@@ -130,7 +148,7 @@ a.surrounding {
 }
 
 .full-width-wrapper {
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   @media screen and (min-width: $mobilelandscapewidth) {
     max-width: $maxwidth;
