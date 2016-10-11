@@ -90,10 +90,14 @@
     > .column-2 {
       order: 1;
       width: 50%;
-      .tag {
-      }
-      .copy {
+      > .wrapper {
+        width: 80%;
+        margin: 0 auto;
+        .tag {
+        }
+        .copy {
 
+        }
       }
     }
   }

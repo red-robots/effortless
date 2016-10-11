@@ -78,12 +78,14 @@
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
                 <div class="column-2">
-                    <?php if ($tag): ?>
-                        <div class="tag"><?php echo $tag; ?></div><!--.tag-->
-                    <?php endif;//if for tag?>
-                    <?php if ($copy): ?>
-                        <div class="copy"><?php echo $copy; ?></div><!--.copy-->
-                    <?php endif;//if for copy?>
+                    <div class="wrapper">
+                        <?php if ($tag): ?>
+                            <div class="tag"><?php echo $tag; ?></div><!--.tag-->
+                        <?php endif;//if for tag?>
+                        <?php if ($copy): ?>
+                            <div class="copy"><?php echo $copy; ?></div><!--.copy-->
+                        <?php endif;//if for copy?>
+                    </div><!--.wrapper-->
                 </div><!--.column-2-->
             <?php endif;//if for tag or copy or button text and link?>
         </section><!--.row-3-->
@@ -100,12 +102,14 @@
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
                 <div class="column-2">
-                    <?php if ($tag): ?>
-                        <div class="tag"><?php echo $tag; ?></div><!--.tag-->
-                    <?php endif;//if for tag?>
-                    <?php if ($copy): ?>
-                        <div class="copy"><?php echo $copy; ?></div><!--.copy-->
-                    <?php endif;//if for copy?>
+                    <div class="wrapper">
+                        <?php if ($tag): ?>
+                            <div class="tag"><?php echo $tag; ?></div><!--.tag-->
+                        <?php endif;//if for tag?>
+                        <?php if ($copy): ?>
+                            <div class="copy"><?php echo $copy; ?></div><!--.copy-->
+                        <?php endif;//if for copy?>
+                    </div><!--.wrapper-->
                 </div><!--.column-2-->
             <?php endif;//if for tag or copy or button text and link?>
         </section><!--.row-4-->
@@ -122,12 +126,14 @@
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
                 <div class="column-2">
-                    <?php if ($tag): ?>
-                        <div class="tag"><?php echo $tag; ?></div><!--.tag-->
-                    <?php endif;//if for tag?>
-                    <?php if ($copy): ?>
-                        <div class="copy"><?php echo $copy; ?></div><!--.copy-->
-                    <?php endif;//if for copy?>
+                    <div class="wrapper">
+                        <?php if ($tag): ?>
+                            <div class="tag"><?php echo $tag; ?></div><!--.tag-->
+                        <?php endif;//if for tag?>
+                        <?php if ($copy): ?>
+                            <div class="copy"><?php echo $copy; ?></div><!--.copy-->
+                        <?php endif;//if for copy?>
+                    </div><!--.wrapper-->
                 </div><!--.column-2-->
             <?php endif;//if for tag or copy or button text and link?>
         </section><!--.row-5-->
