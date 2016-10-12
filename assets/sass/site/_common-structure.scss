@@ -27,6 +27,7 @@ h1, h2, h3 {
   h1, h2, h3 {
     margin: $margin-medium 0;
     color: $color__eff-blue;
+    text-transform: uppercase;
   }
   h1 {
     font-size: 30px;
@@ -65,13 +66,13 @@ a.surrounding {
       align-items: center;
       align-content: center;
       flex-wrap: wrap;
-      @media screen and (min-width: $mobilelandscapewidth) {
+      @media screen and (min-width: $tabwidth) {
         justify-content: flex-end;
         flex-wrap: nowrap;
       }
       #site-navigation {
         width: 100%;
-        @media screen and (min-width: $mobilelandscapewidth) {
+        @media screen and (min-width: $tabwidth) {
           width: 85%;
         }
         @media screen and (min-width: $maxwidth) {
@@ -115,7 +116,7 @@ a.surrounding {
         text-transform: uppercase;
         text-align: center;
         min-width: 145px;
-        @media screen and (min-width: $mobilelandscapewidth) {
+        @media screen and (min-width: $tabwidth) {
           margin-right: 2%;
         }
         @media screen and (min-width: $maxwidth) {
@@ -134,7 +135,13 @@ a.surrounding {
       .logo {
         position: relative;
         margin: 0 auto;
-        width: 30%;
+        width: 80%;
+        @media screen and (min-width: $mobilelandscapewidth) {
+          width: 50%;
+        }
+        @media screen and (min-width: $tabwidth) {
+          width: 30%;
+        }
         img {
           display: block;
           width: 100%;
@@ -150,7 +157,7 @@ a.surrounding {
 .full-width-wrapper {
   width: 95%;
   margin: 0 auto;
-  @media screen and (min-width: $mobilelandscapewidth) {
+  @media screen and (min-width: $tabwidth) {
     max-width: $maxwidth;
   }
 }

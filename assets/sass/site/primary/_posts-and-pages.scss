@@ -7,7 +7,7 @@
       display: block;
     }
     .overlay {
-      @media screen and (min-width: $mobilelandscapewidth) {
+      @media screen and (min-width: $tabwidth) {
         position: absolute;
         top: 0;
         left: 0;
@@ -31,7 +31,7 @@
   > .row-2 {
     margin-bottom: 15px;
     background-color: $color__eff-light-grey;
-    @media screen and (min-width: $mobilelandscapewidth) {
+    @media screen and (min-width: $tabwidth) {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -39,7 +39,7 @@
     }
     > .column-1 {
       width: 100%;
-      @media screen and (min-width: $mobilelandscapewidth) {
+      @media screen and (min-width: $tabwidth) {
         width: 25%;
       }
       img {
@@ -50,7 +50,7 @@
     > .column-2 {
       width: 100%;
       position: relative;
-      @media screen and (min-width: $mobilelandscapewidth) {
+      @media screen and (min-width: $tabwidth) {
         width: 75%;
       }
       .tag {
@@ -70,7 +70,7 @@
   > .row-3, > .row-4, > .row-5 {
     margin-bottom: 15px;
     background-color: $color__eff-blue;
-    @media screen and (min-width: $mobilelandscapewidth) {
+    @media screen and (min-width: $tabwidth) {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -83,7 +83,7 @@
       order: 2;
       width: 100%;
       position: relative;
-      @media screen and (min-width: $mobilelandscapewidth) {
+      @media screen and (min-width: $tabwidth) {
         width: 50%;
       }
       img {
@@ -94,7 +94,7 @@
     > .column-2 {
       order: 1;
       width: 100%;
-      @media screen and (min-width: $mobilelandscapewidth) {
+      @media screen and (min-width: $tabwidth) {
         width: 50%;
       }
       > .wrapper {
@@ -105,6 +105,9 @@
         .tag {
         }
         .copy {
+          p {
+            color: white;
+          }
 
         }
       }
@@ -159,7 +162,10 @@
 .template-about {
   .row-1 {
     position: relative;
-    margin-bottom: $margin-extra-large;
+    margin-bottom: $margin-medium;
+    @media screen and (min-width: $tabwidth) {
+      margin-bottom: $margin-extra-large;
+    }
     img {
       width: 100%;
       display: block;
@@ -185,48 +191,94 @@
       align-content: center;
     flex-wrap: wrap;
     .column-1 {
-      width: 70%;
-      margin: 0 auto;
+      width: 100%;
       order: 2;
       @media screen and (min-width: $mobilelandscapewidth) {
-        width: 48%;
-        margin: 0 2% 0 0;
+        width: 50%;
       }
       @media screen and (min-width: $midwidth) {
-        width: 35%;
+        width: 32%;
         order: 1;
-        margin: 0;
       }
-      img {
-        display: block;
-          width: 100%;
+      > .wrapper {
+        padding: 0 0 $margin-medium 0;
+        @media screen and (min-width: $mobilelandscapewidth) {
+          padding: 0 4% $margin-large 0;
+        }
+        @media screen and (min-width: $midwidth) {
+          padding: 0;
+        }
+        img {
+          display: block;
+          margin: 0 auto;
+          width: 70%;
+          @media screen and (min-width: $mobilelandscapewidth) {
+            width: 100%;
+          }
+        }
       }
     }
     .column-2 {
       width: 100%;
-      padding: 0 $margin-medium;
       order: 1;
       @media screen and (min-width: $midwidth) {
-        width: 40%;
+        width: 46%;
         order: 2;
+      }
+      > .wrapper {
+        padding: 0 4% $margin-medium 4%;
+        @media screen and (min-width: $midwidth) {
+          padding: 0 4%;
+        }
       }
     }
     aside.column-3 {
       order: 3;
-      background-color: $color__eff-blue;
-      padding: 0 $margin-medium;
       @media screen and (min-width: $mobilelandscapewidth) {
-        width: 48%;
-        margin: 0 0 0 2%;
+        width: 50%;
       }
       @media screen and (min-width: $midwidth) {
-        margin: 0;
-        width: 25%;
+        width: 22%;
       }
-      blockquote {
-        p {
-          color: white;
-          font-size: 23px;
+      >.outer-wrapper {
+        padding: 0 0 $margin-large 0;
+        @media screen and (min-width: $mobilelandscapewidth) {
+          padding: 0 0 $margin-large 4%;
+        }
+        @media screen and (min-width: $midwidth) {
+          padding: 0;
+        }
+        >.inner-wrapper {
+          background-color: $color__eff-blue;
+          width: 80%;
+          margin: 0 auto;
+          @media screen and (min-width: $mobilelandscapewidth) {
+            margin: 0;
+            width: 100%;
+          }
+          img {
+            width: 100%;
+            display: block;
+            margin: 0 0 50px 0;
+            @media screen and (min-width: $mobilelandscapewidth) {
+              width: 70%;
+              margin: 0 auto $margin-large auto;
+            }
+            @media screen and (min-width: $midwidth) {
+              width: 100%;
+              margin: 0 0 50px 0;
+            }
+          }
+          blockquote {
+            padding: 0 12%;
+            font-style: italic;
+            font-family: "adobe-caslon-pro", serif;
+            padding: 0 0 $margin-large 0;
+            p {
+              color: white;
+              font-size: 23px;
+            }
+          }
         }
       }
     }

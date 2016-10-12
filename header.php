@@ -53,4 +53,4 @@
             </div><!-- wrapper -->
         </div><!--.row-2-->
     </header><!-- #masthead -->
-    <div id="content" class="site-content wrapper tk-hypatia-sans-pro">
+    <div id="content" class="site-content wrapper">
