@@ -242,6 +242,7 @@
       }
       >.outer-wrapper {
         padding: 0 0 $margin-large 0;
+        height: 100%;
         @media screen and (min-width: $mobilelandscapewidth) {
           padding: 0 0 $margin-large 4%;
         }
@@ -249,6 +250,7 @@
           padding: 0;
         }
         >.inner-wrapper {
+          height: 100%;
           background-color: $color__eff-blue;
           width: 80%;
           margin: 0 auto;
