@@ -6,11 +6,10 @@
   }
 
 }
-h1, h2, h3 {
-  margin: 0;
-  padding: 0;
-}
+
 .copy {
+  font-size: 18px;
+  color: $color__eff-brown;
   > *:first-child {
     margin-top: 0;
     padding-top: 0;
@@ -20,23 +19,7 @@ h1, h2, h3 {
     padding-bottom: 0;
   }
   p {
-    font-size: 18px;
     margin: $margin-medium 0;
-    color: $color__eff-brown;
-  }
-  h1, h2, h3 {
-    margin: $margin-medium 0;
-    color: $color__eff-blue;
-    text-transform: uppercase;
-  }
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 22px;
-  }
-  h3 {
-    font-size: 18px;
   }
   a {
     &:hover {
@@ -71,57 +54,47 @@ a.surrounding {
         flex-wrap: nowrap;
       }
       #site-navigation {
-        width: 100%;
         @media screen and (min-width: $tabwidth) {
-          width: 85%;
-        }
-        @media screen and (min-width: $maxwidth) {
           margin-right: 2%;
         }
-        ul {
-          margin: 0;
-          padding: 0;
-          text-align: center;
-          li {
-            display: inline-block;
-            margin-right: $margin-large;
-            a {
-              color: $color__eff-brown;
-              text-decoration: none;
-              font-size: 15px;
-              text-transform: uppercase;
-              &:hover {
-                color: $color__eff-brown;
-                text-decoration: underline;
-              }
-
-            }
-          }
-          &.sub-menu {
+          ul {
+            margin: 0;
+            padding: 0;
+            text-align: center;
             li {
+              display: inline-block;
+              margin-right: $margin-large;
               a {
+                color: $color__eff-brown;
+                text-decoration: none;
+                font-size: 17px;
+                text-transform: uppercase;
+                &:hover {
+                  color: $color__eff-brown;
+                  text-decoration: underline;
+                }
 
               }
             }
+            &.sub-menu {
+              li {
+                a {
+
+                }
+              }
           }
         }
       }
       .account.button {
         position: relative;
         color: white;
-        padding: 2px $margin-medium;
+        padding: 5px $margin-medium;
         background-color: $color__eff-brown;
         font-size: 13px;
-        width: 13%;
+        width: 135px;
+        min-width: 135px;
         text-transform: uppercase;
         text-align: center;
-        min-width: 145px;
-        @media screen and (min-width: $tabwidth) {
-          margin-right: 2%;
-        }
-        @media screen and (min-width: $maxwidth) {
-          margin-right: 0;
-        }
         a {
 
         }
@@ -157,7 +130,4 @@ a.surrounding {
 .full-width-wrapper {
   width: 95%;
   margin: 0 auto;
-  @media screen and (min-width: $tabwidth) {
-    max-width: $maxwidth;
-  }
 }

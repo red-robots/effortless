@@ -22,3 +22,6 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+@mixin dropshadow() {
+  text-shadow: 1px 1px 4px black;
+}

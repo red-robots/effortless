@@ -2,67 +2,122 @@
   > .row-1 {
     margin-bottom: 15px;
     position: relative;
-    img {
-      width: 100%;
-      display: block;
-    }
-    .overlay {
-      @media screen and (min-width: $tabwidth) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-      }
-      .tag {
+    .outer-wrapper {
+        background-size: cover;
+        background-position: center;
+        background-repeat:no-repeat;
+      .inner-wrapper {
+        padding: 15px;
+        @media screen and (min-width: $tabwidth) {
+          padding: 15% 4% 10% 4%;
+          width: 55%;
+        }
+        .tag {
+          font-size: 30px;
+          text-transform: uppercase;
+          padding: 0 0 $margin-medium 0;
+          color: $color__eff-brown;
+          @media screen and (min-width: $tabwidth) {
+            color: white;
+            @include dropshadow;
 
-      }
-      .copy {
-
-      }
-      .button {
-        position: relative;
-        a.surrounding {
+          }
+        }
+        .copy {
+          font-size: 23px;
+          padding: 0 0 $margin-medium 0;
+          color: $color__eff-brown;
+          @media screen and (min-width: $tabwidth) {
+            color: white;
+            @include dropshadow;
+          }
+        }
+        .button {
+          display: inline-block;
+          border: 1px solid white;
+          padding: $margin-medium $margin-large;
+          background-color: $color__eff-blue;
+          color: white;
+          font-size: 19px;
+          font-weight: 600;
+          position: relative;
+          text-transform: uppercase;
+          a.surrounding {
+          }
         }
       }
     }
   }
   > .row-2 {
     margin-bottom: 15px;
-    background-color: $color__eff-light-grey;
+    @media screen and (max-width: $tabwidth) {
+      background-image: none !important;
+    }
     @media screen and (min-width: $tabwidth) {
+      background-color: $color__eff-light-grey;
       display: flex;
       justify-content: center;
       align-items: center;
       align-content: center;
+      background-size: auto 60%;
+      background-position: right bottom;
+      background-repeat:no-repeat;
     }
     > .column-1 {
       width: 100%;
       @media screen and (min-width: $tabwidth) {
-        width: 25%;
+        width: 35%;
       }
+      @media screen and (min-width: 1100px) {
+          width: 25%;
+        }
       img {
-        width: 100%;
+        width: 70%;
         display: block;
+        margin: 0 auto 15px auto;
+        @media screen and (min-width: $tabwidth) {
+          width: 100%;
+          margin: 0;
+        }
       }
     }
     > .column-2 {
       width: 100%;
       position: relative;
+      padding: $margin-medium;
+      background-size: auto 60%;
+      background-position: right bottom;
+      background-repeat:no-repeat;
+      background-color: $color__eff-light-grey;
       @media screen and (min-width: $tabwidth) {
+        background-image: none !important;
+        width: 65%;
+      }
+      @media screen and (min-width: 1100px) {
         width: 75%;
       }
-      .tag {
+      > .wrapper {
+        padding: 2% 5%;
+        .tag {
+          font-size: 30px;
+          text-transform: uppercase;
+          color: $color__eff-blue;
+          font-weight: 300;
+          padding: 0 0 $margin-medium 0;
+        }
+        .copy {
+          font-size: 20px;
+          padding: 0 0 $margin-large 0;
+        }
+        .button {
+          position: relative;
+          display: inline-block;
+          font-size: 22px;
+          text-transform: uppercase;
+          color: $color__eff-blue;
+          a.surrounding {
 
-      }
-      .copy {
-
-      }
-      .button {
-        position: relative;
-        a.surrounding {
-
+          }
         }
       }
     }
@@ -88,7 +143,24 @@
       }
       img {
         width: 100%;
-        display: block;
+        &.mobile-desktop {
+          display: block;
+          @media screen and (min-width: $tabwidth) {
+            display: none;
+          }
+          @media screen and (min-width: $midwidth) {
+            display: block;
+          }
+        }
+        &.tab {
+          display: none;
+          @media screen and (min-width: $tabwidth) {
+            display: block;
+          }
+          @media screen and (min-width: $midwidth) {
+            display: none;
+          }
+        }
       }
     }
     > .column-2 {

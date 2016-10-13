@@ -15,24 +15,27 @@
     $copy = get_field("row_1_copy");
     $button_text = get_field("row_1_button_text");
     $button_link = get_field("row_1_button_link"); ?>
-    <?php if ($image): ?>
+    <?php if ( $tag || $copy || ($button_link && $button_text)): ?>
         <section class="row-1">
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
             <?php if ($tag || $copy || ($button_link && $button_text)): ?>
-                <div class="overlay">
-                    <?php if ($tag): ?>
-                        <div class="tag"><?php echo $tag; ?></div><!--.tag-->
-                    <?php endif;//if for tag?>
-                    <?php if ($copy): ?>
-                        <div class="copy"><?php echo $copy; ?></div><!--.copy-->
-                    <?php endif;//if for copy?>
-                    <?php if ($button_text && $button_link): ?>
-                        <div class="button">
-                            <?php echo $button_text; ?>
-                            <a class="surrounding" href="<?php echo $button_link; ?>"></a>
-                        </div>
-                    <?php endif;//if for button text and link?>
-                </div><!--.overlay-->
+                <div class="outer-wrapper" <?php if($image):
+                    echo 'style="background-image: url('. $image['url'].');"';
+                endif;?>>
+                    <div class="inner-wrapper">
+                        <?php if ($tag): ?>
+                            <div class="tag"><?php echo $tag; ?></div><!--.tag-->
+                        <?php endif;//if for tag?>
+                        <?php if ($copy): ?>
+                            <div class="copy"><?php echo $copy; ?></div><!--.copy-->
+                        <?php endif;//if for copy?>
+                        <?php if ($button_text && $button_link): ?>
+                            <div class="button">
+                                <?php echo $button_text; ?>
+                                <a class="surrounding" href="<?php echo $button_link; ?>"></a>
+                            </div>
+                        <?php endif;//if for button text and link?>
+                    </div><!--.inner-wrapper-->
+                </div><!--.outer-wrapper-->
             <?php endif;//if for tag or copy or button?>
         </section><!--.row-1-->
     <?php endif; ?>
@@ -40,40 +43,51 @@
     $tag = get_field("row_2_tag");
     $copy = get_field("row_2_copy");
     $button_text = get_field("row_2_button_text");
-    $button_link = get_field("row_2_button_link"); ?>
+    $button_link = get_field("row_2_button_link");
+    $watermark = get_field("row_2_watermark");?>
     <?php if ($image || $tag || $copy || ($button_link && $button_text)): ?>
-        <section class="row-2">
+        <section class="row-2" <?php if($watermark):
+            echo 'style="background-image: url('. $watermark['url'].');"';
+        endif;?>>
             <?php if ($image): ?>
                 <div class="column-1">
                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
                 </div><!--.column-1-->
             <?php endif;//if for image?>
             <?php if ($tag || $copy || ($button_text && $button_link)): ?>
-                <div class="column-2">
-                    <?php if ($tag): ?>
-                        <div class="tag"><?php echo $tag; ?></div><!--.tag-->
-                    <?php endif;//if for tag?>
-                    <?php if ($copy): ?>
-                        <div class="copy"><?php echo $copy; ?></div><!--.copy-->
-                    <?php endif;//if for copy?>
-                    <?php if ($button_text && $button_link): ?>
-                        <div class="button">
-                            <?php echo $button_text; ?>
-                            <a class="surrounding" href="<?php echo $button_link; ?>"></a>
-                        </div>
-                    <?php endif;//if for button text and link?>
+                <div class="column-2" <?php if($watermark):
+                    echo 'style="background-image: url('. $watermark['url'].');"';
+                endif;?>>
+                    <div class="wrapper">
+                        <?php if ($tag): ?>
+                            <div class="tag"><?php echo $tag; ?></div><!--.tag-->
+                        <?php endif;//if for tag?>
+                        <?php if ($copy): ?>
+                            <div class="copy"><?php echo $copy; ?></div><!--.copy-->
+                        <?php endif;//if for copy?>
+                        <?php if ($button_text && $button_link): ?>
+                            <div class="button">
+                                <?php echo $button_text; ?>
+                                <a class="surrounding" href="<?php echo $button_link; ?>"></a>
+                            </div>
+                        <?php endif;//if for button text and link?>
+                    </div><!--.wrapper-->
                 </div><!--.column-2-->
             <?php endif;//if for tag or copy or button text and link?>
         </section><!--.row-2-->
     <?php endif;//if for tag or image or copy or button text and link?>
     <?php $image = get_field("row_3_image");
+    $tabimage = get_field("row_3_tab_image");
     $tag = get_field("row_3_tag");
     $copy = get_field("row_3_copy"); ?>
     <?php if ($image || $tag || $copy): ?>
         <section class="row-3">
             <?php if ($image): ?>
                 <div class="column-1">
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                    <img class="mobile-desktop" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                    <?php if($tabimage):?>
+                        <img class="tab" src="<?php echo $tabimage['url']; ?>" alt="<?php echo $tabimage['alt']; ?>">
+                    <?php endif;?>
                 </div><!--.column-1-->
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
@@ -91,13 +105,17 @@
         </section><!--.row-3-->
     <?php endif;//if for tag or image or copy or button text and link?>
     <?php $image = get_field("row_4_image");
+    $tabimage = get_field("row_4_tab_image");
     $tag = get_field("row_4_tag");
     $copy = get_field("row_4_copy"); ?>
     <?php if ($image || $tag || $copy): ?>
         <section class="row-4">
             <?php if ($image): ?>
                 <div class="column-1">
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                    <img class="mobile-desktop" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                    <?php if($tabimage):?>
+                        <img class="tab" src="<?php echo $tabimage['url']; ?>" alt="<?php echo $tabimage['alt']; ?>">
+                    <?php endif;?>
                 </div><!--.column-1-->
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
@@ -115,13 +133,17 @@
         </section><!--.row-4-->
     <?php endif;//if for tag or image or copy or button text and link?>
     <?php $image = get_field("row_5_image");
+    $tabimage = get_field("row_5_tab_image");
     $tag = get_field("row_5_tag");
     $copy = get_field("row_5_copy"); ?>
     <?php if ($image || $tag || $copy): ?>
         <section class="row-5">
             <?php if ($image): ?>
                 <div class="column-1">
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                    <img class="mobile-desktop" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                    <?php if($tabimage):?>
+                        <img class="tab" src="<?php echo $tabimage['url']; ?>" alt="<?php echo $tabimage['alt']; ?>">
+                    <?php endif;?>
                 </div><!--.column-1-->
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
