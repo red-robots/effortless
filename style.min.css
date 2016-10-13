@@ -747,11 +747,9 @@ a.surrounding{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
 .template-index>.row-1 .outer-wrapper{background-size:cover;background-position:center;background-repeat:no-repeat}
 .template-index>.row-1 .outer-wrapper .inner-wrapper{padding:15px}
 @media screen and (min-width:700px){.template-index>.row-1 .outer-wrapper .inner-wrapper{padding:15% 4% 10% 4%;width:55%}
-}.template-index>.row-1 .outer-wrapper .inner-wrapper .tag{font-size:30px;text-transform:uppercase;padding:0 0 20px 0;color:#8c7e78}
-@media screen and (min-width:700px){.template-index>.row-1 .outer-wrapper .inner-wrapper .tag{color:white;text-shadow:1px 1px 4px black}
-}.template-index>.row-1 .outer-wrapper .inner-wrapper .copy{font-size:23px;padding:0 0 20px 0;color:#8c7e78}
-@media screen and (min-width:700px){.template-index>.row-1 .outer-wrapper .inner-wrapper .copy{color:white;text-shadow:1px 1px 4px black}
-}.template-index>.row-1 .outer-wrapper .inner-wrapper .button{display:inline-block;border:1px solid white;padding:20px 30px;background-color:#96a7a6;color:white;font-size:19px;font-weight:600;position:relative;text-transform:uppercase}
+}.template-index>.row-1 .outer-wrapper .inner-wrapper .tag{font-size:30px;text-transform:uppercase;padding:0 0 20px 0;color:white;text-shadow:1px 1px 4px black}
+.template-index>.row-1 .outer-wrapper .inner-wrapper .copy{font-size:23px;padding:0 0 20px 0;color:white;text-shadow:1px 1px 4px black}
+.template-index>.row-1 .outer-wrapper .inner-wrapper .button{display:inline-block;border:1px solid white;padding:20px 30px;background-color:#96a7a6;color:white;font-size:19px;font-weight:600;position:relative;text-transform:uppercase}
 .template-index>.row-2{margin-bottom:15px}
 @media screen and (max-width:700px){.template-index>.row-2{background-image:none !important}
 }@media screen and (min-width:700px){.template-index>.row-2{background-color:#f2f2f2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;background-size:auto 60%;background-position:right bottom;background-repeat:no-repeat}
@@ -781,8 +779,11 @@ a.surrounding{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
 }@media screen and (min-width:900px){.template-index>.row-3>.column-1 img.tab,.template-index>.row-4>.column-1 img.tab,.template-index>.row-5>.column-1 img.tab{display:none}
 }.template-index>.row-3>.column-2,.template-index>.row-4>.column-2,.template-index>.row-5>.column-2{-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1;width:100%}
 @media screen and (min-width:700px){.template-index>.row-3>.column-2,.template-index>.row-4>.column-2,.template-index>.row-5>.column-2{width:50%}
-}.template-index>.row-3>.column-2>.wrapper,.template-index>.row-4>.column-2>.wrapper,.template-index>.row-5>.column-2>.wrapper{width:80%;margin:0 auto;text-align:center;color:white}
-.template-index>.row-3>.column-2>.wrapper .copy p,.template-index>.row-4>.column-2>.wrapper .copy p,.template-index>.row-5>.column-2>.wrapper .copy p{color:white}
+}.template-index>.row-3>.column-2>.wrapper,.template-index>.row-4>.column-2>.wrapper,.template-index>.row-5>.column-2>.wrapper{width:80%;margin:0 auto;text-align:center;color:white;padding:20px 0}
+@media screen and (min-width:700px){.template-index>.row-3>.column-2>.wrapper,.template-index>.row-4>.column-2>.wrapper,.template-index>.row-5>.column-2>.wrapper{padding:0}
+}.template-index>.row-3>.column-2>.wrapper .tag,.template-index>.row-4>.column-2>.wrapper .tag,.template-index>.row-5>.column-2>.wrapper .tag{font-size:27px;text-transform:uppercase;padding:0 0 5px 0}
+.template-index>.row-3>.column-2>.wrapper .icon,.template-index>.row-4>.column-2>.wrapper .icon,.template-index>.row-5>.column-2>.wrapper .icon{width:30px;margin:0 auto}
+.template-index>.row-3>.column-2>.wrapper .copy,.template-index>.row-4>.column-2>.wrapper .copy,.template-index>.row-5>.column-2>.wrapper .copy{padding:20px 0 0 0;color:white;font-size:22px}
 .template-index>.row-4>.column-1{-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1}
 .template-index>.row-4>.column-2{-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}
 .template-about .row-1{position:relative;margin-bottom:20px}

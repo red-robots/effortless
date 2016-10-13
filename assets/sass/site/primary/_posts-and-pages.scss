@@ -16,21 +16,14 @@
           font-size: 30px;
           text-transform: uppercase;
           padding: 0 0 $margin-medium 0;
-          color: $color__eff-brown;
-          @media screen and (min-width: $tabwidth) {
             color: white;
             @include dropshadow;
-
-          }
         }
         .copy {
           font-size: 23px;
           padding: 0 0 $margin-medium 0;
-          color: $color__eff-brown;
-          @media screen and (min-width: $tabwidth) {
             color: white;
             @include dropshadow;
-          }
         }
         .button {
           display: inline-block;
@@ -174,13 +167,23 @@
         margin: 0 auto;
         text-align: center;
         color: white;
+        padding: $margin-medium 0;
+        @media screen and (min-width: $tabwidth) {
+          padding: 0;
+        }
         .tag {
+          font-size: 27px;
+          text-transform: uppercase;
+          padding: 0 0 $margin-tiny 0;
+        }
+        .icon {
+          width: 30px;
+          margin: 0 auto;
         }
         .copy {
-          p {
-            color: white;
-          }
-
+          padding: $margin-medium 0 0 0;
+          color: white;
+          font-size: 22px;
         }
       }
     }

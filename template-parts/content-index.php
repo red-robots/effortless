@@ -78,6 +78,7 @@
     <?php endif;//if for tag or image or copy or button text and link?>
     <?php $image = get_field("row_3_image");
     $tabimage = get_field("row_3_tab_image");
+    $icon = get_field("row_3_icon");
     $tag = get_field("row_3_tag");
     $copy = get_field("row_3_copy"); ?>
     <?php if ($image || $tag || $copy): ?>
@@ -96,6 +97,9 @@
                         <?php if ($tag): ?>
                             <div class="tag"><?php echo $tag; ?></div><!--.tag-->
                         <?php endif;//if for tag?>
+                        <?php if($icon):?>
+                            <img class="icon" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>">
+                        <?php endif;?>
                         <?php if ($copy): ?>
                             <div class="copy"><?php echo $copy; ?></div><!--.copy-->
                         <?php endif;//if for copy?>
@@ -106,6 +110,7 @@
     <?php endif;//if for tag or image or copy or button text and link?>
     <?php $image = get_field("row_4_image");
     $tabimage = get_field("row_4_tab_image");
+    $icon = get_field("row_4_icon");
     $tag = get_field("row_4_tag");
     $copy = get_field("row_4_copy"); ?>
     <?php if ($image || $tag || $copy): ?>
@@ -124,6 +129,9 @@
                         <?php if ($tag): ?>
                             <div class="tag"><?php echo $tag; ?></div><!--.tag-->
                         <?php endif;//if for tag?>
+                        <?php if($icon):?>
+                            <img class="icon" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>">
+                        <?php endif;?>
                         <?php if ($copy): ?>
                             <div class="copy"><?php echo $copy; ?></div><!--.copy-->
                         <?php endif;//if for copy?>
@@ -134,6 +142,7 @@
     <?php endif;//if for tag or image or copy or button text and link?>
     <?php $image = get_field("row_5_image");
     $tabimage = get_field("row_5_tab_image");
+    $icon = get_field("row_5_icon");
     $tag = get_field("row_5_tag");
     $copy = get_field("row_5_copy"); ?>
     <?php if ($image || $tag || $copy): ?>
@@ -152,6 +161,9 @@
                         <?php if ($tag): ?>
                             <div class="tag"><?php echo $tag; ?></div><!--.tag-->
                         <?php endif;//if for tag?>
+                        <?php if($icon):?>
+                            <img class="icon" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>">
+                        <?php endif;?>
                         <?php if ($copy): ?>
                             <div class="copy"><?php echo $copy; ?></div><!--.copy-->
                         <?php endif;//if for copy?>
