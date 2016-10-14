@@ -12,7 +12,7 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class("template-about full-width-wrapper"); ?>>
+            <article id="post-<?php the_ID(); ?>" <?php post_class("template-sitemap full-width-wrapper"); ?>>
                 <?php $image = get_field("template_header_image");
                 if ($image):?>
                     <header class="template-header row-1" <?php echo 'style="background-image: url('. $image['url'].');"';?>>
@@ -21,8 +21,10 @@ get_header(); ?>
                     </header><!--.template-header-->
                 <?php endif; ?>
                 <div class="copy row-2">
-                    <?php the_content();?>
-                    <?php wp_nav_menu( array( 'theme_location' => 'sitemap' ) ); ?>
+                    <?php if(get_the_content()) the_content();?>
+                    <nav class="sitemap">
+                        <?php wp_nav_menu( array( 'theme_location' => 'sitemap' ) ); ?>
+                    </nav>
                 </div><!-- .copy -->
             </article><!-- .error-404 -->
 

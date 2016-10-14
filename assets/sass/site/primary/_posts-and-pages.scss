@@ -335,7 +335,7 @@
   }
 }
 
-.template-about {
+.template-about, .template-page {
   .row-1 {
     /* see template header */
   }
@@ -446,6 +446,21 @@
               font-size: 23px;
             }
           }
+        }
+      }
+    }
+  }
+}
+.template-sitemap, .error-404 {
+  .row-1 {
+    /* see template header */
+  }
+  .row-2 {
+    padding: 0 4% $margin-large 4%;
+    .sitemap {
+      > .menu-sitemap-container {
+        > ul {
+          margin-bottom: 0;
         }
       }
     }

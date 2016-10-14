@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("template-about full-width-wrapper"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("template-page full-width-wrapper"); ?>>
     <?php $image = get_field("template_header_image");
     if ($image):?>
         <header class="template-header row-1" <?php echo 'style="background-image: url('. $image['url'].');"';?>>
