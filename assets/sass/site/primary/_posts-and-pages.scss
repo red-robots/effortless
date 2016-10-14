@@ -3,9 +3,9 @@
     margin-bottom: 15px;
     position: relative;
     .outer-wrapper {
-        background-size: cover;
-        background-position: center;
-        background-repeat:no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       .inner-wrapper {
         padding: 15px;
         @media screen and (min-width: $tabwidth) {
@@ -16,14 +16,14 @@
           font-size: 30px;
           text-transform: uppercase;
           padding: 0 0 $margin-medium 0;
-            color: white;
-            @include dropshadow;
+          color: white;
+          @include dropshadow;
         }
         .copy {
           font-size: 23px;
           padding: 0 0 $margin-medium 0;
-            color: white;
-            @include dropshadow;
+          color: white;
+          @include dropshadow;
         }
         .button {
           display: inline-block;
@@ -54,7 +54,7 @@
       align-content: center;
       background-size: auto 60%;
       background-position: right bottom;
-      background-repeat:no-repeat;
+      background-repeat: no-repeat;
     }
     > .column-1 {
       width: 100%;
@@ -62,8 +62,8 @@
         width: 35%;
       }
       @media screen and (min-width: 1100px) {
-          width: 25%;
-        }
+        width: 25%;
+      }
       img {
         width: 70%;
         display: block;
@@ -80,7 +80,7 @@
       padding: $margin-medium;
       background-size: auto 60%;
       background-position: right bottom;
-      background-repeat:no-repeat;
+      background-repeat: no-repeat;
       background-color: $color__eff-light-grey;
       @media screen and (min-width: $tabwidth) {
         background-image: none !important;
@@ -121,7 +121,7 @@
     @media screen and (min-width: $tabwidth) {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: stretch;
       align-content: center;
     }
     &:last-child {
@@ -131,28 +131,17 @@
       order: 2;
       width: 100%;
       position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       @media screen and (min-width: $tabwidth) {
         width: 50%;
       }
       img {
         width: 100%;
-        &.mobile-desktop {
-          display: block;
-          @media screen and (min-width: $tabwidth) {
-            display: none;
-          }
-          @media screen and (min-width: $midwidth) {
-            display: block;
-          }
-        }
-        &.tab {
+        display: block;
+        @media screen and (min-width: $tabwidth) {
           display: none;
-          @media screen and (min-width: $tabwidth) {
-            display: block;
-          }
-          @media screen and (min-width: $midwidth) {
-            display: none;
-          }
         }
       }
     }
@@ -169,7 +158,7 @@
         color: white;
         padding: $margin-medium 0;
         @media screen and (min-width: $tabwidth) {
-          padding: 0;
+          padding: 8% 0;
         }
         .tag {
           font-size: 27px;
@@ -204,13 +193,17 @@
   }
   > .row-4 {
     > .column-1 {
-      order: 1;
+      @media screen and (min-width: $tabwidth) {
+        order: 1;
+      }
       img {
 
       }
     }
     > .column-2 {
-      order: 2;
+      @media screen and (min-width: $tabwidth) {
+        order: 2;
+      }
       .tag {
       }
       .copy {
@@ -218,7 +211,7 @@
       }
     }
   }
-  > .row-4 {
+  > .row-5 {
     > .column-1 {
       img {
 
@@ -234,36 +227,123 @@
   }
 }
 
-.template-about {
-  .row-1 {
-    position: relative;
-    margin-bottom: $margin-medium;
-    @media screen and (min-width: $tabwidth) {
-      margin-bottom: $margin-extra-large;
-    }
-    img {
-      width: 100%;
-      display: block;
-    }
-    h1 {
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 5%;
-      width: 90%;
-      color: white;
-      font-size: 30px;
-      text-transform: uppercase;
-      transform: translateY(-50%);
-      margin: 0;
-      font-weight: 500;
+.template-how {
+  .row-1.template-header {
+    @media screen and (max-width: $tabwidth) {
+      margin-bottom: 0;
     }
   }
-  .row-2 {
+  > .row-2, > .row-3, > .row-4 {
+    @media screen and (min-width: $tabwidth) {
+      margin-bottom: 4%;
       display: flex;
       justify-content: center;
       align-items: stretch;
       align-content: center;
+    }
+    &:last-child {
+      margin-bottom: $margin-extra-large;
+    }
+    > .column-1 {
+      order: 1;
+      width: 100%;
+      @media screen and (min-width: $tabwidth) {
+        width: 51%;
+      }
+      > .wrapper {
+        text-align: left;
+        padding: $margin-medium 0;
+        @media screen and (min-width: $tabwidth) {
+          padding: 0 100%-(100%*49/51) 0 0;
+        }
+        .row-1 {
+          img {
+            float: left;
+            width: 20%;
+            margin: 0 4% 3% 0;
+          }
+          header {
+            padding: $margin-medium 0;
+            h2 {
+              font-weight: 300;
+              text-transform: uppercase;
+              color: $color__eff-blue;
+              margin: 0;
+              padding: 0;
+            }
+          }
+          .tag {
+            margin: 0 0 3% 0;
+            font-style: italic;
+            font-family: "adobe-caslon-pro", serif;
+            color: $color__eff-blue;
+            font-size: 23px;
+          }
+        }
+        .row-2 {
+
+        }
+      }
+    }
+    > .column-2 {
+      order: 2;
+      width: 100%;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      @media screen and (min-width: $tabwidth) {
+        width: 49%;
+      }
+      img {
+        width: 100%;
+        display: block;
+        @media screen and (min-width: $tabwidth) {
+          display: none;
+        }
+      }
+    }
+  }
+  > .row-2 {
+    > .column-1 {
+    }
+    > .column-2 {
+    }
+  }
+  > .row-3 {
+    > .column-1 {
+      @media screen and (min-width: $tabwidth) {
+        order: 2;
+      }
+      .wrapper {
+        @media screen and (min-width: $tabwidth) {
+          padding: 0 0 0 100%-(100%*49/51);
+        }
+      }
+    }
+    > .column-2 {
+      @media screen and (min-width: $tabwidth) {
+        order: 1;
+      }
+    }
+  }
+  > .row-4 {
+    > .column-1 {
+    }
+    > .column-2 {
+    }
+  }
+}
+
+.template-about {
+  .row-1 {
+    /* see template header */
+  }
+  .row-2 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
     flex-wrap: wrap;
     .column-1 {
       width: 100%;
@@ -315,7 +395,7 @@
       @media screen and (min-width: $midwidth) {
         width: 22%;
       }
-      >.outer-wrapper {
+      > .outer-wrapper {
         padding: 0 0 $margin-large 0;
         height: 100%;
         @media screen and (min-width: $mobilelandscapewidth) {
@@ -324,18 +404,24 @@
         @media screen and (min-width: $midwidth) {
           padding: 0;
         }
-        >.inner-wrapper {
+        > .inner-wrapper {
           height: 100%;
           background-color: $color__eff-blue;
           width: 80%;
           margin: 0 auto;
+          background-size: 80% auto;
+          background-position: top center;
+          background-repeat: no-repeat;
           @media screen and (min-width: $mobilelandscapewidth) {
             margin: 0;
             width: 100%;
           }
+          @media screen and (min-width: $midwidth) {
+            background-image: none !important;
+          }
           img {
             width: 100%;
-            display: block;
+            display: none;
             margin: 0 0 50px 0;
             @media screen and (min-width: $mobilelandscapewidth) {
               width: 70%;
@@ -343,6 +429,7 @@
             }
             @media screen and (min-width: $midwidth) {
               width: 100%;
+              display: block;
               margin: 0 0 50px 0;
             }
           }
@@ -350,7 +437,10 @@
             padding: 0 12%;
             font-style: italic;
             font-family: "adobe-caslon-pro", serif;
-            padding: 0 0 $margin-large 0;
+            padding: 50px 0 $margin-large 0;
+            @media screen and (min-width: $midwidth) {
+              padding: 0 0 $margin-large 0;
+            }
             p {
               color: white;
               font-size: 23px;

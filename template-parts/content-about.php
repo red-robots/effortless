@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-about full-width-wrapper"); ?>>
     <?php $image = get_field("template_header_image");
     if ($image):?>
-        <header class="template-header row-1">
+        <header class="template-header row-1" <?php echo 'style="background-image: url('. $image['url'].');"';?>>
             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
             <h1><?php echo get_the_title(); ?></h1>
         </header><!--.template-header-->
@@ -48,7 +48,7 @@
         <?php if ($blockquote || $watermark): ?>
             <aside class="column-3 blockquote">
                 <div class="outer-wrapper">
-                    <div class="inner-wrapper">
+                    <div class="inner-wrapper" <?php echo 'style="background-image: url('. $watermark['url'].');"';?>>
                         <?php if ($watermark): ?>
                             <img src="<?php echo $watermark['url']; ?>" alt="<?php echo $watermark['alt']; ?>">
                         <?php endif; ?>

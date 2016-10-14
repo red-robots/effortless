@@ -26,6 +26,28 @@
 
     }
   }
+  h1,h2,h3 {
+    margin: 0 0 $margin-medium 0;
+    text-transform: uppercase;
+    color: $color__eff-blue;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 27px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  ul, ol {
+    padding: 0;
+    margin: 0 0 $margin-medium 0;
+    li {
+      margin: 0 0 0 $margin-medium;
+      padding: 0;
+    }
+  }
 }
 
 a.surrounding {
@@ -57,31 +79,31 @@ a.surrounding {
         @media screen and (min-width: $tabwidth) {
           margin-right: 2%;
         }
-          ul {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            li {
-              display: inline-block;
-              margin-right: $margin-large;
-              a {
+        ul {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          li {
+            display: inline-block;
+            margin-right: $margin-large;
+            a {
+              color: $color__eff-brown;
+              text-decoration: none;
+              font-size: 17px;
+              text-transform: uppercase;
+              &:hover {
                 color: $color__eff-brown;
-                text-decoration: none;
-                font-size: 17px;
-                text-transform: uppercase;
-                &:hover {
-                  color: $color__eff-brown;
-                  text-decoration: underline;
-                }
+                text-decoration: underline;
+              }
+
+            }
+          }
+          &.sub-menu {
+            li {
+              a {
 
               }
             }
-            &.sub-menu {
-              li {
-                a {
-
-                }
-              }
           }
         }
       }
@@ -130,4 +152,40 @@ a.surrounding {
 .full-width-wrapper {
   width: 95%;
   margin: 0 auto;
+}
+
+.template-header {
+  position: relative;
+  margin-bottom: $margin-medium;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media screen and (min-width: $tabwidth) {
+    margin-bottom: $margin-extra-large;
+    background-image: none !important;
+  }
+  img {
+    width: 100%;
+    display: none;
+    @media screen and (min-width: $tabwidth) {
+      display: block;
+    }
+  }
+  h1 {
+    text-align: center;
+    width: 90%;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    font-weight: 500;
+    padding: 10% 0;
+    @media screen and (min-width: $tabwidth) {
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
+  }
 }

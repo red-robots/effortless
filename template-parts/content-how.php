@@ -9,10 +9,10 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("template-about full-width-wrapper"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("template-how full-width-wrapper"); ?>>
 	<?php $image = get_field("template_header_image");
 	if($image):?>
-		<header class="template-header row-1">
+		<header class="template-header row-1" <?php echo 'style="background-image: url('. $image['url'].');"';?>>
 			<img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
 			<h1><?php echo get_the_title();?></h1>
 		</header><!--.template-header-->
@@ -25,28 +25,32 @@
         $copy = get_field("step_1_copy");?>
         <?php if($step_image||$title||$tag||$copy):?>
             <div class="column-1">
-                <?php if($step_image||$title||$tag):?>
-                    <div class="row-1">
-                        <?php if($step_image):?>
-                            <img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
-                        <?php endif;//if for image?>
-                        <?php if($title):?>
-                            <h2><?php echo $title;?></h2>
-                        <?php endif;//if for title?>
-                        <?php if($tag):?>
-                            <span class="tag"><?php echo $tag;?></span>
-                        <?php endif;//if for tag?>
-                    </div><!--.row-1-->
-                <?php endif;//if for step image or title or tag?>
-                <?php if($copy):?>
-                    <div class="row-2 copy">
-                        <?php echo $copy;?>
-                    </div><!--.row-2-->
-                <?php endif;//if for copy?>
+                <div class="wrapper">
+                    <?php if($step_image||$title||$tag):?>
+                        <div class="row-1 clear-bottom">
+                            <?php if($step_image):?>
+                                <img src="<?php echo $step_image['url'];?>" alt="<?php echo $step_image['alt'];?>">
+                            <?php endif;//if for image?>
+                            <?php if($title):?>
+                                <header>
+                                    <h2><?php echo $title;?></h2>
+                                </header>
+                            <?php endif;//if for title?>
+                            <?php if($tag):?>
+                                <span class="tag"><?php echo $tag;?></span>
+                            <?php endif;//if for tag?>
+                        </div><!--.row-1-->
+                    <?php endif;//if for step image or title or tag?>
+                    <?php if($copy):?>
+                        <div class="row-2 copy">
+                            <?php echo $copy;?>
+                        </div><!--.row-2-->
+                    <?php endif;//if for copy?>
+                </div><!--.wrapper-->
             </div><!--.column-1-->
         <?php endif;//if for step image or title or tag or copy?>
         <?php if($image):?>
-            <div class="column-2">
+            <div class="column-2" <?php echo 'style="background-image: url('. $image['url'].');"';?>>
                 <img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
             </div><!--.column-2-->
         <?php endif;//if for image?>
@@ -59,28 +63,32 @@
         $copy = get_field("step_2_copy");?>
         <?php if($step_image||$title||$tag||$copy):?>
             <div class="column-1">
-                <?php if($step_image||$title||$tag):?>
-                    <div class="row-1">
-                        <?php if($step_image):?>
-                            <img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
-                        <?php endif;//if for image?>
-                        <?php if($title):?>
-                            <h2><?php echo $title;?></h2>
-                        <?php endif;//if for title?>
-                        <?php if($tag):?>
-                            <span class="tag"><?php echo $tag;?></span>
-                        <?php endif;//if for tag?>
-                    </div><!--.row-1-->
-                <?php endif;//if for step image or title or tag?>
-                <?php if($copy):?>
-                    <div class="row-2 copy">
-                        <?php echo $copy;?>
-                    </div><!--.row-2-->
-                <?php endif;//if for copy?>
+                <div class="wrapper">
+                    <?php if($step_image||$title||$tag):?>
+                        <div class="row-1 clear-bottom">
+                            <?php if($step_image):?>
+                                <img src="<?php echo $step_image['url'];?>" alt="<?php echo $step_image['alt'];?>">
+                            <?php endif;//if for image?>
+                            <?php if($title):?>
+                                <header>
+                                    <h2><?php echo $title;?></h2>
+                                </header>
+                            <?php endif;//if for title?>
+                            <?php if($tag):?>
+                                <span class="tag"><?php echo $tag;?></span>
+                            <?php endif;//if for tag?>
+                        </div><!--.row-1-->
+                    <?php endif;//if for step image or title or tag?>
+                    <?php if($copy):?>
+                        <div class="row-2 copy">
+                            <?php echo $copy;?>
+                        </div><!--.row-2-->
+                    <?php endif;//if for copy?>
+                </div><!--.wrapper-->
             </div><!--.column-1-->
         <?php endif;//if for step image or title or tag or copy?>
         <?php if($image):?>
-            <div class="column-2">
+            <div class="column-2" <?php echo 'style="background-image: url('. $image['url'].');"';?>>
                 <img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
             </div><!--.column-2-->
         <?php endif;//if for image?>
@@ -93,28 +101,32 @@
         $copy = get_field("step_3_copy");?>
         <?php if($step_image||$title||$tag||$copy):?>
             <div class="column-1">
-                <?php if($step_image||$title||$tag):?>
-                    <div class="row-1">
-                        <?php if($step_image):?>
-                            <img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
-                        <?php endif;//if for image?>
-                        <?php if($title):?>
-                            <h2><?php echo $title;?></h2>
-                        <?php endif;//if for title?>
-                        <?php if($tag):?>
-                            <span class="tag"><?php echo $tag;?></span>
-                        <?php endif;//if for tag?>
-                    </div><!--.row-1-->
-                <?php endif;//if for step image or title or tag?>
-                <?php if($copy):?>
-                    <div class="row-2 copy">
-                        <?php echo $copy;?>
-                    </div><!--.row-2-->
-                <?php endif;//if for copy?>
+                <div class="wrapper">
+                    <?php if($step_image||$title||$tag):?>
+                        <div class="row-1 clear-bottom">
+                            <?php if($step_image):?>
+                                <img src="<?php echo $step_image['url'];?>" alt="<?php echo $step_image['alt'];?>">
+                            <?php endif;//if for image?>
+                            <?php if($title):?>
+                                <header>
+                                    <h2><?php echo $title;?></h2>
+                                </header>
+                            <?php endif;//if for title?>
+                            <?php if($tag):?>
+                                <span class="tag"><?php echo $tag;?></span>
+                            <?php endif;//if for tag?>
+                        </div><!--.row-1-->
+                    <?php endif;//if for step image or title or tag?>
+                    <?php if($copy):?>
+                        <div class="row-2 copy">
+                            <?php echo $copy;?>
+                        </div><!--.row-2-->
+                    <?php endif;//if for copy?>
+                </div><!--.wrapper-->
             </div><!--.column-1-->
         <?php endif;//if for step image or title or tag or copy?>
         <?php if($image):?>
-            <div class="column-2">
+            <div class="column-2" <?php echo 'style="background-image: url('. $image['url'].');"';?>>
                 <img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
             </div><!--.column-2-->
         <?php endif;//if for image?>
