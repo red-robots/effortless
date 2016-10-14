@@ -9,33 +9,57 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("template-page full-width-wrapper"); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'acstarter' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'acstarter' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer><!-- .entry-footer -->
+<article id="post-<?php the_ID(); ?>" <?php post_class("template-about full-width-wrapper"); ?>>
+    <?php $image = get_field("template_header_image");
+    if ($image):?>
+        <header class="template-header row-1" <?php echo 'style="background-image: url('. $image['url'].');"';?>>
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+            <h1><?php echo get_the_title(); ?></h1>
+        </header><!--.template-header-->
+    <?php endif; ?>
+    <section class="row-2 clear-bottom">
+        <?php $image = get_field("row_2_image");
+        $watermark = get_field("row_2_watermark");
+        $rows = get_field("row_2_blockquote");
+        if ($rows) :
+            $max = count($rows) - 1;
+            if ($max === -1) :
+                $blockquote = false;
+            else :
+                $blockquote = $rows[rand(0, $max)]['quote'];
+            endif;
+        else :
+            $blockquote = false;
+        endif;
+        if ($image):?>
+            <div class="column-1">
+                <div class="wrapper">
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                </div><!--.wrapper-->
+            </div><!--.column-1-->
+        <?php endif; ?>
+        <?php if (get_the_content()): ?>
+            <div class="column-2">
+                <div class="wrapper copy">
+                    <?php the_content(); ?>
+                </div><!--.wrapper-->
+            </div><!--.column-2-->
+        <?php endif; ?>
+        <?php if ($blockquote || $watermark): ?>
+            <aside class="column-3 blockquote">
+                <div class="outer-wrapper">
+                    <div class="inner-wrapper" <?php echo 'style="background-image: url('. $watermark['url'].');"';?>>
+                        <?php if ($watermark): ?>
+                            <img src="<?php echo $watermark['url']; ?>" alt="<?php echo $watermark['alt']; ?>">
+                        <?php endif; ?>
+                        <?php if ($blockquote): ?>
+                            <blockquote class="copy">
+                                <?php echo $blockquote; ?>
+                            </blockquote>
+                        <?php endif; ?>
+                    </div><!--.inner-wrapper-->
+                </div><!--.outer-wrapper-->
+            </aside><!--column-3-->
+        <?php endif; ?>
+    </section><!--.row-2-->
 </article><!-- #post-## -->
