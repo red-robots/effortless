@@ -756,7 +756,7 @@ a.surrounding{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
 @media screen and (min-width:700px){.template-header{margin-bottom:40px;background-image:none !important}
 }.template-header img{width:100%;display:none}
 @media screen and (min-width:700px){.template-header img{display:block}
-}.template-header h1{text-align:center;width:90%;color:white;font-size:30px;text-transform:uppercase;margin:0 auto;font-weight:500;padding:10% 0}
+}.template-header h1{text-align:center;text-shadow:1px 1px 4px black;width:90%;color:white;font-size:30px;text-transform:uppercase;margin:0 auto;font-weight:500;padding:10% 0}
 @media screen and (min-width:700px){.template-header h1{padding:0;position:absolute;top:50%;left:5%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
 }.template-index>.row-1{margin-bottom:15px;position:relative}
 .template-index>.row-1 .outer-wrapper{background-size:cover;background-position:center;background-repeat:no-repeat}

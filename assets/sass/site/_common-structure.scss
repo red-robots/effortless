@@ -196,6 +196,7 @@ a.surrounding {
   }
   h1 {
     text-align: center;
+    @include dropshadow;
     width: 90%;
     color: white;
     font-size: 30px;
