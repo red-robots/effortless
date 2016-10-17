@@ -265,7 +265,7 @@
           header {
             padding: $margin-medium 0;
             h2 {
-              font-weight: 300;
+              font-weight: 500;
               text-transform: uppercase;
               color: $color__eff-blue;
               margin: 0;
@@ -470,6 +470,11 @@
       order: 1;
       @media screen and (min-width: $tabwidth) {
         width: 78%;
+      }
+      .gform_wrapper {
+        @media screen and (min-width: $tabwidth) {
+          width: 70%;
+        }
       }
       > .wrapper {
         padding: 0 4% $margin-medium 4%;

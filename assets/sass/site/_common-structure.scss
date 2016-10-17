@@ -67,22 +67,37 @@ a.surrounding {
 #masthead {
   width: 100%;
   > .row-1 {
+    position: relative;
     width: 100%;
     background-color: $color__eff-light-grey;
     > .wrapper {
       padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      flex-wrap: wrap;
-      @media screen and (min-width: $tabwidth) {
-        justify-content: flex-end;
-        flex-wrap: nowrap;
+      .account.button {
+        position: relative;
+        float: right;
+        color: white;
+        padding: 5px $margin-medium;
+        background-color: $color__eff-brown;
+        font-size: 13px;
+        width: 135px;
+        min-width: 135px;
+        text-transform: uppercase;
+        text-align: center;
+        a {
+
+        }
       }
       #site-navigation {
         @media screen and (min-width: $tabwidth) {
-          margin-right: 2%;
+          margin: 0 auto;
+          width: 58%;
+          padding: $margin-tiny 0 0 0;
+        }
+        @media screen and (min-width: $midwidth) {
+          width: 68%;
+        }
+        @media screen and (min-width: 1200px) {
+          width: 75%;
         }
         ul {
           margin: 0;
@@ -91,6 +106,9 @@ a.surrounding {
           li {
             display: inline-block;
             margin-right: $margin-large;
+            &:last-child {
+              margin-right: 0;
+            }
             a {
               color: $color__eff-brown;
               text-decoration: none;
@@ -110,20 +128,6 @@ a.surrounding {
               }
             }
           }
-        }
-      }
-      .account.button {
-        position: relative;
-        color: white;
-        padding: 5px $margin-medium;
-        background-color: $color__eff-brown;
-        font-size: 13px;
-        width: 135px;
-        min-width: 135px;
-        text-transform: uppercase;
-        text-align: center;
-        a {
-
         }
       }
     }

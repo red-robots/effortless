@@ -736,15 +736,17 @@ html[xmlns] .flexslider .slides{display:block}
 .copy ul li ul.sub-menu,.copy ol li ul.sub-menu{margin:0}
 a.surrounding{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
 #masthead{width:100%}
-#masthead>.row-1{width:100%;background-color:#f2f2f2}
-#masthead>.row-1>.wrapper{padding:10px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
-@media screen and (min-width:700px){#masthead>.row-1>.wrapper{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap}
-}@media screen and (min-width:700px){#masthead>.row-1>.wrapper #site-navigation{margin-right:2%}
+#masthead>.row-1{position:relative;width:100%;background-color:#f2f2f2}
+#masthead>.row-1>.wrapper{padding:10px 0}
+#masthead>.row-1>.wrapper .account.button{position:relative;float:right;color:white;padding:5px 20px;background-color:#8c7e78;font-size:13px;width:135px;min-width:135px;text-transform:uppercase;text-align:center}
+@media screen and (min-width:700px){#masthead>.row-1>.wrapper #site-navigation{margin:0 auto;width:58%;padding:5px 0 0 0}
+}@media screen and (min-width:900px){#masthead>.row-1>.wrapper #site-navigation{width:68%}
+}@media screen and (min-width:1200px){#masthead>.row-1>.wrapper #site-navigation{width:75%}
 }#masthead>.row-1>.wrapper #site-navigation ul{margin:0;padding:0;text-align:center}
 #masthead>.row-1>.wrapper #site-navigation ul li{display:inline-block;margin-right:30px}
+#masthead>.row-1>.wrapper #site-navigation ul li:last-child{margin-right:0}
 #masthead>.row-1>.wrapper #site-navigation ul li a{color:#8c7e78;text-decoration:none;font-size:17px;text-transform:uppercase}
 #masthead>.row-1>.wrapper #site-navigation ul li a:hover{color:#8c7e78;text-decoration:underline}
-#masthead>.row-1>.wrapper .account.button{position:relative;color:white;padding:5px 20px;background-color:#8c7e78;font-size:13px;width:135px;min-width:135px;text-transform:uppercase;text-align:center}
 #masthead>.row-2{width:100%}
 #masthead>.row-2>.wrapper{padding:30px}
 #masthead>.row-2>.wrapper .logo{position:relative;margin:0 auto;width:80%}
@@ -805,7 +807,7 @@ a.surrounding{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
 @media screen and (min-width:700px){.template-how>.row-2>.column-1>.wrapper,.template-how>.row-3>.column-1>.wrapper,.template-how>.row-4>.column-1>.wrapper{padding:0 3.92157% 0 0}
 }.template-how>.row-2>.column-1>.wrapper .row-1 img,.template-how>.row-3>.column-1>.wrapper .row-1 img,.template-how>.row-4>.column-1>.wrapper .row-1 img{float:left;width:20%;margin:0 4% 3% 0}
 .template-how>.row-2>.column-1>.wrapper .row-1 header,.template-how>.row-3>.column-1>.wrapper .row-1 header,.template-how>.row-4>.column-1>.wrapper .row-1 header{padding:20px 0}
-.template-how>.row-2>.column-1>.wrapper .row-1 header h2,.template-how>.row-3>.column-1>.wrapper .row-1 header h2,.template-how>.row-4>.column-1>.wrapper .row-1 header h2{font-weight:300;text-transform:uppercase;color:#96a7a6;margin:0;padding:0}
+.template-how>.row-2>.column-1>.wrapper .row-1 header h2,.template-how>.row-3>.column-1>.wrapper .row-1 header h2,.template-how>.row-4>.column-1>.wrapper .row-1 header h2{font-weight:500;text-transform:uppercase;color:#96a7a6;margin:0;padding:0}
 .template-how>.row-2>.column-1>.wrapper .row-1 .tag,.template-how>.row-3>.column-1>.wrapper .row-1 .tag,.template-how>.row-4>.column-1>.wrapper .row-1 .tag{margin:0 0 3% 0;font-style:italic;font-family:"adobe-caslon-pro",serif;color:#96a7a6;font-size:23px}
 .template-how>.row-2>.column-2,.template-how>.row-3>.column-2,.template-how>.row-4>.column-2{-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2;width:100%;position:relative;background-size:cover;background-position:center;background-repeat:no-repeat}
 @media screen and (min-width:700px){.template-how>.row-2>.column-2,.template-how>.row-3>.column-2,.template-how>.row-4>.column-2{width:49%}
@@ -845,6 +847,7 @@ a.surrounding{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
 .template-contact .row-2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:0 0 30px 0}
 .template-contact .row-2 .column-1{width:100%;-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1}
 @media screen and (min-width:700px){.template-contact .row-2 .column-1{width:78%}
+}@media screen and (min-width:700px){.template-contact .row-2 .column-1 .gform_wrapper{width:70%}
 }.template-contact .row-2 .column-1>.wrapper{padding:0 4% 20px 4%}
 @media screen and (min-width:700px){.template-contact .row-2 .column-1>.wrapper{padding:0 4% 0 0}
 }.template-contact .row-2 aside.column-2{-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2;width:100%}

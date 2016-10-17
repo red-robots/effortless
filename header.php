@@ -25,12 +25,9 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header clear-bottom" role="banner">
         <div class="row-1">
             <div class="wrapper full-width-wrapper clear-bottom">
-                <nav id="site-navigation" class="main-navigation" role="navigation">
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-                </nav><!-- #site-navigation -->
                 <?php $account_link = get_field("account_link","option");
                 $account_text = get_field("account_text","option");
                 if($account_text&&$account_link):?>
@@ -39,6 +36,9 @@
                         <a href="<?php echo $account_link;?>" class="surrounding"></a>
                     </div>
                 <?php endif;?>
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+                </nav><!-- #site-navigation -->
             </div><!--.wrapper-->
         </div><!--.row-1-->
         <div class="row-2">
