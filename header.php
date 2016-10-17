@@ -32,8 +32,9 @@
                 $account_text = get_field("account_text","option");
                 if($account_text&&$account_link):?>
                     <div class="account button">
-                        <?php echo $account_text; ?>
-                        <a href="<?php echo $account_link;?>" class="surrounding"></a>
+                        <a href="<?php echo $account_link;?>" class="surrounding">
+                            <?php echo $account_text; ?>
+                        </a>
                     </div>
                 <?php endif;?>
                 <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -46,8 +47,9 @@
                 <?php $logo = get_field("logo","option");
                 if($logo):?>
                     <div class="logo">
-                        <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['alt'];?>">
-                        <a href="<?php echo get_bloginfo("url");?>" class="surrounding"></a>
+                        <a href="<?php echo get_bloginfo("url");?>" class="surrounding">
+                            <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['alt'];?>">
+                        </a>
                     </div><!--.logo-->
                 <?php endif;?>
             </div><!-- wrapper -->

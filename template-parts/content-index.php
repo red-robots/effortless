@@ -30,8 +30,9 @@
                         <?php endif;//if for copy?>
                         <?php if ($button_text && $button_link): ?>
                             <div class="button">
-                                <?php echo $button_text; ?>
-                                <a class="surrounding" href="<?php echo $button_link; ?>"></a>
+                                <a class="surrounding" href="<?php echo $button_link; ?>">
+                                    <?php echo $button_text; ?>
+                                </a>
                             </div>
                         <?php endif;//if for button text and link?>
                     </div><!--.inner-wrapper-->
@@ -67,8 +68,9 @@
                         <?php endif;//if for copy?>
                         <?php if ($button_text && $button_link): ?>
                             <div class="button">
-                                <?php echo $button_text; ?>
-                                <a class="surrounding" href="<?php echo $button_link; ?>"></a>
+                                <a class="surrounding" href="<?php echo $button_link; ?>">
+                                    <?php echo $button_text; ?>
+                                </a>
                             </div>
                         <?php endif;//if for button text and link?>
                     </div><!--.wrapper-->
@@ -90,6 +92,9 @@
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
                 <div class="column-2">
+                    <?php if($link):?>
+                        <a class="surrounding" href="<?php echo $link;?>">
+                    <?php endif;?>
                     <div class="wrapper">
                         <?php if ($tag): ?>
                             <div class="tag"><?php echo $tag; ?></div><!--.tag-->
@@ -102,7 +107,7 @@
                         <?php endif;//if for copy?>
                     </div><!--.wrapper-->
                     <?php if($link):?>
-                        <a class="surrounding" href="<?php echo $link;?>"></a>
+                        </a>
                     <?php endif;?>
                 </div><!--.column-2-->
             <?php endif;//if for tag or copy or button text and link?>
@@ -122,6 +127,9 @@
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
                 <div class="column-2">
+                    <?php if($link):?>
+                        <a class="surrounding" href="<?php echo $link;?>">
+                    <?php endif;?>
                     <div class="wrapper">
                         <?php if ($tag): ?>
                             <div class="tag"><?php echo $tag; ?></div><!--.tag-->
@@ -134,7 +142,7 @@
                         <?php endif;//if for copy?>
                     </div><!--.wrapper-->
                     <?php if($link):?>
-                        <a class="surrounding" href="<?php echo $link;?>"></a>
+                        </a>
                     <?php endif;?>
                 </div><!--.column-2-->
             <?php endif;//if for tag or copy or button text and link?>
@@ -154,6 +162,9 @@
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
                 <div class="column-2">
+                    <?php if($link):?>
+                        <a class="surrounding" href="<?php echo $link;?>">
+                    <?php endif;?>
                     <div class="wrapper">
                         <?php if ($tag): ?>
                             <div class="tag"><?php echo $tag; ?></div><!--.tag-->
@@ -166,7 +177,7 @@
                         <?php endif;//if for copy?>
                     </div><!--.wrapper-->
                     <?php if($link):?>
-                        <a class="surrounding" href="<?php echo $link;?>"></a>
+                        </a>
                     <?php endif;?>
                 </div><!--.column-2-->
             <?php endif;//if for tag or copy or button text and link?>

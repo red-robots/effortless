@@ -27,8 +27,6 @@
         }
         .button {
           display: inline-block;
-          border: 1px solid white;
-          padding: $margin-medium $margin-large;
           background-color: $color__eff-blue;
           color: white;
           font-size: 19px;
@@ -36,6 +34,8 @@
           position: relative;
           text-transform: uppercase;
           a.surrounding {
+            border: 1px solid white;
+            padding: $margin-medium $margin-large;
           }
         }
       }
@@ -109,7 +109,6 @@
           text-transform: uppercase;
           color: $color__eff-blue;
           a.surrounding {
-
           }
         }
       }
@@ -123,6 +122,9 @@
       justify-content: center;
       align-items: stretch;
       align-content: center;
+    }
+    @media screen and (min-width: 1400px) {
+      align-items: center;
     }
     &:last-child {
       margin-bottom: $margin-extra-large;
@@ -143,6 +145,9 @@
         @media screen and (min-width: $tabwidth) {
           display: none;
         }
+        @media screen and (min-width: 1400px) {
+          display: block;
+        }
       }
     }
     > .column-2 {
@@ -152,32 +157,31 @@
       @media screen and (min-width: $tabwidth) {
         width: 50%;
       }
-      > .wrapper {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        color: white;
-        padding: $margin-medium 0;
-        @media screen and (min-width: $tabwidth) {
-          padding: 8% 0;
-        }
-        .tag {
-          font-size: 27px;
-          text-transform: uppercase;
-          padding: 0 0 $margin-tiny 0;
-        }
-        .icon {
-          width: 30px;
+      a.surrounding {
+        > .wrapper {
+          width: 80%;
           margin: 0 auto;
-        }
-        .copy {
-          padding: $margin-medium 0 0 0;
+          text-align: center;
           color: white;
-          font-size: 22px;
+          padding: $margin-medium 0;
+          @media screen and (min-width: $tabwidth) {
+            padding: 8% 0;
+          }
+          .tag {
+            font-size: 27px;
+            text-transform: uppercase;
+            padding: 0 0 $margin-tiny 0;
+          }
+          .icon {
+            width: 30px;
+            margin: 0 auto;
+          }
+          .copy {
+            padding: $margin-medium 0 0 0;
+            color: white;
+            font-size: 22px;
+          }
         }
-      }
-      a {
-
       }
     }
   }

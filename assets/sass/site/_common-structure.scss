@@ -56,12 +56,12 @@
 }
 
 a.surrounding {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
 }
 
 #masthead {
@@ -75,7 +75,6 @@ a.surrounding {
       .account.button {
         position: relative;
         color: white;
-        padding: 5px $margin-medium;
         background-color: $color__eff-brown;
         font-size: 13px;
         width: 135px;
@@ -87,8 +86,8 @@ a.surrounding {
           float: right;
           margin: 0;
         }
-        a {
-
+        a.surrounding {
+          padding: 5px $margin-medium;
         }
       }
       #site-navigation {
@@ -152,12 +151,11 @@ a.surrounding {
         @media screen and (min-width: $tabwidth) {
           width: 30%;
         }
-        img {
-          display: block;
-          width: 100%;
-        }
         a {
-
+          img {
+            display: block;
+            width: 100%;
+          }
         }
       }
     }
