@@ -453,6 +453,84 @@
     }
   }
 }
+
+.template-contact {
+  .row-1 {
+    /* see template header */
+  }
+  .row-2 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 0 0 $margin-large 0;
+    .column-1 {
+      width: 100%;
+      order: 1;
+      @media screen and (min-width: $tabwidth) {
+        width: 78%;
+      }
+      > .wrapper {
+        padding: 0 4% $margin-medium 4%;
+        @media screen and (min-width: $tabwidth) {
+          padding: 0 4% 0 0;
+        }
+      }
+    }
+    aside.column-2 {
+      order: 2;
+      width: 100%;
+      @media screen and (min-width: $tabwidth) {
+        width: 22%;
+      }
+      > .outer-wrapper {
+        padding: 0;
+        height: 100%;
+        > .inner-wrapper {
+          height: 100%;
+          background-color: $color__eff-blue;
+          width: 80%;
+          margin: 0 auto;
+          background-size: 80% auto;
+          background-position: top center;
+          background-repeat: no-repeat;
+          @media screen and (min-width: $tabwidth) {
+            margin: 0;
+            width: 100%;
+          }
+          @media screen and (min-width: $tabwidth) {
+            background-image: none !important;
+          }
+          img {
+            width: 100%;
+            display: none;
+            margin: 0 0 50px 0;
+            @media screen and (min-width: $tabwidth) {
+              width: 100%;
+              display: block;
+              margin: 0 0 50px 0;
+            }
+          }
+          blockquote {
+            padding: 0 12%;
+            font-style: italic;
+            font-family: "adobe-caslon-pro", serif;
+            padding: 50px 0 $margin-large 0;
+            @media screen and (min-width: $tabwidth) {
+              padding: 0 0 $margin-large 0;
+            }
+            p {
+              color: white;
+              font-size: 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .template-sitemap, .error-404 {
   .row-1 {
     /* see template header */
