@@ -194,6 +194,10 @@ a.surrounding {
             display: block;
             width: 100%;
             text-align: center;
+            padding: 0 0 $margin-tiny 0;
+            &:last-child {
+              padding: 0;
+            }
             a {
               color: $color__eff-brown;
               text-decoration: none;
