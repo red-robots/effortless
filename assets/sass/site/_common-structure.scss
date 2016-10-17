@@ -167,6 +167,9 @@ a.surrounding {
     width: 100%;
     background-color: $color__eff-light-grey;
     margin: 0 0 15px 0;
+    @media screen and (min-width: $tabwidth) {
+      display: none;
+    }
     >.wrapper {
       padding: 10px 0;
       .button {
@@ -180,9 +183,6 @@ a.surrounding {
         text-transform: uppercase;
         text-align: center;
         margin: 0 auto;
-        @media screen and (min-width: $tabwidth) {
-          display: none;
-        }
       }
       #mobile-site-navigation {
         display: none;
