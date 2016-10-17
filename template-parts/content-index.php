@@ -79,7 +79,8 @@
     <?php $image = get_field("row_3_image");
     $icon = get_field("row_3_icon");
     $tag = get_field("row_3_tag");
-    $copy = get_field("row_3_copy"); ?>
+    $copy = get_field("row_3_copy");
+    $link = get_field("row_3_link"); ?>
     <?php if ($image || $tag || $copy): ?>
         <section class="row-3">
             <?php if ($image): ?>
@@ -100,6 +101,9 @@
                             <div class="copy"><?php echo $copy; ?></div><!--.copy-->
                         <?php endif;//if for copy?>
                     </div><!--.wrapper-->
+                    <?php if($link):?>
+                        <a class="surrounding" href="<?php echo $link;?>"></a>
+                    <?php endif;?>
                 </div><!--.column-2-->
             <?php endif;//if for tag or copy or button text and link?>
         </section><!--.row-3-->
@@ -107,7 +111,8 @@
     <?php $image = get_field("row_4_image");
     $icon = get_field("row_4_icon");
     $tag = get_field("row_4_tag");
-    $copy = get_field("row_4_copy"); ?>
+    $copy = get_field("row_4_copy");
+    $link = get_field("row_4_link");?>
     <?php if ($image || $tag || $copy): ?>
         <section class="row-4">
             <?php if ($image): ?>
@@ -128,6 +133,9 @@
                             <div class="copy"><?php echo $copy; ?></div><!--.copy-->
                         <?php endif;//if for copy?>
                     </div><!--.wrapper-->
+                    <?php if($link):?>
+                        <a class="surrounding" href="<?php echo $link;?>"></a>
+                    <?php endif;?>
                 </div><!--.column-2-->
             <?php endif;//if for tag or copy or button text and link?>
         </section><!--.row-4-->
@@ -135,7 +143,8 @@
     <?php $image = get_field("row_5_image");
     $icon = get_field("row_5_icon");
     $tag = get_field("row_5_tag");
-    $copy = get_field("row_5_copy"); ?>
+    $copy = get_field("row_5_copy");
+    $link = get_field("row_5_link"); ?>
     <?php if ($image || $tag || $copy): ?>
         <section class="row-5">
             <?php if ($image): ?>
@@ -156,6 +165,9 @@
                             <div class="copy"><?php echo $copy; ?></div><!--.copy-->
                         <?php endif;//if for copy?>
                     </div><!--.wrapper-->
+                    <?php if($link):?>
+                        <a class="surrounding" href="<?php echo $link;?>"></a>
+                    <?php endif;?>
                 </div><!--.column-2-->
             <?php endif;//if for tag or copy or button text and link?>
         </section><!--.row-5-->

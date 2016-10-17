@@ -74,7 +74,6 @@ a.surrounding {
       padding: 10px 0;
       .account.button {
         position: relative;
-        float: right;
         color: white;
         padding: 5px $margin-medium;
         background-color: $color__eff-brown;
@@ -83,13 +82,20 @@ a.surrounding {
         min-width: 135px;
         text-transform: uppercase;
         text-align: center;
+        margin: 0 auto;
+        @media screen and (min-width: $tabwidth) {
+          float: right;
+          margin: 0;
+        }
         a {
 
         }
       }
       #site-navigation {
+        display: none;
         @media screen and (min-width: $tabwidth) {
           margin: 0 auto;
+          display: block;
           width: 58%;
           padding: $margin-tiny 0 0 0;
         }
@@ -152,6 +158,63 @@ a.surrounding {
         }
         a {
 
+        }
+      }
+    }
+  }
+  >.row-3 {
+    position: relative;
+    width: 100%;
+    background-color: $color__eff-light-grey;
+    margin: 0 0 15px 0;
+    >.wrapper {
+      padding: 10px 0;
+      .button {
+        position: relative;
+        color: white;
+        padding: 5px $margin-medium;
+        background-color: $color__eff-blue;
+        font-size: 13px;
+        width: 135px;
+        min-width: 135px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 auto;
+        @media screen and (min-width: $tabwidth) {
+          display: none;
+        }
+      }
+      #mobile-site-navigation {
+        display: none;
+        width: 100%;
+        padding: 10px 0 0 0;
+        ul {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          li {
+            display: block;
+            width: 100%;
+            text-align: center;
+            a {
+              color: $color__eff-brown;
+              text-decoration: none;
+              font-size: 17px;
+              text-transform: uppercase;
+              &:hover {
+                color: $color__eff-brown;
+                text-decoration: underline;
+              }
+
+            }
+          }
+          &.sub-menu {
+            li {
+              a {
+
+              }
+            }
+          }
         }
       }
     }

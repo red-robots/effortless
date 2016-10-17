@@ -738,8 +738,10 @@ a.surrounding{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
 #masthead{width:100%}
 #masthead>.row-1{position:relative;width:100%;background-color:#f2f2f2}
 #masthead>.row-1>.wrapper{padding:10px 0}
-#masthead>.row-1>.wrapper .account.button{position:relative;float:right;color:white;padding:5px 20px;background-color:#8c7e78;font-size:13px;width:135px;min-width:135px;text-transform:uppercase;text-align:center}
-@media screen and (min-width:700px){#masthead>.row-1>.wrapper #site-navigation{margin:0 auto;width:58%;padding:5px 0 0 0}
+#masthead>.row-1>.wrapper .account.button{position:relative;color:white;padding:5px 20px;background-color:#8c7e78;font-size:13px;width:135px;min-width:135px;text-transform:uppercase;text-align:center;margin:0 auto}
+@media screen and (min-width:700px){#masthead>.row-1>.wrapper .account.button{float:right;margin:0}
+}#masthead>.row-1>.wrapper #site-navigation{display:none}
+@media screen and (min-width:700px){#masthead>.row-1>.wrapper #site-navigation{margin:0 auto;display:block;width:58%;padding:5px 0 0 0}
 }@media screen and (min-width:900px){#masthead>.row-1>.wrapper #site-navigation{width:68%}
 }@media screen and (min-width:1200px){#masthead>.row-1>.wrapper #site-navigation{width:75%}
 }#masthead>.row-1>.wrapper #site-navigation ul{margin:0;padding:0;text-align:center}
@@ -753,6 +755,15 @@ a.surrounding{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
 @media screen and (min-width:600px){#masthead>.row-2>.wrapper .logo{width:50%}
 }@media screen and (min-width:700px){#masthead>.row-2>.wrapper .logo{width:30%}
 }#masthead>.row-2>.wrapper .logo img{display:block;width:100%}
+#masthead>.row-3{position:relative;width:100%;background-color:#f2f2f2;margin:0 0 15px 0}
+#masthead>.row-3>.wrapper{padding:10px 0}
+#masthead>.row-3>.wrapper .button{position:relative;color:white;padding:5px 20px;background-color:#96a7a6;font-size:13px;width:135px;min-width:135px;text-transform:uppercase;text-align:center;margin:0 auto}
+@media screen and (min-width:700px){#masthead>.row-3>.wrapper .button{display:none}
+}#masthead>.row-3>.wrapper #mobile-site-navigation{display:none;width:100%;padding:10px 0 0 0}
+#masthead>.row-3>.wrapper #mobile-site-navigation ul{margin:0;padding:0;text-align:center}
+#masthead>.row-3>.wrapper #mobile-site-navigation ul li{display:block;width:100%;text-align:center}
+#masthead>.row-3>.wrapper #mobile-site-navigation ul li a{color:#8c7e78;text-decoration:none;font-size:17px;text-transform:uppercase}
+#masthead>.row-3>.wrapper #mobile-site-navigation ul li a:hover{color:#8c7e78;text-decoration:underline}
 .full-width-wrapper{width:95%;margin:0 auto}
 .template-header{position:relative;margin-bottom:20px;background-size:cover;background-position:center;background-repeat:no-repeat}
 @media screen and (min-width:700px){.template-header{margin-bottom:40px;background-image:none !important}
@@ -789,7 +800,7 @@ a.surrounding{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
 @media screen and (min-width:700px){.template-index>.row-3>.column-1,.template-index>.row-4>.column-1,.template-index>.row-5>.column-1{width:50%}
 }.template-index>.row-3>.column-1 img,.template-index>.row-4>.column-1 img,.template-index>.row-5>.column-1 img{width:100%;display:block}
 @media screen and (min-width:700px){.template-index>.row-3>.column-1 img,.template-index>.row-4>.column-1 img,.template-index>.row-5>.column-1 img{display:none}
-}.template-index>.row-3>.column-2,.template-index>.row-4>.column-2,.template-index>.row-5>.column-2{-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1;width:100%}
+}.template-index>.row-3>.column-2,.template-index>.row-4>.column-2,.template-index>.row-5>.column-2{-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1;width:100%;position:relative}
 @media screen and (min-width:700px){.template-index>.row-3>.column-2,.template-index>.row-4>.column-2,.template-index>.row-5>.column-2{width:50%}
 }.template-index>.row-3>.column-2>.wrapper,.template-index>.row-4>.column-2>.wrapper,.template-index>.row-5>.column-2>.wrapper{width:80%;margin:0 auto;text-align:center;color:white;padding:20px 0}
 @media screen and (min-width:700px){.template-index>.row-3>.column-2>.wrapper,.template-index>.row-4>.column-2>.wrapper,.template-index>.row-5>.column-2>.wrapper{padding:8% 0}

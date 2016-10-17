@@ -148,6 +148,7 @@
     > .column-2 {
       order: 1;
       width: 100%;
+      position: relative;
       @media screen and (min-width: $tabwidth) {
         width: 50%;
       }
@@ -174,6 +175,9 @@
           color: white;
           font-size: 22px;
         }
+      }
+      a {
+
       }
     }
   }

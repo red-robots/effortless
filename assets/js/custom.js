@@ -80,4 +80,9 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	new WOW().init();
 
+    /* custom mobile menu */
+    $('#masthead > .row-3 .button').click(function(){
+        $('#masthead >.row-3 #mobile-site-navigation').toggle();
+    })
+
 });// END #####################################    END
