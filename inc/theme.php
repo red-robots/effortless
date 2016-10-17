@@ -16,7 +16,7 @@ function my_login_logo() { ?>
   	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
   	background-size: 100% auto;
   	width: 327px;
-  	height: 100px;
+  	height: 91px;
   }
 </style>
 <?php }
