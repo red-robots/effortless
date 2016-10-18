@@ -424,30 +424,13 @@
           background-position: top center;
           background-repeat: no-repeat;
           @media screen and (min-width: $midwidth) {
-            background-image: none !important;
-          }
-          img {
-            width: 100%;
-            display: none;
-            margin: 0 0 50px 0;
-            @media screen and (min-width: $mobilelandscapewidth) {
-              width: 70%;
-              margin: 0 auto $margin-large auto;
-            }
-            @media screen and (min-width: $midwidth) {
-              width: 100%;
-              display: block;
-              margin: 0 0 50px 0;
-            }
+            background-size: 100% auto;
           }
           blockquote {
             padding: 0 12%;
             font-style: italic;
             font-family: "adobe-caslon-pro", serif;
             padding: 50px 0 $margin-large 0;
-            @media screen and (min-width: $midwidth) {
-              padding: 0 0 $margin-large 0;
-            }
             p {
               color: white;
               font-size: 23px;
@@ -497,6 +480,9 @@
       > .outer-wrapper {
         padding: 0 4%;
         height: 100%;
+        @media screen and (min-width: $tabwidth) {
+          padding: 0;
+        }
         > .inner-wrapper {
           height: 100%;
           background-color: $color__eff-blue;
@@ -506,26 +492,13 @@
           background-position: top center;
           background-repeat: no-repeat;
           @media screen and (min-width: $tabwidth) {
-            background-image: none !important;
-          }
-          img {
-            width: 100%;
-            display: none;
-            margin: 0 0 50px 0;
-            @media screen and (min-width: $tabwidth) {
-              width: 100%;
-              display: block;
-              margin: 0 0 50px 0;
-            }
+            background-size: 100% auto;
           }
           blockquote {
             padding: 0 12%;
             font-style: italic;
             font-family: "adobe-caslon-pro", serif;
             padding: 50px 0 $margin-large 0;
-            @media screen and (min-width: $tabwidth) {
-              padding: 0 0 $margin-large 0;
-            }
             p {
               color: white;
               font-size: 23px;

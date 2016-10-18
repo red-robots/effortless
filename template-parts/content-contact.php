@@ -37,13 +37,10 @@
                 </div><!--.wrapper-->
             </div><!--.column-2-->
         <?php endif; ?>
-        <?php if ($blockquote || $watermark): ?>
+        <?php if ($blockquote): ?>
             <aside class="column-2 blockquote">
                 <div class="outer-wrapper">
-                    <div class="inner-wrapper" <?php echo 'style="background-image: url('. $watermark['url'].');"';?>>
-                        <?php if ($watermark): ?>
-                            <img src="<?php echo $watermark['url']; ?>" alt="<?php echo $watermark['alt']; ?>">
-                        <?php endif; ?>
+                    <div class="inner-wrapper" <?php if($watermark) echo 'style="background-image: url('. $watermark['url'].');"';?>>
                         <?php if ($blockquote): ?>
                             <blockquote class="copy">
                                 <?php echo $blockquote; ?>

@@ -369,7 +369,8 @@ a.surrounding {
                   color: $color__eff-brown;
                   line-height: 1.6;
                   font-size: 15px;
-                  &::-moz-placeholder, &::-webkit-input-placeholder, &:-moz-placeholder, &:-ms-input-placeholder, &::placeholder {
+                  &::-moz-placeholder, &::-webkit-input-placeholder,
+                  &:-moz-placeholder, &:-ms-input-placeholder {
                     color: $color__eff-brown;
                     font-size: 15px;
                   }
