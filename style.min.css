@@ -767,6 +767,48 @@ a.surrounding:hover{color:inherit}
 #masthead>.row-3>.wrapper #mobile-site-navigation ul li:last-child{padding:0}
 #masthead>.row-3>.wrapper #mobile-site-navigation ul li a{color:#8c7e78;text-decoration:none;font-size:17px;text-transform:uppercase}
 #masthead>.row-3>.wrapper #mobile-site-navigation ul li a:hover{color:#8c7e78;text-decoration:underline}
+#colophon{background-color:#f2f2f2}
+#colophon>.wrapper{padding:30px 20px}
+@media screen and (min-width:700px){#colophon>.wrapper{padding:7% 5%}
+}#colophon>.wrapper .site-info{width:100%}
+@media screen and (min-width:700px){#colophon>.wrapper .site-info{float:left;width:50%}
+}#colophon>.wrapper .site-info>.wrapper{max-width:100%;text-align:center}
+@media screen and (min-width:700px){#colophon>.wrapper .site-info>.wrapper{text-align:left;float:left}
+}#colophon>.wrapper .site-info>.wrapper .account{padding:0 0 20px 0}
+#colophon>.wrapper .site-info>.wrapper .account .menu-account-container>ul>li:first-child{padding:0}
+#colophon>.wrapper .site-info>.wrapper .account .menu-account-container ul{margin:0;padding:0}
+#colophon>.wrapper .site-info>.wrapper .account .menu-account-container ul li{list-style-type:none;padding:5px 0 0 0}
+@media screen and (min-width:700px){#colophon>.wrapper .site-info>.wrapper .account .menu-account-container ul li{padding:0}
+}#colophon>.wrapper .site-info>.wrapper .account .menu-account-container ul li a{color:#8c7e78;text-decoration:none;text-transform:uppercase;font-size:15px}
+#colophon>.wrapper .site-info>.wrapper .account .menu-account-container ul li a:hover{color:#96a7a6}
+#colophon>.wrapper .site-info>.wrapper .account .menu-account-container ul li .sub-menu{margin:0;padding:0}
+@media screen and (min-width:700px){#colophon>.wrapper .site-info>.wrapper .account .menu-account-container ul li .sub-menu{padding:0 0 0 10px}
+}#colophon>.wrapper .site-info>.wrapper .email{padding:0 0 5px 0}
+@media screen and (min-width:700px){#colophon>.wrapper .site-info>.wrapper .email{padding:0}
+}#colophon>.wrapper .site-info>.wrapper .email a{color:#8c7e78;text-decoration:none;font-size:14px}
+#colophon>.wrapper .site-info>.wrapper .email a:hover{color:#96a7a6}
+#colophon>.wrapper .site-info>.wrapper .sitemapbw ul{margin:0;padding:0}
+#colophon>.wrapper .site-info>.wrapper .sitemapbw ul li{list-style-type:none;padding:5px 0 0 0;display:inline-block}
+@media screen and (min-width:700px){#colophon>.wrapper .site-info>.wrapper .sitemapbw ul li{padding:0}
+}#colophon>.wrapper .site-info>.wrapper .sitemapbw ul li:first-child a:before{display:none}
+#colophon>.wrapper .site-info>.wrapper .sitemapbw ul li a{color:#8c7e78;text-decoration:none;font-size:14px}
+#colophon>.wrapper .site-info>.wrapper .sitemapbw ul li a:before{content:"|";margin:0 5px 0 3px;display:inline-block}
+#colophon>.wrapper .site-info>.wrapper .sitemapbw ul li a:hover{color:#96a7a6}
+#colophon>.wrapper .site-info>.wrapper .sitemapbw ul li .sub-menu{margin:0;padding:0}
+@media screen and (min-width:700px){#colophon>.wrapper .site-info>.wrapper .sitemapbw ul li .sub-menu{padding:0 0 0 10px}
+}#colophon>.wrapper .email-signup{width:100%}
+@media screen and (min-width:700px){#colophon>.wrapper .email-signup{float:right;width:50%}
+}#colophon>.wrapper .email-signup>.wrapper{max-width:50%;text-align:center}
+@media screen and (min-width:700px){#colophon>.wrapper .email-signup>.wrapper{text-align:left;float:right}
+}#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll h2{color:#8c7e78;font-size:15px;text-transform:uppercase;font-weight:500;margin:20px 0 10px 0}
+@media screen and (min-width:700px){#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll h2{margin:0 0 10px 0}
+}#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group{display:block;margin-bottom:8px}
+#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input{border:0;border-radius:0;color:#8c7e78;line-height:1.6;font-size:15px}
+#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input::-moz-placeholder,#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input::-webkit-input-placeholder,#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input:-moz-placeholder,#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input:-ms-input-placeholder,#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input::-moz-placeholder{color:#8c7e78;font-size:15px}
+#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input::-moz-placeholder,#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input::-webkit-input-placeholder,#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input:-moz-placeholder,#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input:-ms-input-placeholder,#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input::placeholder{color:#8c7e78;font-size:15px}
+#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group .mce_inline_error{margin-top:8px;text-transform:uppercase}
+#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll #mce-responses{margin-bottom:5px;color:#8c7e78}
+#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll input[type="submit"]{display:inline-block;margin-top:8px;border:0;background:0;box-shadow:none;border-radius:0;padding:10px 20px;background-color:#96a7a6;color:white;font-size:18px;text-transform:uppercase;text-align:center;min-width:130px;line-height:1}
 .full-width-wrapper{width:95%;margin:0 auto}
 .template-header{position:relative;margin-bottom:20px;background-size:cover;background-position:center;background-repeat:no-repeat}
 @media screen and (min-width:700px){.template-header{margin-bottom:40px;background-image:none !important}
