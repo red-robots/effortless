@@ -734,6 +734,14 @@ html[xmlns] .flexslider .slides{display:block}
 .copy ul,.copy ol{padding:0;margin:0 0 20px 10px}
 .copy ul li,.copy ol li{margin:0 0 0 20px;padding:0}
 .copy ul li ul.sub-menu,.copy ol li ul.sub-menu{margin:0}
+.copy #mc_embed_signup form #mc_embed_signup_scroll h2{color:#96a7a6;text-transform:uppercase;font-weight:500;margin:20px 0 10px 0}
+@media screen and (min-width:700px){.copy #mc_embed_signup form #mc_embed_signup_scroll h2{margin:0 0 10px 0}
+}.copy #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group{display:block;margin-bottom:8px}
+.copy #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input{display:block;border:0;border-radius:0;background-color:#f2f2f2;color:#8c7e78;line-height:1.6;font-size:15px}
+.copy #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input::-moz-placeholder,.copy #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input::-webkit-input-placeholder,.copy #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input:-moz-placeholder,.copy #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input:-ms-input-placeholder{color:#8c7e78;font-size:15px}
+.copy #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group .mce_inline_error{margin-top:8px;text-transform:uppercase}
+.copy #mc_embed_signup form #mc_embed_signup_scroll #mce-responses{margin-bottom:5px;color:#8c7e78}
+.copy #mc_embed_signup form #mc_embed_signup_scroll input[type="submit"]{display:inline-block;margin-top:8px;border:0;background:0;box-shadow:none;border-radius:0;padding:10px 20px;background-color:#96a7a6;color:white;font-size:18px;text-transform:uppercase;text-align:center;min-width:130px;line-height:1}
 a.surrounding{text-decoration:none;display:block;color:inherit}
 a.surrounding:hover{color:inherit}
 #masthead{width:100%}
