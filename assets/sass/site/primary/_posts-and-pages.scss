@@ -84,6 +84,7 @@
       background-color: $color__eff-light-grey;
       @media screen and (min-width: $tabwidth) {
         background-image: none !important;
+        background-color: transparent;
         width: 65%;
       }
       @media screen and (min-width: 1100px) {

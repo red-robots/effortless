@@ -729,8 +729,8 @@ html[xmlns] .flexslider .slides{display:block}
 .copy a:hover{color:#8c7e78}
 .copy h1,.copy h2,.copy h3{margin:0 0 20px 0;text-transform:uppercase;color:#96a7a6}
 .copy h1{font-size:30px}
-.copy h2{font-size:27px}
-.copy h3{font-size:24px}
+.copy h2{font-size:22px}
+.copy h3{font-size:20px}
 .copy ul,.copy ol{padding:0;margin:0 0 20px 10px}
 .copy ul li,.copy ol li{margin:0 0 0 20px;padding:0}
 .copy ul li ul.sub-menu,.copy ol li ul.sub-menu{margin:0}
@@ -791,7 +791,7 @@ a.surrounding:hover{color:inherit}
 }.template-index>.row-2>.column-1 img{width:70%;display:block;margin:0 auto 15px auto}
 @media screen and (min-width:700px){.template-index>.row-2>.column-1 img{width:100%;margin:0}
 }.template-index>.row-2>.column-2{width:100%;position:relative;padding:20px;background-size:auto 60%;background-position:right bottom;background-repeat:no-repeat;background-color:#f2f2f2}
-@media screen and (min-width:700px){.template-index>.row-2>.column-2{background-image:none !important;width:65%}
+@media screen and (min-width:700px){.template-index>.row-2>.column-2{background-image:none !important;background-color:transparent;width:65%}
 }@media screen and (min-width:1100px){.template-index>.row-2>.column-2{width:75%}
 }.template-index>.row-2>.column-2>.wrapper{padding:2% 5%}
 .template-index>.row-2>.column-2>.wrapper .tag{font-size:30px;text-transform:uppercase;color:#96a7a6;font-weight:300;padding:0 0 20px 0}
