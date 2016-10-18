@@ -173,9 +173,9 @@ a.surrounding {
       .button {
         position: relative;
         color: white;
-        padding: 5px $margin-medium;
+        padding: $margin-small $margin-medium;
         background-color: $color__eff-blue;
-        font-size: 13px;
+        font-size: 18px;
         width: 135px;
         min-width: 135px;
         text-transform: uppercase;
@@ -194,7 +194,7 @@ a.surrounding {
             display: block;
             width: 100%;
             text-align: center;
-            padding: 0 0 $margin-tiny 0;
+            padding: 0 0 $margin-small 0;
             &:last-child {
               padding: 0;
             }
