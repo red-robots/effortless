@@ -407,9 +407,9 @@ a.surrounding {
         width: 50%;
       }
       >.wrapper {
-        max-width: 50%;
         text-align: center;
         @media screen and (min-width: $tabwidth) {
+          max-width: 50%;
           text-align: left;
           float: right;
         }
