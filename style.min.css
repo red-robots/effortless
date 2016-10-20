@@ -830,7 +830,7 @@ a.surrounding:hover{color:inherit}
 @media screen and (min-width:700px){.template-index>.row-1 .outer-wrapper .inner-wrapper{padding:15% 4% 10% 4%;width:55%}
 }.template-index>.row-1 .outer-wrapper .inner-wrapper .tag{font-size:30px;text-transform:uppercase;padding:0 0 20px 0;color:white;text-shadow:1px 1px 4px black}
 .template-index>.row-1 .outer-wrapper .inner-wrapper .copy{font-size:23px;padding:0 0 20px 0;color:white;text-shadow:1px 1px 4px black}
-.template-index>.row-1 .outer-wrapper .inner-wrapper .button{display:inline-block;background-color:#96a7a6;color:white;font-size:19px;font-weight:600;position:relative;text-transform:uppercase}
+.template-index>.row-1 .outer-wrapper .inner-wrapper .button{display:inline-block;text-align:center;background-color:#96a7a6;color:white;font-size:19px;font-weight:600;position:relative;text-transform:uppercase}
 .template-index>.row-1 .outer-wrapper .inner-wrapper .button a.surrounding{border:1px solid white;padding:20px 30px}
 .template-index>.row-2{margin-bottom:15px}
 @media screen and (max-width:700px){.template-index>.row-2{background-image:none !important}
@@ -846,7 +846,7 @@ a.surrounding:hover{color:inherit}
 }.template-index>.row-2>.column-2>.wrapper{padding:2% 5%}
 .template-index>.row-2>.column-2>.wrapper .tag{font-size:30px;text-transform:uppercase;color:#96a7a6;font-weight:300;padding:0 0 20px 0}
 .template-index>.row-2>.column-2>.wrapper .copy{font-size:20px;padding:0 0 30px 0}
-.template-index>.row-2>.column-2>.wrapper .button{position:relative;display:inline-block;font-size:22px;text-transform:uppercase;color:#96a7a6}
+.template-index>.row-2>.column-2>.wrapper .button{position:relative;text-align:center;display:inline-block;font-size:22px;text-transform:uppercase;color:#96a7a6}
 .template-index>.row-3,.template-index>.row-4,.template-index>.row-5{margin-bottom:15px;background-color:#96a7a6}
 @media screen and (min-width:700px){.template-index>.row-3,.template-index>.row-4,.template-index>.row-5{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center}
 }@media screen and (min-width:1400px){.template-index>.row-3,.template-index>.row-4,.template-index>.row-5{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
