@@ -34,6 +34,9 @@
           font-weight: 600;
           position: relative;
           text-transform: uppercase;
+          &:hover {
+            background-color: rgba(150,167,166,0.8);
+          }
           a.surrounding {
             border: 1px solid white;
             padding: $margin-medium $margin-large;
@@ -112,6 +115,9 @@
           text-transform: uppercase;
           color: $color__eff-blue;
           a.surrounding {
+            &:hover {
+              font-size: 24px;
+            }
           }
         }
       }
@@ -119,7 +125,6 @@
   }
   > .row-3, > .row-4, > .row-5 {
     margin-bottom: 15px;
-    background-color: $color__eff-blue;
     @media screen and (min-width: $tabwidth) {
       display: flex;
       justify-content: center;
@@ -157,8 +162,12 @@
       order: 1;
       width: 100%;
       position: relative;
+      background-color: $color__eff-blue;
       @media screen and (min-width: $tabwidth) {
         width: 50%;
+      }
+      &:hover {
+        background-color: rgba(150,167,166,0.8);
       }
       a.surrounding {
         > .wrapper {

@@ -115,6 +115,9 @@
           text-align: center;
           min-width: 130px;
           line-height: 1;
+          &:hover {
+            background-color: rgba(150,167,166,0.8);
+          }
         }
       }
     }
@@ -151,6 +154,9 @@ a.surrounding {
         @media screen and (min-width: $tabwidth) {
           float: right;
           margin: 0;
+        }
+        &:hover {
+          background-color: rgba(140,126,120,0.8);
         }
         a.surrounding {
           padding: 5px $margin-medium;
@@ -247,6 +253,9 @@ a.surrounding {
         text-transform: uppercase;
         text-align: center;
         margin: 0 auto;
+        &:hover {
+          background-color: rgba(150,167,166,0.8);
+        }
       }
       #mobile-site-navigation {
         display: none;
@@ -471,6 +480,9 @@ a.surrounding {
                 text-align: center;
                 min-width: 130px;
                 line-height: 1;
+                &:hover {
+                  background-color: rgba(150,167,166,0.8);
+                }
               }
             }
           }
