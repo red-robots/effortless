@@ -116,7 +116,7 @@
           min-width: 130px;
           line-height: 1;
           &:hover {
-            background-color: rgba(150,167,166,0.8);
+            background-color: $color__eff-brown;
           }
         }
       }
@@ -254,7 +254,7 @@ a.surrounding {
         text-align: center;
         margin: 0 auto;
         &:hover {
-          background-color: rgba(150,167,166,0.8);
+          background-color: $color__eff-brown;
         }
       }
       #mobile-site-navigation {
@@ -481,7 +481,7 @@ a.surrounding {
                 min-width: 130px;
                 line-height: 1;
                 &:hover {
-                  background-color: rgba(150,167,166,0.8);
+                  background-color: $color__eff-brown;
                 }
               }
             }

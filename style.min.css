@@ -743,7 +743,7 @@ html[xmlns] .flexslider .slides{display:block}
 .copy #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group .mce_inline_error{margin-top:8px;text-transform:uppercase}
 .copy #mc_embed_signup form #mc_embed_signup_scroll #mce-responses{margin-bottom:5px;color:#8c7e78}
 .copy #mc_embed_signup form #mc_embed_signup_scroll input[type="submit"]{display:inline-block;margin-top:8px;border:0;background:0;box-shadow:none;border-radius:0;padding:10px 20px;background-color:#96a7a6;color:white;font-size:18px;text-transform:uppercase;text-align:center;min-width:130px;line-height:1}
-.copy #mc_embed_signup form #mc_embed_signup_scroll input[type="submit"]:hover{background-color:rgba(150,167,166,0.8)}
+.copy #mc_embed_signup form #mc_embed_signup_scroll input[type="submit"]:hover{background-color:#8c7e78}
 a.surrounding{text-decoration:none;display:block;color:inherit}
 a.surrounding:hover{color:inherit}
 #masthead{width:100%}
@@ -772,7 +772,7 @@ a.surrounding:hover{color:inherit}
 @media screen and (min-width:700px){#masthead>.row-3{display:none}
 }#masthead>.row-3>.wrapper{padding:10px 0}
 #masthead>.row-3>.wrapper .button{position:relative;color:white;padding:10px 20px;background-color:#96a7a6;font-size:18px;width:135px;min-width:135px;text-transform:uppercase;text-align:center;margin:0 auto}
-#masthead>.row-3>.wrapper .button:hover{background-color:rgba(150,167,166,0.8)}
+#masthead>.row-3>.wrapper .button:hover{background-color:#8c7e78}
 #masthead>.row-3>.wrapper #mobile-site-navigation{display:none;width:100%;padding:10px 0 0 0}
 #masthead>.row-3>.wrapper #mobile-site-navigation ul{margin:0;padding:0;text-align:center}
 #masthead>.row-3>.wrapper #mobile-site-navigation ul li{display:block;width:100%;text-align:center;padding:0 0 10px 0}
@@ -820,7 +820,7 @@ a.surrounding:hover{color:inherit}
 #colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group .mce_inline_error{margin-top:8px;text-transform:uppercase}
 #colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll #mce-responses{margin-bottom:5px;color:#8c7e78}
 #colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll input[type="submit"]{display:inline-block;margin-top:8px;border:0;background:0;box-shadow:none;border-radius:0;padding:10px 20px;background-color:#96a7a6;color:white;font-size:18px;text-transform:uppercase;text-align:center;min-width:130px;line-height:1}
-#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll input[type="submit"]:hover{background-color:rgba(150,167,166,0.8)}
+#colophon>.wrapper .email-signup>.wrapper #mc_embed_signup form #mc_embed_signup_scroll input[type="submit"]:hover{background-color:#8c7e78}
 .full-width-wrapper{width:95%;margin:0 auto}
 .template-header{position:relative;margin-bottom:20px;background-size:cover;background-position:center;background-repeat:no-repeat}
 @media screen and (min-width:700px){.template-header{margin-bottom:40px;background-image:none !important}
@@ -835,7 +835,7 @@ a.surrounding:hover{color:inherit}
 }.template-index>.row-1 .outer-wrapper .inner-wrapper .tag{font-size:30px;text-transform:uppercase;padding:0 0 20px 0;color:white;text-shadow:1px 1px 4px black}
 .template-index>.row-1 .outer-wrapper .inner-wrapper .copy{font-size:23px;padding:0 0 20px 0;color:white;text-shadow:1px 1px 4px black}
 .template-index>.row-1 .outer-wrapper .inner-wrapper .button{display:inline-block;text-align:center;background-color:#96a7a6;color:white;font-size:19px;font-weight:600;position:relative;text-transform:uppercase}
-.template-index>.row-1 .outer-wrapper .inner-wrapper .button:hover{background-color:rgba(150,167,166,0.8)}
+.template-index>.row-1 .outer-wrapper .inner-wrapper .button:hover{background-color:#8c7e78}
 .template-index>.row-1 .outer-wrapper .inner-wrapper .button a.surrounding{border:1px solid white;padding:20px 30px}
 .template-index>.row-2{margin-bottom:15px}
 @media screen and (max-width:700px){.template-index>.row-2{background-image:none !important}
@@ -864,7 +864,7 @@ a.surrounding:hover{color:inherit}
 }@media screen and (min-width:1400px){.template-index>.row-3>.column-1 img,.template-index>.row-4>.column-1 img,.template-index>.row-5>.column-1 img{display:block}
 }.template-index>.row-3>.column-2,.template-index>.row-4>.column-2,.template-index>.row-5>.column-2{-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1;width:100%}
 @media screen and (min-width:700px){.template-index>.row-3>.column-2,.template-index>.row-4>.column-2,.template-index>.row-5>.column-2{width:50%}
-}.template-index>.row-3>.column-2:hover .background,.template-index>.row-4>.column-2:hover .background,.template-index>.row-5>.column-2:hover .background{background-color:rgba(150,167,166,0.8)}
+}.template-index>.row-3>.column-2:hover .background,.template-index>.row-4>.column-2:hover .background,.template-index>.row-5>.column-2:hover .background{background-color:#8c7e78}
 .template-index>.row-3>.column-2 .background,.template-index>.row-4>.column-2 .background,.template-index>.row-5>.column-2 .background{width:100%;position:absolute;height:100%;z-index:-1;background-color:#96a7a6;top:0;left:0}
 .template-index>.row-3>.column-2 a.surrounding>.wrapper,.template-index>.row-4>.column-2 a.surrounding>.wrapper,.template-index>.row-5>.column-2 a.surrounding>.wrapper{width:80%;margin:0 auto;text-align:center;color:white;padding:20px 0}
 @media screen and (min-width:700px){.template-index>.row-3>.column-2 a.surrounding>.wrapper,.template-index>.row-4>.column-2 a.surrounding>.wrapper,.template-index>.row-5>.column-2 a.surrounding>.wrapper{padding:8% 0}
