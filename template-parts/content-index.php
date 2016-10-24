@@ -92,6 +92,7 @@
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
                 <div class="column-2">
+                    <div class="background"></div><!--.background-->
                     <?php if($link):?>
                         <a class="surrounding" href="<?php echo $link;?>">
                     <?php endif;?>
@@ -127,6 +128,7 @@
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
                 <div class="column-2">
+                    <div class="background"></div><!--.background-->
                     <?php if($link):?>
                         <a class="surrounding" href="<?php echo $link;?>">
                     <?php endif;?>
@@ -162,6 +164,7 @@
             <?php endif;//if for image?>
             <?php if ($tag || $copy): ?>
                 <div class="column-2">
+                    <div class="background"></div><!--.background-->
                     <?php if($link):?>
                         <a class="surrounding" href="<?php echo $link;?>">
                     <?php endif;?>
