@@ -280,7 +280,7 @@ a.surrounding {
               text-transform: uppercase;
               &:hover {
                 color: $color__eff-brown;
-                text-decoration: underline;
+                font-weight: 600;
               }
 
             }
