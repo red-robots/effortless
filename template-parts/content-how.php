@@ -20,11 +20,15 @@
     <section class="row-2">
         <?php $image = get_field("step_1_image");
         $step_image = get_field("step_1_step_image");
+        $link = get_field("step_1_link");
         $title = get_field("step_1_title");
         $tag = get_field("step_1_tag");
         $copy = get_field("step_1_copy");?>
         <?php if($step_image||$title||$tag||$copy):?>
             <div class="column-1">
+	            <?php if($link):?>
+	                <a class="surrounding" href="<?php echo $link;?>">
+		        <?php endif;?>
                 <div class="wrapper">
                     <?php if($step_image||$title||$tag):?>
                         <div class="row-1 clear-bottom">
@@ -47,6 +51,9 @@
                         </div><!--.row-2-->
                     <?php endif;//if for copy?>
                 </div><!--.wrapper-->
+		        <?php if($link):?>
+	                </a>
+                <?php endif;?>
             </div><!--.column-1-->
         <?php endif;//if for step image or title or tag or copy?>
         <?php if($image):?>
@@ -59,10 +66,14 @@
         <?php $image = get_field("step_2_image");
         $step_image = get_field("step_2_step_image");
         $title = get_field("step_2_title");
+        $link = get_field("step_2_link");
         $tag = get_field("step_2_tag");
         $copy = get_field("step_2_copy");?>
         <?php if($step_image||$title||$tag||$copy):?>
             <div class="column-1">
+	            <?php if($link):?>
+	                <a class="surrounding" href="<?php echo $link;?>">
+		        <?php endif;?>
                 <div class="wrapper">
                     <?php if($step_image||$title||$tag):?>
                         <div class="row-1 clear-bottom">
@@ -85,6 +96,9 @@
                         </div><!--.row-2-->
                     <?php endif;//if for copy?>
                 </div><!--.wrapper-->
+		        <?php if($link):?>
+	                </a>
+                <?php endif;?>
             </div><!--.column-1-->
         <?php endif;//if for step image or title or tag or copy?>
         <?php if($image):?>
@@ -98,9 +112,13 @@
         $step_image = get_field("step_3_step_image");
         $title = get_field("step_3_title");
         $tag = get_field("step_3_tag");
+        $link = get_field("step_3_link");
         $copy = get_field("step_3_copy");?>
         <?php if($step_image||$title||$tag||$copy):?>
             <div class="column-1">
+	            <?php if($link):?>
+	                <a class="surrounding" href="<?php echo $link;?>">
+		        <?php endif;?>
                 <div class="wrapper">
                     <?php if($step_image||$title||$tag):?>
                         <div class="row-1 clear-bottom">
@@ -123,6 +141,9 @@
                         </div><!--.row-2-->
                     <?php endif;//if for copy?>
                 </div><!--.wrapper-->
+		        <?php if($link):?>
+	                </a>
+                <?php endif;?>
             </div><!--.column-1-->
         <?php endif;//if for step image or title or tag or copy?>
         <?php if($image):?>

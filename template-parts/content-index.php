@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-index full-width-wrapper"); ?>>
-    <?php $image = get_field("row_1_image");
+    <?php $images = get_field("row_1_images");
     $tag = get_field("row_1_tag");
     $copy = get_field("row_1_copy");
     $button_text = get_field("row_1_button_text");
@@ -18,9 +18,13 @@
     <?php if ( $tag || $copy || ($button_link && $button_text)): ?>
         <section class="row-1">
             <?php if ($tag || $copy || ($button_link && $button_text)): ?>
-                <div class="outer-wrapper" <?php if($image):
-                    echo 'style="background-image: url('. $image['url'].');"';
-                endif;?>>
+                <div class="outer-wrapper">
+	                <?php if($images):
+		                foreach($images as $image):?>
+			                <div class="slide" style="background-image: url(<?php echo $image['url'];?>);">
+			                </div><!--.slide-->
+		                <?php endforeach;?>
+	                <?php endif;?>
                     <div class="inner-wrapper">
                         <?php if ($tag): ?>
                             <div class="tag"><?php echo $tag; ?></div><!--.tag-->
