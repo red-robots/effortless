@@ -94,7 +94,6 @@ jQuery(document).ready(function ($) {
             "position":"relative",
             "overflow":"hidden"
         }).find(".slide");
-        console.log($slides.length);
         if($slides.length<1){ //if no slides don't don anything else
             return;
         }
