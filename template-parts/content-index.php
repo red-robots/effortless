@@ -19,12 +19,14 @@
         <section class="row-1">
             <?php if ($tag || $copy || ($button_link && $button_text)): ?>
                 <div class="outer-wrapper">
-	                <?php if($images):
-		                foreach($images as $image):?>
-			                <div class="slide" style="background-image: url(<?php echo $image['url'];?>);">
-			                </div><!--.slide-->
-		                <?php endforeach;?>
-	                <?php endif;?>
+	                <?php if($images):?>
+                        <div class="slide-wrapper">
+                            <?php foreach($images as $image):?>
+                                <div class="slide" style="background-image: url(<?php echo $image['url'];?>);">
+                                </div><!--.slide-->
+                            <?php endforeach;?>
+                        </div><!--slide-wrapper-->
+                    <?php endif;?>
                     <div class="inner-wrapper">
                         <?php if ($tag): ?>
                             <div class="tag"><?php echo $tag; ?></div><!--.tag-->

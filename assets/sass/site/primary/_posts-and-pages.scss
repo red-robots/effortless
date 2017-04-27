@@ -3,6 +3,14 @@
     margin-bottom: 15px;
     position: relative;
     .outer-wrapper {
+      .slide-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        @media screen and (min-width: $tabwidth) {
+          position: static;
+          padding-bottom: 0;
+        }
+      }
       .slide {
         display: none;
         background-position: center;
@@ -18,14 +26,19 @@
           font-size: 30px;
           text-transform: uppercase;
           padding: 0 0 $margin-medium 0;
-          color: white;
-          @include dropshadow;
+          color: $color__eff-blue;
+          @media screen and (min-width: $tabwidth) {
+            @include dropshadow;
+            color: white;
+          }
         }
         .copy {
           font-size: 23px;
           padding: 0 0 $margin-medium 0;
-          color: white;
-          @include dropshadow;
+          @media screen and (min-width: $tabwidth) {
+            @include dropshadow;
+            color: white;
+          }
         }
         .button {
           display: inline-block;
@@ -454,8 +467,6 @@
             background-size: 100% auto;
           }
           blockquote {
-            padding: 0 12%;
-            font-style: italic;
             font-family: "adobe-caslon-pro", serif;
             padding: 50px 0 $margin-large 0;
             p {
@@ -523,7 +534,6 @@
           }
           blockquote {
             padding: 0 12%;
-            font-style: italic;
             font-family: "adobe-caslon-pro", serif;
             padding: 50px 0 $margin-large 0;
             p {
