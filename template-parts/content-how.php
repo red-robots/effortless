@@ -27,7 +27,7 @@
         $copy = get_field("step_1_copy");?>
         <?php if($step_image||$title||$tag||$copy):?>
             <div class="column-1">
-	            <?php if($link&&$link_active):?>
+	            <?php if($link&&strcmp($link_active,"yes")===0):?>
 	                <a class="surrounding" href="<?php echo $link;?>">
 		        <?php endif;?>
                 <div class="wrapper">
@@ -52,7 +52,7 @@
                         </div><!--.row-2-->
                     <?php endif;//if for copy?>
                 </div><!--.wrapper-->
-		        <?php if($link&&$link_active):?>
+		        <?php if($link&&strcmp($link_active,"yes")===0):?>
 	                </a>
                 <?php endif;?>
             </div><!--.column-1-->
@@ -73,7 +73,7 @@
         $copy = get_field("step_2_copy");?>
         <?php if($step_image||$title||$tag||$copy):?>
             <div class="column-1">
-	            <?php if($link&&$link_active):?>
+	            <?php if($link&&strcmp($link_active,"yes")===0):?>
 	                <a class="surrounding" href="<?php echo $link;?>">
 		        <?php endif;?>
                 <div class="wrapper">
@@ -98,7 +98,7 @@
                         </div><!--.row-2-->
                     <?php endif;//if for copy?>
                 </div><!--.wrapper-->
-		        <?php if($link&&$link_active):?>
+		        <?php if($link&&strcmp($link_active,"yes")===0):?>
 	                </a>
                 <?php endif;?>
             </div><!--.column-1-->
@@ -119,7 +119,7 @@
         $copy = get_field("step_3_copy");?>
         <?php if($step_image||$title||$tag||$copy):?>
             <div class="column-1">
-	            <?php if($link&&$link_active):?>
+	            <?php if($link&&strcmp($link_active,"yes")===0):?>
 	                <a class="surrounding" href="<?php echo $link;?>">
 		        <?php endif;?>
                 <div class="wrapper">
@@ -144,7 +144,7 @@
                         </div><!--.row-2-->
                     <?php endif;//if for copy?>
                 </div><!--.wrapper-->
-		        <?php if($link&&$link_active):?>
+		        <?php if($link&&strcmp($link_active,"yes")===0):?>
 	                </a>
                 <?php endif;?>
             </div><!--.column-1-->

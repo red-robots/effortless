@@ -296,39 +296,39 @@
         width: 51%;
       }
       > a.surrounding {
-        > .wrapper {
-          text-align: left;
-          padding: $margin-medium 0;
-          @media screen and (min-width: $tabwidth) {
-            padding: 0 100%-(100%*49/51) 0 0;
+      }
+      > a >.wrapper, > .wrapper {
+        text-align: left;
+        padding: $margin-medium 0;
+        @media screen and (min-width: $tabwidth) {
+          padding: 0 100%-(100%*49/51) 0 0;
+        }
+        .row-1 {
+          img {
+            float: left;
+            width: 20%;
+            margin: 0 4% 3% 0;
           }
-          .row-1 {
-            img {
-              float: left;
-              width: 20%;
-              margin: 0 4% 3% 0;
-            }
-            header {
-              padding: $margin-medium 0;
-              h2 {
-                font-weight: 500;
-                text-transform: uppercase;
-                color: $color__eff-blue;
-                margin: 0;
-                padding: 0;
-              }
-            }
-            .tag {
-              margin: 0 0 3% 0;
-              font-style: italic;
-              font-family: "adobe-caslon-pro", serif;
+          header {
+            padding: $margin-medium 0;
+            h2 {
+              font-weight: 500;
+              text-transform: uppercase;
               color: $color__eff-blue;
-              font-size: 23px;
+              margin: 0;
+              padding: 0;
             }
           }
-          .row-2 {
-
+          .tag {
+            margin: 0 0 3% 0;
+            font-style: italic;
+            font-family: "adobe-caslon-pro", serif;
+            color: $color__eff-blue;
+            font-size: 23px;
           }
+        }
+        .row-2 {
+
         }
       }
     }
@@ -363,10 +363,10 @@
         order: 2;
       }
       > a.surrounding {
-        > .wrapper {
-          @media screen and (min-width: $tabwidth) {
-            padding: 0 0 0 100%-(100%*49/51);
-          }
+      }
+      > a >.wrapper,> .wrapper {
+        @media screen and (min-width: $tabwidth) {
+          padding: 0 0 0 100%-(100%*49/51);
         }
       }
     }
