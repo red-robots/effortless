@@ -1,3 +1,11 @@
+#eff-embed-signup {
+  background-color: white;
+  text-align: center;
+  padding: 20px; 
+  @media screen and (min-width: $tabwidth) {
+    padding: 40px;
+  }
+}
 .template-index {
   > .row-1 {
     margin-bottom: 15px;

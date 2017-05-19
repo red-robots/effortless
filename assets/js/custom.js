@@ -7,6 +7,39 @@
 
 jQuery(document).ready(function ($) {
 	
+    if($("#eff-embed-signup").length > 0) {	
+        if (document.cookie.indexOf('visited=true') == -1) {
+            var fifteenDays = 1000*60*60*24*15;
+            var expires = new Date((new Date()).valueOf() + fifteenDays);
+            document.cookie = "visited=true;expires=" + expires.toUTCString();
+
+            
+            var width = window.innerWidth*0.5 > 960 ? "960px" : "50%";
+            width = window.innerWidth < 600 ? "95%": width;
+            var cboxOptions = {
+            width: width,
+            // height: '95%',
+            // maxWidth: '960px',
+            // maxHeight: '960px',
+            inline:true, 
+            href:"#eff-embed-signup",
+            opacity:.8,
+            close: '<i class="fa fa-close"></i>'
+            }
+
+
+            $.colorbox(cboxOptions);
+
+            $(window).resize(function(){
+                var width = window.innerWidth*0.5 > 960 ? "960px" : "50%";
+                width = window.innerWidth < 600 ? "95%": width;
+                $.colorbox.resize({
+                    width: width,
+                    // height: window.innerHeight > parseInt(cboxOptions.maxHeight) ? cboxOptions.maxHeight : cboxOptions.height
+                });
+            });            
+        }
+    }
 	/*
 	*
 	*	Current Page Active

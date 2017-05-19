@@ -8,7 +8,22 @@
  */
 
 ?>
-
+<div style="display: none;">
+    <div id="eff-embed-signup">
+        <?php $popup_text = get_field("popup_text");
+        $popup_form = get_field("popup_form");
+        if($popup_text):?>
+            <div class="copy">
+                <?php echo $popup_text;?>
+            </div>
+        <?php endif;
+        if($popup_form):?>
+            <div class="popup-form">
+                <?php echo $popup_form;?>
+            </div>
+        <?php endif;?>
+    </div>
+</div>
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-index full-width-wrapper"); ?>>
     <?php $images = get_field("row_1_images");
     $tag = get_field("row_1_tag");
