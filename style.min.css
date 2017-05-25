@@ -939,6 +939,7 @@ a.surrounding:hover{color:inherit}
 .template-sitemap .row-2,.error-404 .row-2{padding:0 4% 30px 4%}
 .template-sitemap .row-2 .sitemap>.menu-sitemap-container>ul,.error-404 .row-2 .sitemap>.menu-sitemap-container>ul{margin-bottom:0}
 .template-mailchimp-embed{text-align:center}
+.template-mailchimp-embed input{margin:8px auto 0 auto}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
