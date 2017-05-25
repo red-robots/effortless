@@ -6,24 +6,25 @@
  *
  * @package ACStarter
  */
-
-?>
-<div style="display: none;">
-    <div id="eff-embed-signup">
-        <?php $popup_text = get_field("popup_text");
-        $popup_form = get_field("popup_form");
-        if($popup_text):?>
-            <div class="copy">
-                <?php echo $popup_text;?>
-            </div>
-        <?php endif;
-        if($popup_form):?>
-            <div class="popup-form">
-                <?php echo $popup_form;?>
-            </div>
-        <?php endif;?>
+$popup_active = get_field("popup_active");
+if($popup_active && strcmp($popup_active,'yes')===0):?>
+    <div style="display: none;">
+        <div id="eff-embed-signup">
+            <?php $popup_text = get_field("popup_text");
+            if($popup_text):?>
+                <div class="copy">
+                    <?php echo $popup_text;?>
+                </div>
+            <?php endif;
+            $form_post = get_post(474);
+            if($form_post):?>
+                <div class="popup-form">
+                    <iframe scrolling="no" class="dynamic-embed" src="<?php echo get_the_permalink($form_post);?>"></iframe>
+                </div>
+            <?php endif;?>
+        </div>
     </div>
-</div>
+<?php endif;?>
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-index full-width-wrapper"); ?>>
     <?php $images = get_field("row_1_images");
     $tag = get_field("row_1_tag");

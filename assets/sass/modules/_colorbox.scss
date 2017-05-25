@@ -51,7 +51,7 @@
         #cboxTitle{
 			position:absolute; 
 			bottom:-25px; 
-			left:0; 
+			left:-999px; 
 			text-align:left; 
 			width:60%; 
 			font-weight:bold; 
@@ -103,7 +103,7 @@
 	#cboxTitle{
 			position:absolute; 
 			top:0px; 
-			left:0; 
+			left:-999px; 
 			text-align:left; 
 			width:20%; 
 			font-weight:bold; 

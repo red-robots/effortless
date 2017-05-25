@@ -6,9 +6,13 @@
  */
 
 jQuery(document).ready(function ($) {
-	
+	$('iframe.dynamic-embed').load(function(){
+        var $this = $(this);
+        var scroll_height = $this[0].contentWindow.document.body.scrollHeight;
+        $this.css("height",scroll_height+"px");
+    });
     if($("#eff-embed-signup").length > 0) {	
-        if (document.cookie.indexOf('visited=true') == -1) {
+        if (document.cookie.indexOf('visited=true') === -1) {
             var fifteenDays = 1000*60*60*24*15;
             var expires = new Date((new Date()).valueOf() + fifteenDays);
             document.cookie = "visited=true;expires=" + expires.toUTCString();
