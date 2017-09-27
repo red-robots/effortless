@@ -82,15 +82,44 @@ add_action( 'init', 'build_taxonomies', 0 );
 
 function build_taxonomies() {
 // custom tax
-	register_taxonomy( 'recipe_menu_tax', 'menu',
+	register_taxonomy( 'other', array('menu','recipe'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'Category',
+			'label' => 'Other',
 			'query_var' => true,
 			'show_admin_column' => true,
 			'public' => true,
-			'rewrite' => array( 'slug' => 'recipe-menu-category' ),
+			'rewrite' => array( 'slug' => 'other' ),
 			'_builtin' => true
 		) );
-
+    register_taxonomy( 'season', array('menu','recipe'),
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'Season',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'season' ),
+			'_builtin' => true
+    ) );
+    register_taxonomy( 'from', array('menu','recipe'),
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'From',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'from' ),
+			'_builtin' => true
+    ) );
+    register_taxonomy( 'year', array('menu','recipe'),
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'Year',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'year' ),
+			'_builtin' => true
+		) );
 } // End build taxonomies
