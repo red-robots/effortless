@@ -87,7 +87,7 @@
       @include flexbox();
       @include flexbox-justify(center);
       @include flexbox-align-content(center);
-      @include flexbox-align-itmes(center);
+      @include flexbox-align-items(center);
       background-size: auto 60%;
       background-position: right bottom;
       background-repeat: no-repeat;
@@ -162,7 +162,7 @@
       @include flexbox();
       @include flexbox-justify(center);
       @include flexbox-align-content(center);
-      @include flexbox-align-itmes(stretch);
+      @include flexbox-align-items(stretch);
     }
     @media screen and (min-width: 1400px) {
       align-items: center;
