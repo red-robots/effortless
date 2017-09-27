@@ -587,4 +587,41 @@
     margin: 8px auto 0 auto;
   }
 }
+.template-recipe {    
+  @include flexbox();
+  @include flexbox-justify(center);
+  @include flexbox-align-content(center);
+  @include flexbox-align-items(stretch);
+  @include flexbox-wrap(wrap);
+  padding: 0 0 $margin-large 0;
+  .column-1 {
+    width: 100%;
+    order: 2;
+    @media screen and (min-width: $mobilelandscapewidth) {
+      width: 50%;
+    }
+    @media screen and (min-width: $midwidth) {
+      width: 22%;
+      order: 1;
+    }
+  }
+  .column-2 {
+    width: 100%;
+    order: 1;
+    @media screen and (min-width: $midwidth) {
+      width: 56%;
+      order: 2;
+    }
+  }
+  aside.column-3 {
+    order: 3;
+    width: 100%;
+    @media screen and (min-width: $mobilelandscapewidth) {
+      width: 50%;
+    }
+    @media screen and (min-width: $midwidth) {
+      width: 22%;
+    }
+  }
+}
 
