@@ -780,7 +780,34 @@ a.surrounding:hover{color:inherit}
 #masthead>.row-3>.wrapper #mobile-site-navigation ul li:last-child{padding:0}
 #masthead>.row-3>.wrapper #mobile-site-navigation ul li a{color:#8c7e78;text-decoration:none;font-size:17px;text-transform:uppercase}
 #masthead>.row-3>.wrapper #mobile-site-navigation ul li a:hover{color:#8c7e78;font-weight:600}
-#colophon{background-color:#f2f2f2}
+#masthead-login{width:100%}
+#masthead-login>.row-1{position:relative;width:100%;background-color:#96a7a6}
+#masthead-login>.row-1>.wrapper{padding:5px 0}
+#masthead-login>.row-1>.wrapper .account.button{position:relative;color:white;background-color:#8c7e78;font-size:13px;width:135px;min-width:135px;text-transform:uppercase;text-align:center;margin:0 auto}
+@media screen and (min-width:700px){#masthead-login>.row-1>.wrapper .account.button{float:right;margin:0}
+}#masthead-login>.row-1>.wrapper .account.button:hover{background-color:rgba(140,126,120,0.8)}
+#masthead-login>.row-1>.wrapper .account.button a.surrounding{padding:5px 20px}
+#masthead-login>.row-2{width:100%;background-color:#f2f2f2}
+#masthead-login>.row-2>.wrapper{padding:20px}
+@media screen and (min-width:700px){#masthead-login>.row-2>.wrapper{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}
+}#masthead-login>.row-2>.wrapper .logo{position:relative;margin:0 auto;width:80%}
+@media screen and (min-width:600px){#masthead-login>.row-2>.wrapper .logo{width:50%}
+}@media screen and (min-width:700px){#masthead-login>.row-2>.wrapper .logo{width:30%;margin:0;max-width:250px}
+}#masthead-login>.row-2>.wrapper .logo a img{display:block;width:100%}
+#masthead-login>.row-2>.wrapper .button{position:relative;color:white;padding:10px 20px;background-color:#96a7a6;font-size:18px;width:135px;min-width:135px;text-transform:uppercase;text-align:center;margin:40px auto 0 auto}
+#masthead-login>.row-2>.wrapper .button:hover{background-color:#8c7e78}
+@media screen and (min-width:700px){#masthead-login>.row-2>.wrapper .button{display:none}
+}#masthead-login>.row-2>.wrapper #login-site-navigation{display:none;width:100%;padding:10px 0 0 0}
+#masthead-login>.row-2>.wrapper #login-site-navigation.toggled{display:block}
+@media screen and (min-width:700px){#masthead-login>.row-2>.wrapper #login-site-navigation{display:block;-webkit-box-flex:1 1 auto;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;padding:0 0 0 5%}
+}#masthead-login>.row-2>.wrapper #login-site-navigation ul{margin:0;padding:0;text-align:center}
+#masthead-login>.row-2>.wrapper #login-site-navigation ul li{display:block;width:100%;text-align:center;padding:0 0 10px 0}
+#masthead-login>.row-2>.wrapper #login-site-navigation ul li:last-child{padding:0}
+@media screen and (min-width:700px){#masthead-login>.row-2>.wrapper #login-site-navigation ul li{display:inline-block;padding:0 30px;width:auto}
+}#masthead-login>.row-2>.wrapper #login-site-navigation ul li a{color:#8c7e78;text-decoration:none;font-size:17px;text-transform:uppercase}
+#masthead-login>.row-2>.wrapper #login-site-navigation ul li a:hover{color:#8c7e78;font-weight:600}
+@media screen and (min-width:700px){#masthead-login>.row-2>.wrapper #login-site-navigation ul li a{font-size:20px}
+}#colophon{background-color:#f2f2f2}
 #colophon>.wrapper{padding:30px 20px}
 @media screen and (min-width:700px){#colophon>.wrapper{padding:7% 5%}
 }#colophon>.wrapper .site-info{width:100%}

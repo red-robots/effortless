@@ -120,7 +120,16 @@ jQuery(document).ready(function ($) {
     /* custom mobile menu */
     $('#masthead > .row-3 .button').click(function(){
         $('#masthead >.row-3 #mobile-site-navigation').toggle();
-    })
+    });
+    $('#masthead-login > .row-2 .button').click(function(){
+        var $nav = $('#masthead-login >.row-2 #login-site-navigation');
+        if($nav.hasClass("toggled")){
+            $nav.removeClass("toggled");
+        } else {
+            $nav.addClass("toggled");
+        }
+    });
+    
 
     /*--------------------------------------------
      * Custom slider for homepage

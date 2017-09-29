@@ -297,6 +297,140 @@ a.surrounding {
     }
   }
 }
+#masthead-login {
+  width: 100%;
+  > .row-1 {
+    position: relative;
+    width: 100%;
+    background-color: $color__eff-blue;
+    > .wrapper {
+      padding: 5px 0;
+      .account.button {
+        position: relative;
+        color: white;
+        background-color: $color__eff-brown;
+        font-size: 13px;
+        width: 135px;
+        min-width: 135px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 auto;
+        @media screen and (min-width: $tabwidth) {
+          float: right;
+          margin: 0;
+        }
+        &:hover {
+          background-color: rgba(140,126,120,0.8);
+        }
+        a.surrounding {
+          padding: 5px $margin-medium;
+        }
+      }
+    }
+  }
+  > .row-2 {
+    width: 100%;
+    background-color: $color__eff-light-grey;
+    > .wrapper {
+      padding: $margin-medium;
+      @media screen and (min-width: $tabwidth) {
+        @include flexbox();
+        @include flexbox-justify(space-between);
+        @include flexbox-align-content(center);
+        @include flexbox-align-items(stretch);
+      }
+      .logo {
+        position: relative;
+        margin: 0 auto;
+        width: 80%;
+        @media screen and (min-width: $mobilelandscapewidth) {
+          width: 50%;
+        }
+        @media screen and (min-width: $tabwidth) {
+          width: 30%;
+          margin: 0;
+          max-width: 250px;
+        }
+        a {
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+      .button {
+        position: relative;
+        color: white;
+        padding: $margin-small $margin-medium;
+        background-color: $color__eff-blue;
+        font-size: 18px;
+        width: 135px;
+        min-width: 135px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 40px auto 0 auto;
+        &:hover {
+          background-color: $color__eff-brown;
+        }
+        @media screen and (min-width: $tabwidth) {
+          display: none;
+        }
+      }
+      #login-site-navigation {
+        display: none;
+        width: 100%;
+        padding: 10px 0 0 0;
+        &.toggled {
+          display: block;
+        }
+        @media screen and (min-width: $tabwidth) {
+          display: block;
+          @include flexbox-flex(1,1,auto);
+          padding: 0 0 0 5%;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          li {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 0 0 $margin-small 0;
+            &:last-child {
+              padding: 0;
+            }
+            @media screen and (min-width: $tabwidth) {
+              display: inline-block;
+              padding: 0 30px;
+              width: auto;
+            }
+            a {
+              color: $color__eff-brown;
+              text-decoration: none;
+              font-size: 17px;
+              text-transform: uppercase;
+              &:hover {
+                color: $color__eff-brown;
+                font-weight: 600;
+              }
+              @media screen and (min-width: $tabwidth) {
+                font-size: 20px;
+              }
+            }
+          }
+          &.sub-menu {
+            li {
+              a {
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 #colophon {
   background-color: $color__eff-light-grey;
   >.wrapper {
