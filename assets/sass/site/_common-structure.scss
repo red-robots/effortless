@@ -337,7 +337,7 @@ a.surrounding {
         @include flexbox();
         @include flexbox-justify(space-between);
         @include flexbox-align-content(center);
-        @include flexbox-align-items(stretch);
+        @include flexbox-align-items(center);
       }
       .logo {
         position: relative;
