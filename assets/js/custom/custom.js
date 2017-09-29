@@ -85,7 +85,7 @@ jQuery(document).ready(function ($) {
     // options
 	 itemSelector: '.item',
 		  masonry: {
-			gutter: 15
+			gutter: 0
 			}
  		 });
 	});
@@ -179,4 +179,74 @@ jQuery(document).ready(function ($) {
         slide();
     }
     init_slider();//call function to init slider
+
+    $('.filter-term').click(function(){
+        var value = this.className.match(new RegExp("\\bvalue-(.*)\\b"));
+        if(value===null){
+            return;
+        }
+        value = value[1];
+        var $redirect_node = $('.redirect-url');
+        if($redirect_node.length===0){
+            return;
+        }
+        var redirect = $redirect_node[0].className.match(new RegExp("\\bvalue-(.*)\\b"));
+        if(redirect===null){
+            return;
+        }
+        redirect = redirect[1];
+        var redirect_query = redirect.match(new RegExp("\\?[^#]*(filter=([^&#]*))"));
+        var current_page_query = window.location.href.match(new RegExp("\\?[^#]*(filter=([^&#]*))"));
+        var filters = current_page_query ? 
+            current_page_query[2]===""? Array():current_page_query[2].split(",") :
+            Array();
+        var index = filters.indexOf(value);
+        if(index === -1){
+            filters.push(value);
+        } else {
+            filters.splice(index,1);
+        }
+        if(filters.length>0){
+            filters = filters.join(",");
+        } else {
+            filters = "";
+        }
+        if(redirect_query===null){
+            var index = redirect.indexOf("?");
+            if(index===-1){
+                var index = redirect.indexOf("#");
+                if(index===-1){
+                    var full_url = redirect+"?filter="+filters;
+                } else {
+                    var full_url = redirect.slice(0,index)+"?filter="+filters+redirect.slice(index);
+                }
+            } else {
+                var length = redirect.length;
+                var full_url = redirect.slice(0,index+1)+"filter="+filters;
+                if(index===length-1){
+                    full_url = full_url + redirect.slice(index+1);
+                } else {
+                    full_url = full_url + "&"+redirect.slice(index+1);
+                }
+            }
+        } else {
+            var filter_string = redirect_query[1];
+            var full_url = redirect.replace(filter_string,"filter="+filters);
+        }
+        window.location.href = full_url;
+    });
+    $('.terms-wrapper').click(function(){
+        var $this = $(this);
+        if($this.hasClass("toggled")){
+            $this.removeClass("toggled");
+        } else {
+            $this.addClass("toggled");
+        }
+    });
+    $('.terms-wrapper').each(function(){
+        var $this = $(this);
+        if($this.find('.fa-check-square-o').length>0){
+            $this.addClass("toggled");
+        }
+    });
 });// END #####################################    END

@@ -10,53 +10,92 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-menu full-width-wrapper"); ?>>
-    <?php $image = get_field("template_header_image");
-    if ($image):?>
-        <header class="template-header row-1" <?php echo 'style="background-image: url('. $image['url'].');"';?>>
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-            <h1><?php echo get_the_title(); ?></h1>
-        </header><!--.template-header-->
-    <?php endif; ?>
-    <section class="row-2 clear-bottom">
-        <?php $image = get_field("row_2_image");
-        $watermark = get_field("row_2_watermark");
-        $rows = get_field("row_2_blockquote");
-        if ($rows) :
-            $max = count($rows) - 1;
-            if ($max === -1) :
-                $blockquote = false;
-            else :
-                $blockquote = $rows[rand(0, $max)]['quote'];
-            endif;
-        else :
-            $blockquote = false;
-        endif;
-        if ($image):?>
-            <div class="column-1">
-                <div class="wrapper">
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-                </div><!--.wrapper-->
-            </div><!--.column-1-->
-        <?php endif; ?>
-        <?php if (get_the_content()): ?>
-            <div class="column-2">
-                <div class="wrapper copy">
-                    <?php the_content(); ?>
-                </div><!--.wrapper-->
-            </div><!--.column-2-->
-        <?php endif; ?>
-        <?php if ($blockquote): ?>
-            <aside class="column-3 blockquote">
-                <div class="outer-wrapper">
-                    <div class="inner-wrapper" <?php if($watermark) echo 'style="background-image: url('. $watermark['url'].');"';?>>
-                        <?php if ($blockquote): ?>
-                            <blockquote class="copy">
-                                <?php echo $blockquote; ?>
-                            </blockquote>
-                        <?php endif; ?>
-                    </div><!--.inner-wrapper-->
-                </div><!--.outer-wrapper-->
-            </aside><!--column-3-->
-        <?php endif; ?>
-    </section><!--.row-2-->
+    <?php $post = get_post(549);
+    setup_postdata($post);
+    $description_title = get_field("description_title");
+    $gameplan_title = get_field("gameplan_title");
+    $shopping_list_title = get_field("shopping_list_title");
+    $notes_title = get_field("notes_title");
+    wp_reset_postdata();?>
+    <aside class="column-1">
+        <?php get_template_part( 'template-parts/content', 'terms' );?>
+    </aside><!--.column-1-->
+    <section class="column-2">
+        <header>
+            <h1><?php the_title();?></h1>
+            <?php $serving_size = get_field("serving_size");
+            if($serving_size):?>
+                <div class="serving-size">
+                    <?php echo $serving_size;?>
+                </div><!--.serving-size-->
+            <?php endif;?>
+        </header>
+        <?php $recipes = get_field("recipes");
+        $description = get_field("description");
+        $gameplan = get_field("gameplan");
+        $shopping_list = get_field("shopping_list");
+        $notes = get_field("notes");
+        if($recipes):?>
+            <div class="recipes copy">
+                <?php foreach($recipes as $row):
+                    if(isset($row['recipe'])):;?>
+                        <div class="recipe">
+                            <a href="<?php echo get_the_permalink($row['recipe']->ID);?>">
+                                <?php echo $row['recipe']->post_title;?>
+                            </a>
+                        </div><!--.recipe-->
+                    <?php endif;
+                endforeach;?>
+            </div><!--.recipes-->
+        <?php endif;
+        if($description):?>
+            <?php if($description_title):?>
+                <header><h2><?php echo $description_title;?></h2></header>
+            <?php endif;?>
+            <div class="description copy">
+                <?php echo $description;?>    
+            </div><!--.description-->
+        <?php endif;
+        if($gameplan):?>
+            <?php if($gameplan_title):?>
+                <header><h2 class="gameplan"><?php echo $gameplan_title;?></h2></header>
+            <?php endif;?>
+            <div class="gameplan copy">
+                <?php foreach($gameplan as $row):
+                    if(!empty($row['time'])):?>
+                        <div class="unit">
+                            <?php if($row['day']):?>
+                                <header><h3><?php echo $row['day'];?></h3></header>
+                            <?php endif;
+                            foreach($row['time'] as $sub_row):?>
+                                <?php if($sub_row['time']):?>
+                                    <header><h3 class="time"><?php echo $sub_row['time'];?></h3></header>
+                                <?php endif;?>
+                                <?php if($sub_row['list']):?>
+                                    <?php echo $sub_row['list'];?>
+                                <?php endif;?>
+                            <?php endforeach;?>
+                        </div><!--.unit-->
+                    <?php endif;
+                endforeach;?>
+            </div><!--.gameplan-->
+        <?php endif;
+        if($shopping_list):?>
+            <?php if($shopping_list_title):?>
+                <header><h2 class="shopping-list"><?php echo $shopping_list_title;?></h2></header>
+            <?php endif;?>
+            <div class="shopping-list copy">
+                <?php foreach($shopping_list as $row):
+                    if($row['list']):?>
+                        <div class="unit">
+                            <?php if($row['header']):?>
+                                <header><h3><?php echo $row['header'];?></h3></header>
+                            <?php endif;?>
+                            <?php echo $row['list'];?>
+                        </div><!--.unit-->
+                    <?php endif;
+                endforeach;?>
+            </div><!--.shopping-list-->
+        <?php endif;?>
+    </section><!--.column-2-->
 </article><!-- #post-## -->

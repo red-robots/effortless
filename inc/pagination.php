@@ -1,19 +1,14 @@
 <?php
 // Pagination
 
-function pagi_posts_nav() {
-
-	if( is_singular() )
-		return;
-
-	global $wp_query;
+function pagi_posts_nav($query) {
 
 	/** Stop execution if there's only 1 page */
-	if( $wp_query->max_num_pages <= 1 )
+	if( $query->max_num_pages <= 1 )
 		return;
 
 	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-	$max   = intval( $wp_query->max_num_pages );
+	$max   = intval( $query->max_num_pages );
 
 	/**	Add current page to the array */
 	if ( $paged >= 1 )

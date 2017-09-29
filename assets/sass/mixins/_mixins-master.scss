@@ -68,4 +68,15 @@
 	-moz-transform: translateX($value1) translateY($value2);
 	-webkit-transform: translateX($value1) translateY($value2);
 	transform: translateX($value1) translateY($value2);
-  }
+	}
+	@mixin column($value1, $value2, $value3){
+		-webkit-column-count: $value1;
+		-moz-column-count: $value1;
+		column-count: $value1;
+		-moz-column-gap: $value2;
+		-webkit-column-gap: $value2;
+		column-gap: $value2;
+		-moz-column-width: $value3;
+		-webkit-column-width: $value3;
+		column-width: $value3;
+	}

@@ -64,7 +64,6 @@ function js_custom_init()
     'has_archive' => false, 
     'hierarchical' => false, // 'false' acts like posts 'true' acts like pages
     'menu_position' => 20,
-    'taxonomies' => ['recipe_menu_tax'],
     'supports' => array('title','editor','custom-fields','thumbnail'),
 	
   ); 
@@ -78,7 +77,6 @@ function js_custom_init()
 
   /*##############################################
 Custom Taxonomies     */
-add_action( 'init', 'build_taxonomies', 0 );
 
 function build_taxonomies() {
 // custom tax
@@ -123,3 +121,4 @@ function build_taxonomies() {
 			'_builtin' => true
 		) );
 } // End build taxonomies
+add_action( 'init', 'build_taxonomies', 0 );
