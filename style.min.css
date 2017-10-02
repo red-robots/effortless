@@ -996,7 +996,7 @@ a.surrounding:hover{color:inherit}
 @media screen and (min-width:900px){.template-recipe .column-2 header h1{font-size:30px}
 }.template-recipe .column-2 header .serving-size{display:inline;color:#96a7a6}
 .template-recipe .column-2 header .adapted-from{display:inline;margin-left:20px;color:#96a7a6}
-.template-recipe .column-2 header{margin:20px 0}
+.template-recipe .column-2 header{margin:0 0 20px 0}
 .template-recipe .column-2 header h2{margin:0;color:#8c7e78;text-transform:uppercase;font-size:20px}
 .template-recipe .column-2 .copy{margin:20px 0 0 0}
 .template-recipe .column-2 blockquote.quote{font-family:"adobe-caslon-pro",serif;margin:0}
@@ -1034,7 +1034,7 @@ a.surrounding:hover{color:inherit}
 }.template-menu .column-2 header h1{color:#96a7a6;font-size:25px;text-transform:uppercase;margin:0 0 10px 0}
 @media screen and (min-width:900px){.template-menu .column-2 header h1{font-size:30px}
 }.template-menu .column-2 header .serving-size{display:inline;color:#96a7a6}
-.template-menu .column-2>header{margin:20px 0}
+.template-menu .column-2>header{margin:0 0 20px 0}
 .template-menu .column-2>header h2{margin:0;color:#8c7e78;text-transform:uppercase;font-size:20px}
 .template-menu .column-2>header h2.shopping-list{color:#96a7a6}
 .template-menu .column-2>header h2.gameplan{color:#96a7a6}
