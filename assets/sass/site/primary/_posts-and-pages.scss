@@ -588,6 +588,7 @@
   }
 }
 .template-recipe {    
+  padding: $margin-extra-large 0;
   @include flexbox();
   @include flexbox-justify(stretch);
   @include flexbox-align-content(stretch);
@@ -600,7 +601,6 @@
     @include flexbox-wrap(wrap);
     @include flexbox-direction(row);
   }
-  padding: 0 0 $margin-large 0;
   .column-1 {
     width: 100%;
     order: 3;
@@ -788,6 +788,7 @@
   }
 }
 .template-menu {    
+  padding: $margin-extra-large 0;
   @include flexbox();
   @include flexbox-justify(stretch);
   @include flexbox-align-content(stretch);
@@ -800,7 +801,6 @@
     @include flexbox-direction(row);
     @include flexbox-wrap(no-wrap);
   }
-  padding: 0 0 $margin-large 0;
   .column-1 {
     width: 100%;
     order: 2;
