@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page-recipe-menu-search.php.
+ * Template part for displaying page content in page-filter.php.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("template-recipe-menu-search full-width-wrapper"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("template-filter full-width-wrapper"); ?>>
     <?php $filter_terms = null;
     if(isset($_GET['filter'])):
         $filter_terms = explode(",",$_GET['filter']);

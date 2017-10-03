@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Recipe Menu Search
+ * Template Name: Filter
  *
  */
 
@@ -12,7 +12,7 @@ get_header("login"); ?>
 			<?php
 			if( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'recipe-menu-search' );
+				get_template_part( 'template-parts/content', 'filter' );
 
 			endif; // End of the loop.
 			?>
