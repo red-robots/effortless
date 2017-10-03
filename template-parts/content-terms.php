@@ -1,4 +1,7 @@
-<div class="terms-section redirect-url redirect-value-<?php echo get_the_permalink(561);?>">
+<?php global $bella_url;?>
+<div class="terms-section <?php if($bella_url): 
+    echo 'redirect-url redirect-value-'. $bella_url;
+endif;?>">
     <?php $filter_terms = null;
     if(isset($_GET['filter'])):
         $filter_terms = explode(",",$_GET['filter']);

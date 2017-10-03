@@ -6,7 +6,7 @@
  *
  * @package ACStarter
  */
-
+global $bella_url;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-menu full-width-wrapper"); ?>>
@@ -18,7 +18,8 @@
     $notes_title = get_field("notes_title");
     wp_reset_postdata();?>
     <aside class="column-1">
-        <?php get_template_part( 'template-parts/content', 'terms' );?>
+        <?php $bella_url = get_the_permalink(561);
+        get_template_part( 'template-parts/content', 'terms' );?>
     </aside><!--.column-1-->
     <section class="column-2">
         <header>
