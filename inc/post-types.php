@@ -173,7 +173,7 @@ Custom Taxonomies     */
 
 function build_taxonomies() {
 // custom tax
-  register_taxonomy( 'other', array('menu','recipe','sources-resources','tips-quips','syle-points'),
+  register_taxonomy( 'other', array('menu','recipe','sources-resources','tips-quips','style-points'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
 			'label' => 'Other',
@@ -183,7 +183,7 @@ function build_taxonomies() {
 			'rewrite' => array( 'slug' => 'other' ),
 			'_builtin' => true
 		) );
-    register_taxonomy( 'season', array('menu','recipe','sources-resources','tips-quips','syle-points'),
+    register_taxonomy( 'season', array('menu','recipe','sources-resources','tips-quips','style-points'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
 			'label' => 'Season',
@@ -193,7 +193,7 @@ function build_taxonomies() {
 			'rewrite' => array( 'slug' => 'season' ),
 			'_builtin' => true
     ) );
-    register_taxonomy( 'from', array('menu','recipe','sources-resources','tips-quips','syle-points'),
+    register_taxonomy( 'from', array('menu','recipe','sources-resources','tips-quips','style-points'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
 			'label' => 'From',
@@ -203,7 +203,7 @@ function build_taxonomies() {
 			'rewrite' => array( 'slug' => 'from' ),
 			'_builtin' => true
     ) );
-    register_taxonomy( 'year', array('menu','recipe','sources-resources','tips-quips','syle-points'),
+    register_taxonomy( 'year', array('menu','recipe','sources-resources','tips-quips','style-points'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
 			'label' => 'Year',
