@@ -1,48 +1,45 @@
 <?php
 /**
- * The template for displaying search results pages.
+ * The template for displaying search page.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package ACStarter
  */
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'acstarter' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main " role="main">
+            <?php $post = get_post(131);
+            if($post):
+                setup_postdata($post);?>
+                <section class="template-search full-width-wrapper">
+                    <?php $image = get_field("template_header_image");
+                    if ($image):?>
+                        <header class="template-header row-1" <?php echo 'style="background-image: url('. $image['url'].');"';?>>
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                            <h1><?php esc_html_e( 'Search Results for: '. get_search_query(), 'acstarter' ); ?></h1>
+                        </header><!--.template-header-->
+					<?php endif; 
+					wp_reset_postdata();?>
+                    <div class="copy row-2">
+						<?php if(have_posts()):?>
+							<ul>
+								<?php while(have_posts()):the_post();?>
+									<li><a href="<?php the_permalink();?>"><?php the_title();?></a></li>
+								<?php endwhile;?>
+							</ul>
+						<?php endif;?>
+						<header><h2>Sitemap</h2></header>
+						<nav class="sitemap">
+                            <?php wp_nav_menu( array( 'theme_location' => 'sitemap' ) ); ?>
+                        </nav>
+                    </div><!-- .copy -->
+                </section><!-- .error-404 -->
+            <?php endif;//if post?>
 		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

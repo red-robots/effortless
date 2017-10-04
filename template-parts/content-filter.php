@@ -7,6 +7,7 @@
  * @package ACStarter
  */
 global $bella_url;
+global $post_type;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-filter full-width-wrapper"); ?>>

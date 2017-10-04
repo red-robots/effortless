@@ -305,13 +305,51 @@ a.surrounding {
     background-color: $color__eff-blue;
     > .wrapper {
       padding: 5px 0;
+      .search-form {
+        border: 1px solid white;
+        border-radius: 0;  
+        margin: 10px auto 0 auto;
+        padding: 0 10px 0 10px;
+        @media screen and (min-width: $tabwidth) {
+          float: right;
+          margin: 0;
+        }
+        &:before {
+          font-family: 'FontAwesome';
+          content: '\f002';
+          display: inline-block;
+          color: white;
+          margin-right: 10px;
+          font-size: 16px;
+          vertical-align: top;
+        }
+        label {
+          line-height: 1;
+          font-size: 13px;
+          vertical-align: top;
+        }
+        input[type=search] {
+          width: 100px;
+          background: transparent;
+          border: none;
+          color: white;
+          font-size: 13px;
+          padding: 0;
+          &::-webkit-input-placeholder {
+            color: white;
+          }
+          &::-moz-placeholder{
+            color: white;
+          }
+          &::placeholder {
+            color: white;
+          }
+        }
+      }
       .account.button {
         position: relative;
         color: white;
-        background-color: $color__eff-brown;
-        font-size: 13px;
-        width: 135px;
-        min-width: 135px;
+        font-size: 16px;
         text-transform: uppercase;
         text-align: center;
         margin: 0 auto;
@@ -319,11 +357,16 @@ a.surrounding {
           float: right;
           margin: 0;
         }
-        &:hover {
-          background-color: rgba(140,126,120,0.8);
-        }
         a.surrounding {
-          padding: 5px $margin-medium;
+          padding: 0 $margin-medium;
+          &:before {
+            font-family: 'FontAwesome';
+            content: '\f007';
+            display: inline-block;
+            color: white;
+            margin-right: 10px;
+            font-size: 18px;
+          }
         }
       }
     }
