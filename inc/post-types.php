@@ -203,14 +203,14 @@ function build_taxonomies() {
 			'rewrite' => array( 'slug' => 'from' ),
 			'_builtin' => true
     ) );
-    register_taxonomy( 'year', array('menu','recipe','sources-resources','tips-quips','style-points'),
+    register_taxonomy( 'when', array('menu','recipe','sources-resources','tips-quips','style-points'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
 			'label' => 'Year',
 			'query_var' => true,
 			'show_admin_column' => true,
 			'public' => true,
-			'rewrite' => array( 'slug' => 'year' ),
+			'rewrite' => array( 'slug' => 'when' ),
 			'_builtin' => true
 		) );
 } // End build taxonomies
