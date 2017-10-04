@@ -19,41 +19,63 @@ global $bella_url;
         get_template_part( 'template-parts/content', 'terms' );?>
     </aside><!--.column-1-->
     <section class="column-2">
-        <header><h1><?php the_title();?></h1></header>
-        <?php $post_type = get_field("post_type");
-        if($post_type && !empty($post_type)):
-            $args = array(
-                'posts_per_page'=>12,
-                'paged'=>$paged,
-                'post_type'=>$post_type,
-            );
-            $tax_params = array(
-                'relation' => 'AND',
-            );
-            $taxes = array();
-            if($filter_terms):
-                foreach($filter_terms as $term):
-                    $split = explode("-",$term);
-                    if(count($split)===2):
-                        $taxes[$split[0]][] = $split[1];    
-                    endif;
-                endforeach;
-            endif;
-            foreach($taxes as $key=>$value):
-                $tax_params[] = array(
-                    'taxonomy'=>$key,
-                    'field'=>'term_id',
-                    'terms'=>$value,
+        <header>
+            <h1><?php the_title();?></h1>
+            <?php get_template_part('template-parts/content', 'search-form');?>
+        </header>
+        <?php $args = null;
+        if(!isset($_GET['search'])):
+            $post_type = get_field("post_type");
+            if($post_type && !empty($post_type)):
+                $args = array(
+                    'posts_per_page'=>12,
+                    'paged'=>$paged,
+                    'post_type'=>$post_type,
                 );
-            endforeach;
-            if(count($tax_params)>1):
-                $args['tax_query'] = $tax_params;
+                $tax_params = array(
+                    'relation' => 'AND',
+                );
+                $taxes = array();
+                if($filter_terms):
+                    foreach($filter_terms as $term):
+                        $split = explode("-",$term);
+                        if(count($split)===2):
+                            $taxes[$split[0]][] = $split[1];    
+                        endif;
+                    endforeach;
+                endif;
+                foreach($taxes as $key=>$value):
+                    $tax_params[] = array(
+                        'taxonomy'=>$key,
+                        'field'=>'term_id',
+                        'terms'=>$value,
+                    );
+                endforeach;
+                if(count($tax_params)>1):
+                    $args['tax_query'] = $tax_params;
+                endif;
             endif;
+        else: 
+            $metakey	= "Harriet's Adages";
+            $metavalue	= "WordPress' database interface is like Sunday Morning: Easy.";
+    
+            $wpdb->query( $wpdb->prepare( 
+                "
+                    INSERT INTO $wpdb->postmeta
+                    ( post_id, meta_key, meta_value )
+                    VALUES ( %d, %s, %s )
+                ", 
+                    10, 
+                $metakey, 
+                $metavalue 
+            ) );
+        endif;
+        if($args):
             $query = new WP_Query($args);
             if($query->have_posts()):?>
                 <div id="container">    
                     <?php while($query->have_posts()):$query->the_post();?>
-                        <div class="item">
+                        <div class="item js-blocks">
                             <a href="<?php 
                             if(isset($_GET['filter'])):
                                 echo add_query_arg('filter',$_GET['filter'],get_the_permalink());

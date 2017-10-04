@@ -892,3 +892,76 @@
     }
   }
 }
+.template-generic-single {    
+  padding: $margin-extra-large 0;
+  @include flexbox();
+  @include flexbox-justify(stretch);
+  @include flexbox-align-content(stretch);
+  @include flexbox-align-items(stretch);
+  @include flexbox-direction(column);
+  @media screen and (min-width: $mobilelandscapewidth) {
+    @include flexbox-justify(center);
+    @include flexbox-align-content(center);
+    @include flexbox-align-items(stretch);
+    @include flexbox-wrap(wrap);
+    @include flexbox-direction(row);
+  }
+  .column-1 {
+    width: 100%;
+    order: 3;
+    @media screen and (min-width: $mobilelandscapewidth) {
+      width: 50%;
+      padding: 0 10px 0;
+    }
+    @media screen and (min-width: $midwidth) {
+      width: 180px;
+      order: 1;
+      padding: 0;
+    }
+  }
+  .column-2 {
+    width: 100%;
+    order: 1;
+    margin: 0 0 $margin-medium 0;
+    @media screen and (min-width: $midwidth) {
+      width: 56%;
+      order: 2;
+      padding: 0 5%;
+      margin: 0;
+      @include flexbox-flex(1,1,auto);
+    }
+    header {
+      h1 {
+        color: $color__eff-blue;
+        font-size: 25px;
+        text-transform: uppercase;
+        margin: 0 0 5px 0;
+        @media screen and (min-width: $midwidth) {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  aside.column-3 {
+    order: 2;
+    width: 100%;
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $mobilelandscapewidth) {
+      width: 50%;
+      padding: 0 0 0 10px;
+    }
+    @media screen and (min-width: $midwidth) {
+      width: 22%;
+      padding: 0;
+    }
+    header {
+      margin: 20px 0;
+      h2 {
+        margin: 0;
+        color: $color__eff-blue;
+        text-transform: uppercase;
+        font-size: 20px;
+      }
+    }
+  }
+}
