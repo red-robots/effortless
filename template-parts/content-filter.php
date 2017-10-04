@@ -24,9 +24,9 @@ global $bella_url;
             <?php get_template_part('template-parts/content', 'search-form');?>
         </header>
         <?php $args = null;
-        if(!isset($_GET['search'])):
-            $post_type = get_field("post_type");
-            if($post_type && !empty($post_type)):
+        $post_type = get_field("post_type");
+        if($post_type && !empty($post_type)):
+            if(!isset($_POST['search'])):
                 $args = array(
                     'posts_per_page'=>12,
                     'paged'=>$paged,
@@ -54,21 +54,35 @@ global $bella_url;
                 if(count($tax_params)>1):
                     $args['tax_query'] = $tax_params;
                 endif;
+            else: 
+                $prepare_args = $post_type;
+                $prepare_string = "SELECT ID, post_title FROM $wpdb->posts WHERE post_title LIKE '%%%s%%' AND (";
+                $max = count($post_type);
+                for($i = 1;$i<=$max;$i++):
+                    $prepare_string .= " post_type = %s";
+                    if($i<$max):
+                        $prepare_string.=" OR ";
+                    else:
+                        $prepare_string.=" ";
+                    endif;
+                endfor;
+                $prepare_string .= ")";
+                array_unshift($prepare_args,$_POST['search']);
+                array_unshift($prepare_args,$prepare_string);
+                $results = $wpdb->get_results(  call_user_func_array(array($wpdb, "prepare"),$prepare_args));
+                if($results):
+                    $in = array();
+                    foreach($results as $result):
+                        $in[] = $result->ID;
+                    endforeach;
+                    $args = array(
+                        'posts_per_page'=>12,
+                        'paged'=>$paged,
+                        'post_type'=>$post_type,
+                        'post__in'=>$in
+                    );
+                endif;
             endif;
-        else: 
-            $metakey	= "Harriet's Adages";
-            $metavalue	= "WordPress' database interface is like Sunday Morning: Easy.";
-    
-            $wpdb->query( $wpdb->prepare( 
-                "
-                    INSERT INTO $wpdb->postmeta
-                    ( post_id, meta_key, meta_value )
-                    VALUES ( %d, %s, %s )
-                ", 
-                    10, 
-                $metakey, 
-                $metavalue 
-            ) );
         endif;
         if($args):
             $query = new WP_Query($args);
