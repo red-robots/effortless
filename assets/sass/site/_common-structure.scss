@@ -445,7 +445,7 @@ a.surrounding {
             }
             @media screen and (min-width: $tabwidth) {
               display: inline-block;
-              padding: 0 30px;
+              padding: 0 30px 0 0;
               width: auto;
             }
             a {
@@ -717,7 +717,9 @@ a.surrounding {
       font-size: 20px;
       color: $color__eff-brown;
       text-transform: uppercase;
-      padding: 10px;
+      @media screen and (min-width: $midwidth) {
+        padding: 10px;
+      }
     }
   }
   .terms-wrapper {
@@ -769,11 +771,13 @@ a.surrounding {
     padding-bottom: 5px;
     .term {
       width: 100%;
-      padding: 5px 10px;
       @include flexbox();
       @include flexbox-justify(space-between);
       @include flexbox-align-content(center);
       @include flexbox-align-items(center);
+      @media screen and (min-width: $midwidth) {
+        padding: 5px 10px;
+      }
       .name {
         font-size: 16px;
         color: $color__eff-brown;

@@ -18,6 +18,9 @@
 	& a {
 		display: inline-block;
 	}
+	@media screen and (min-width: $midwidth) {
+	  padding: 0 0 0 1%;
+	}
 }
 .navigation li a,
 .navigation li a:hover,

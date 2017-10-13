@@ -195,7 +195,7 @@ jQuery(document).ready(function ($) {
             return;
         }
         value = value[1];
-        var $redirect_node = $('.redirect-url');
+        var $redirect_node = $(this).parents('.redirect-url').eq(0);
         if($redirect_node.length===0){
             return;
         }
@@ -207,7 +207,7 @@ jQuery(document).ready(function ($) {
         var redirect_query = redirect.match(new RegExp("\\?[^#]*(filter=([^&#]*))"));
         var current_page_query = window.location.href.match(new RegExp("\\?[^#]*(filter=([^&#]*))"));
         var filters = current_page_query ? 
-            current_page_query[2]===""? Array():current_page_query[2].split(",") :
+            current_page_query[2]===""? Array():current_page_query[2].replace("%2C",",").split(",") :
             Array();
         var index = filters.indexOf(value);
         if(index === -1){

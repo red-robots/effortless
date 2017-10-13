@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page-filter.php.
+ * Template part for displaying page content in page-filter-menus-recipes.php.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -13,7 +13,7 @@ global $post_type;
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-filter full-width-wrapper"); ?>>
     <?php $filter_terms = null;
     if(isset($_GET['filter'])):
-        $filter_terms = explode(",",$_GET['filter']);
+        $filter_terms = explode(",",str_replace("%2C",",",$_GET['filter']));
     endif;?>
     <aside class="column-1">
         <?php $bella_url = get_the_permalink();
@@ -24,6 +24,28 @@ global $post_type;
             <h1><?php the_title();?></h1>
             <?php get_template_part('template-parts/content', 'search-form');?>
         </header>
+        <div class="sub-menu redirect-url redirect-value-<?php echo get_the_permalink();?>">
+            <?php $terms = get_terms(array(
+                'taxonomy'=>'sub',
+                'hide_empty'=>false,
+            ));
+            if(!is_wp_error($terms)&&is_array($terms)&&!empty($terms)):?>
+                <div class="sub-terms terms">
+                    <?php foreach($terms as $term):?>
+                        <div class="filter-term term value-sub-<?php echo $term->term_id;?>">
+                            <div class="name">
+                                <?php echo $term->name;?>      
+                            </div><!--.name-->
+                            <?php if($filter_terms&&in_array("sub-".$term->term_id,$filter_terms)):?>
+                                <i class="fa fa-check-square-o"></i>
+                            <?php else:?>
+                                <i class="fa fa-square-o"></i>
+                            <?php endif;?>
+                        </div><!--.filter-term-->
+                    <?php endforeach;?>
+                </div><!--.from-terms-->
+            <?php endif;?>
+        </div><!--.sub-menu-->
         <?php $args = null;
         $post_type = get_field("post_type");
         if($post_type && !empty($post_type)):

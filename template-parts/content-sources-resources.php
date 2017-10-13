@@ -12,7 +12,7 @@ global $bella_url;
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-generic-single full-width-wrapper"); ?>>
     <aside class="column-1">
         <?php $bella_url = get_the_permalink(583);
-        get_template_part( 'template-parts/content', 'terms' );?>
+        get_template_part( 'template-parts/content', 'terms-hidden' );?>
     </aside><!--.column-1-->
     <section class="column-2">
         <header>

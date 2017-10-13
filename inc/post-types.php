@@ -212,6 +212,16 @@ function build_taxonomies() {
 			'public' => true,
 			'rewrite' => array( 'slug' => 'when' ),
 			'_builtin' => true
+    ) );
+    register_taxonomy( 'sub', array('menu','recipe'),
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'Sub',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'recipe-menu-sub' ),
+			'_builtin' => true
 		) );
 } // End build taxonomies
 add_action( 'init', 'build_taxonomies', 0 );
