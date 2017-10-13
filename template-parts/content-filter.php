@@ -29,7 +29,7 @@ global $post_type;
         if($post_type && !empty($post_type)):
             if(!isset($_POST['search'])):
                 $args = array(
-                    'posts_per_page'=>1,
+                    'posts_per_page'=>12,
                     'paged'=>$paged,
                     'post_type'=>$post_type,
                 );
