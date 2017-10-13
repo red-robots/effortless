@@ -1041,7 +1041,7 @@ a.surrounding:hover{color:inherit}
 }.template-filter .column-2 .sub-menu{margin:10px 0}
 .template-filter .column-2 .sub-menu .terms{margin:10px 0}
 @media screen and (min-width:900px){.template-filter .column-2 .sub-menu .terms{padding:0 0 0 1%;margin:0}
-}.template-filter .column-2 .sub-menu .terms .term{color:#96a7a6;margin:10px 0 0 0;font-size:18px}
+}.template-filter .column-2 .sub-menu .terms .term{cursor:pointer;color:#96a7a6;margin:10px 0 0 0;font-size:18px}
 .template-filter .column-2 .sub-menu .terms .term:first-child{margin:0}
 @media screen and (min-width:900px){.template-filter .column-2 .sub-menu .terms .term{margin:0 10px;display:inline-block}
 .template-filter .column-2 .sub-menu .terms .term:first-child{margin:0 10px 0 0}
