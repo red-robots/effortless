@@ -12,19 +12,20 @@ global $post_type;
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-filter full-width-wrapper"); ?>>
     <?php $filter_terms = null;
+    $queried_object = get_queried_object();
     if(isset($_GET['filter'])):
         $filter_terms = explode(",",str_replace("%2C",",",$_GET['filter']));
     endif;?>
     <aside class="column-1">
-        <?php $bella_url = get_the_permalink();
+        <?php $bella_url = is_a($queried_object,'WP_Term') ? get_term_link($queried_object) : get_the_permalink();
         get_template_part( 'template-parts/content', 'terms-hidden' );?>
     </aside><!--.column-1-->
     <section class="column-2">
         <header>
-            <h1><?php the_title();?></h1>
+            <h1><?php echo is_a($queried_object,'WP_Term') ? $queried_object->name: get_the_title();?></h1>
             <?php get_template_part('template-parts/content', 'search-form');?>
         </header>
-        <div class="sub-menu redirect-url redirect-value-<?php echo get_the_permalink();?>">
+        <div class="sub-menu">
             <?php $terms = get_terms(array(
                 'taxonomy'=>'sub',
                 'hide_empty'=>false,
@@ -32,16 +33,13 @@ global $post_type;
             if(!is_wp_error($terms)&&is_array($terms)&&!empty($terms)):?>
                 <div class="sub-terms terms">
                     <?php foreach($terms as $term):?>
-                        <div class="filter-term term value-sub-<?php echo $term->term_id;?>">
+                        <div class="term">
                             <div class="name">
-                                <?php echo $term->name;?>      
+                                <a href="<?php echo get_term_link($term);?>">
+                                    <?php echo $term->name;?>      
+                                </a>
                             </div><!--.name-->
-                            <?php if($filter_terms&&in_array("sub-".$term->term_id,$filter_terms)):?>
-                                <i class="fa fa-check-square-o"></i>
-                            <?php else:?>
-                                <i class="fa fa-square-o"></i>
-                            <?php endif;?>
-                        </div><!--.filter-term-->
+                        </div><!--.term-->
                     <?php endforeach;?>
                 </div><!--.from-terms-->
             <?php endif;?>
@@ -109,6 +107,13 @@ global $post_type;
         endif;
         if($args):
             $query = new WP_Query($args);
+        else: 
+            if(is_a($queried_object,'WP_Term')):
+                $args = true;
+                $query = $wp_query;
+            endif;
+        endif;
+        if($args):
             if($query->have_posts()):?>
                 <div id="container">    
                     <?php while($query->have_posts()):$query->the_post();?>

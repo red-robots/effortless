@@ -819,10 +819,13 @@
             }
           }
           .name {
-            display: inline;
-          }
-          i {
-            display: inline;
+            a {
+              text-decoration: none;
+              color: inherit;
+              &:hover {
+                color: inherit;
+              }
+            }
           }
         }
       }

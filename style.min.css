@@ -1045,8 +1045,8 @@ a.surrounding:hover{color:inherit}
 .template-filter .column-2 .sub-menu .terms .term:first-child{margin:0}
 @media screen and (min-width:900px){.template-filter .column-2 .sub-menu .terms .term{margin:0 10px;display:inline-block}
 .template-filter .column-2 .sub-menu .terms .term:first-child{margin:0 10px 0 0}
-}.template-filter .column-2 .sub-menu .terms .term .name{display:inline}
-.template-filter .column-2 .sub-menu .terms .term i{display:inline}
+}.template-filter .column-2 .sub-menu .terms .term .name a{text-decoration:none;color:inherit}
+.template-filter .column-2 .sub-menu .terms .term .name a:hover{color:inherit}
 .template-filter .column-2 #container .item{width:100%;margin:1% 0}
 @media screen and (min-width:600px){.template-filter .column-2 #container .item{width:calc(1/2*98%);margin:1% 0 1% 1%}
 }@media screen and (min-width:900px){.template-filter .column-2 #container .item{width:calc(1/4*96%);margin:1% 0 1% 1%}
