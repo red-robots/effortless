@@ -904,7 +904,7 @@
       margin: 0;
       @include flexbox-flex(1,1,auto);
     }
-    header {
+    >header {
       h1 {
         color: $color__eff-blue;
         font-size: 25px;
@@ -917,6 +917,23 @@
       .serving-size {
         display: inline;
         color: $color__eff-blue;
+      }
+    }
+    img.featured {
+      display: block;
+      width: 100%;
+      margin: 20px 0 0 0;
+      @media screen and (min-width: $tinywidth) {
+        float: right;
+        width: 40%;
+        margin: 0;
+      }
+      @media screen and (min-width: $mobilelandscapewidth) {
+        width: 30%;
+      }
+      @media screen and (min-width: $midwidth) {
+        width: 20%;
+        max-width: 250px;
       }
     }
     >header {

@@ -31,6 +31,10 @@ global $bella_url;
                 </div><!--.serving-size-->
             <?php endif;?>
         </header>
+        <?php $image = get_field("search_image");
+        if($image):?>
+            <img class="featured" src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
+        <?php endif;?>
         <?php $recipes = get_field("recipes");
         $description = get_field("description");
         $gameplan = get_field("gameplan");
@@ -58,7 +62,7 @@ global $bella_url;
             <?php if($description_title):?>
                 <header><h2><?php echo $description_title;?></h2></header>
             <?php endif;?>
-            <div class="description copy">
+            <div class="description copy clear-bottom">
                 <?php echo $description;?>    
             </div><!--.description-->
         <?php endif;
