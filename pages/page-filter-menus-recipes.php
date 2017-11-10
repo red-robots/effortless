@@ -11,9 +11,7 @@ get_header("login"); ?>
 
 			<?php
 			if( have_posts() ) : the_post();
-
 				get_template_part( 'template-parts/content', 'filter-menus-recipes' );
-
 			endif; // End of the loop.
 			?>
 
