@@ -423,11 +423,11 @@
       order: 1;
       width: 100%;
       @media screen and (min-width: $tabwidth) {
-        width: 51%;
+        width: 50%;
       }
       > .wrapper {
         text-align: left;
-        padding: $margin-medium 0;
+        padding: $margin-medium;
         text-align: center;
         @media screen and (min-width: $tabwidth) {
           padding: 20px;
@@ -469,7 +469,7 @@
       background-position: center;
       background-repeat: no-repeat;
       @media screen and (min-width: $tabwidth) {
-        width: 49%;
+        width: 50%;
       }
       img {
         width: 100%;
