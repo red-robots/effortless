@@ -401,6 +401,106 @@
   }
 }
 
+.template-join {
+  .row-1.template-header {
+    @media screen and (max-width: $tabwidth) {
+      margin-bottom: 0;
+    }
+  }
+  > .row-2, > .row-3, > .row-4 {
+    background-color: $color__eff-brown;
+    @media screen and (min-width: $tabwidth) {
+      margin-bottom: 4%;
+      @include flexbox();
+      @include flexbox-justify(center);
+      @include flexbox-align-content(center);
+      @include flexbox-align-items(stretch);
+    }
+    &:last-child {
+      margin-bottom: $margin-extra-large;
+    }
+    > .column-1 {
+      order: 1;
+      width: 100%;
+      @media screen and (min-width: $tabwidth) {
+        width: 51%;
+      }
+      > .wrapper {
+        text-align: left;
+        padding: $margin-medium 0;
+        text-align: center;
+        @media screen and (min-width: $tabwidth) {
+          padding: 20px;
+        }
+        .row-1 {
+          header {
+            padding: 0 0 $margin-medium 0;
+            h2 {
+              font-size: 20px;
+              color: white;
+              font-weight: 500;
+              text-transform: uppercase;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+        .row-2 {
+          color: white;
+          font-family: "adobe-caslon-pro", serif;
+        }
+        .row-3 {
+          margin: 20px 0 0 0;
+          display: inline-block;
+          padding: 10px 15px;
+          background-color: white;
+          color: $color__eff-brown;
+          text-transform: uppercase;
+          font-size: 20px;
+          text-decoration: none;
+        }
+      }
+    }
+    > .column-2 {
+      order: 2;
+      width: 100%;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      @media screen and (min-width: $tabwidth) {
+        width: 49%;
+      }
+      img {
+        width: 100%;
+        display: block;
+        @media screen and (min-width: $tabwidth) {
+          display: none;
+        }
+      }
+    }
+  }
+  > .row-2 {
+    > .column-1 {
+    }
+    > .column-2 {
+    }
+  }
+  > .row-3 {
+    > .column-1 {
+      @media screen and (min-width: $tabwidth) {
+        order: 2;
+      }
+    }
+    > .column-2 {
+      @media screen and (min-width: $tabwidth) {
+        order: 1;
+      }
+    }
+  }
+}
+
+
 .template-about, .template-page {
   .row-1 {
     /* see template header */
