@@ -432,6 +432,9 @@
         @media screen and (min-width: $tabwidth) {
           padding: 20px;
         }
+        @media screen and (min-width: $deskwidth) {
+          padding: 10%;
+        }
         .row-1 {
           header {
             padding: 0 0 $margin-medium 0;

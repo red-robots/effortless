@@ -964,6 +964,7 @@ a.surrounding:hover{color:inherit}
 @media screen and (min-width:700px){.template-join>.row-2>.column-1,.template-join>.row-3>.column-1,.template-join>.row-4>.column-1{width:50%}
 }.template-join>.row-2>.column-1>.wrapper,.template-join>.row-3>.column-1>.wrapper,.template-join>.row-4>.column-1>.wrapper{text-align:left;padding:20px;text-align:center}
 @media screen and (min-width:700px){.template-join>.row-2>.column-1>.wrapper,.template-join>.row-3>.column-1>.wrapper,.template-join>.row-4>.column-1>.wrapper{padding:20px}
+}@media screen and (min-width:1200px){.template-join>.row-2>.column-1>.wrapper,.template-join>.row-3>.column-1>.wrapper,.template-join>.row-4>.column-1>.wrapper{padding:10%}
 }.template-join>.row-2>.column-1>.wrapper .row-1 header,.template-join>.row-3>.column-1>.wrapper .row-1 header,.template-join>.row-4>.column-1>.wrapper .row-1 header{padding:0 0 20px 0}
 .template-join>.row-2>.column-1>.wrapper .row-1 header h2,.template-join>.row-3>.column-1>.wrapper .row-1 header h2,.template-join>.row-4>.column-1>.wrapper .row-1 header h2{font-size:20px;color:white;font-weight:500;text-transform:uppercase;margin:0;padding:0}
 .template-join>.row-2>.column-1>.wrapper .row-2,.template-join>.row-3>.column-1>.wrapper .row-2,.template-join>.row-4>.column-1>.wrapper .row-2{color:white;font-family:"adobe-caslon-pro",serif}
