@@ -10,13 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-about full-width-wrapper"); ?>>
-    <?php $image = get_field("template_header_image");
-    if ($image):?>
-        <header class="template-header row-1" <?php echo 'style="background-image: url('. $image['url'].');"';?>>
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-            <h1><?php echo get_the_title(); ?></h1>
-        </header><!--.template-header-->
-    <?php endif; ?>
+    <?php get_template_part("template-parts/content","template-header");?>
     <section class="row-2 clear-bottom">
         <?php $image = get_field("row_2_image");
         $watermark = get_field("row_2_watermark");

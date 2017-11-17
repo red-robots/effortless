@@ -600,7 +600,24 @@
     }
   }
 }
-
+.template-one-column {
+  .row-2 {
+    > .wrapper {
+      padding: 0 0 $margin-medium 0;
+      @media screen and (min-width: $tabwidth) {
+        padding: 0 4% $margin-medium 4%;
+      }
+      a.button, button[type=submit] {
+        background-color: $color__eff-blue;
+        border: 1px solid $color__eff-blue;
+        &:hover {
+          background-color: $color__eff-brown;
+          border: 1px solid $color__eff-brown;
+        }
+      }
+    }
+  }
+}
 .template-contact {
   .row-1 {
     /* see template header */
@@ -1171,13 +1188,10 @@
   }
 }
 .post-type-archive-product {
-  max-width: 1300px;
-  margin: 0 auto;
   #content {
-    padding: 20px;
-    @media screen and (min-width: $tabwidth){
-      padding: 0 8% 5% 8%;
-    }
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
     header.woocommerce-products-header {
       h1 {
         text-transform: uppercase;
@@ -1210,8 +1224,9 @@
     }
     ul.products {
       padding: 20px 0 0 0;
+      margin: 0;
       @media screen and (min-width: $tabwidth){
-        padding: 40px 0 0 0;
+        padding: 40px 5% 0 5%;
       }
       li {
         width: 100%;
