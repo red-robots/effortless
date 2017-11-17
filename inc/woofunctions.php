@@ -15,7 +15,9 @@ if(!function_exists('bella_remove_hooks')){
         remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
         remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
         remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
-		remove_action( 'woocommerce_review_order_after_order_total', array('WC_Subscriptions_Cart' , 'display_recurring_totals') );
+        if(class_exists('WC_Subscriptions_Cart')){
+            remove_action( 'woocommerce_review_order_after_order_total', array('WC_Subscriptions_Cart' , 'display_recurring_totals') );
+        }
     }
 }
 add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_single_add_to_cart', 10 );
