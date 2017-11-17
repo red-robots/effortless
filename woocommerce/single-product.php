@@ -15,7 +15,8 @@
  * @package 	WooCommerce/Templates
  * @version     1.6.4
  */
-
+wp_redirect(get_home_url(null,'/shop'));
+exit;
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }

@@ -1170,3 +1170,113 @@
     }
   }
 }
+.post-type-archive-product {
+  max-width: 1300px;
+  margin: 0 auto;
+  #content {
+    padding: 20px;
+    @media screen and (min-width: $tabwidth){
+      padding: 0 8% 5% 8%;
+    }
+    header.woocommerce-products-header {
+      h1 {
+        text-transform: uppercase;
+        font-size: 30px;
+        margin: 0 0 20px 0;
+        color: $color__eff-blue;
+        @media screen and (min-width: $tabwidth){
+          font-size: 40px;
+        }
+      }
+    }
+    .woocommerce-result-count {
+      color: $color__eff-blue;
+      float: none;
+      @media screen and (min-width: $tabwidth){
+        float: left;
+      }
+    }
+    form.woocommerce-ordering {
+      float: none;
+      @media screen and (min-width: $tabwidth){
+        float: right;
+      }
+      select {
+        color: white;
+        padding: 10px 15px;
+        background-color: $color__eff-brown;
+        border: none;
+      }
+    }
+    ul.products {
+      padding: 20px 0 0 0;
+      @media screen and (min-width: $tabwidth){
+        padding: 40px 0 0 0;
+      }
+      li {
+        width: 100%;
+        margin: 20px 0;
+        @media screen and (min-width: $tabwidth){
+          width: 48%;
+          margin: 0 4% 4% 0;
+        }
+        &.first {
+          margin-top: 0;
+        }
+        &.last {
+          margin-right: 0;
+        }
+        img {
+          width: 100%;
+          display: block;
+        }
+        h2 {
+          margin-top: 20px;
+          font-size: 20px;
+          text-align: center;
+          color: $color__eff-brown;
+        }
+        .woocommerce-product-details__short-description {
+          text-align: center;
+          color: $color__eff-brown;
+          font-size: 16px;
+          font-family: "adobe-caslon-pro", serif;
+        }
+        .price {
+          text-align: center;
+          color: $color__eff-blue;
+        }
+        form.cart {
+          text-align: center;
+          .quantity {
+            display: inline-block;
+            margin: 10px 20px 0 0;
+            &.hidden {
+              display: none;
+            }
+            input {
+              width: 76px;
+              padding: 10px 15px;
+              font-size: 16px;
+              line-height: 1.2;
+            }
+          }
+          button[type=submit] {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 16px;
+            line-height: 1.2;
+            color: white;
+            background-color: $color__eff-blue;
+            border: 1px solid $color__eff-blue;
+            margin: 10px 0 0 0;
+            &:hover {
+              background-color: $color__eff-brown;
+              border: 1px solid $color__eff-brown;
+            }
+          }
+        }
+      }
+    }
+  } 
+}
