@@ -102,7 +102,7 @@
         $step_image = get_field("step_3_step_image");
         $title = get_field("step_3_title");
         $link = get_field("step_3_link");
-        $link_text = get_field("step_1_link_text");
+        $link_text = get_field("step_3_link_text");
         $link_active = get_field("step_3_link_active");
         $copy = get_field("step_3_copy");?>
         <?php if($step_image||$title||$tag||$copy):?>
