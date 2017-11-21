@@ -17,6 +17,10 @@ if(!function_exists('bella_remove_hooks')){
         remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
         remove_action('woocommerce_before_shop_loop','woocommerce_result_count',20);
         remove_action('woocommerce_before_shop_loop','woocommerce_catalog_ordering',30);
+        if(class_exists('WC_Force_Sells')){
+            $instance = WC_Force_Sells::get_instance();
+            remove_action( 'woocommerce_after_add_to_cart_button', array( $instance, 'show_force_sell_products' ) );
+        }
         if(class_exists('WC_Subscriptions_Cart')){
             remove_action( 'woocommerce_review_order_after_order_total', array('WC_Subscriptions_Cart' , 'display_recurring_totals') );
             remove_action( 'woocommerce_cart_totals_after_order_total', array('WC_Subscriptions_Cart' , 'display_recurring_totals') );
