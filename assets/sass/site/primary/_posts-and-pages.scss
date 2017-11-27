@@ -618,7 +618,7 @@
     }
   }
 }
-.template-contact {
+.template-contact, .template-single, .template-archive {
   .row-1 {
     /* see template header */
   }
@@ -670,13 +670,26 @@
           @media screen and (min-width: $tabwidth) {
             background-size: 100% auto;
           }
-          blockquote {
+          blockquote, .list {
             padding: 0 12%;
             font-family: "adobe-caslon-pro", serif;
             padding: 50px 0 $margin-large 0;
             p {
               color: white;
               font-size: 23px;
+            }
+            ul {
+              margin: 0;
+              padding: 0;
+              li {
+                list-style-type: none;
+                a {
+                  color: white;
+                  &:hover {
+                    color: $color__eff-brown;
+                  }
+                }
+              }
             }
           }
         }
