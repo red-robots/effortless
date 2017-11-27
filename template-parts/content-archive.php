@@ -23,7 +23,7 @@
                 </div><!--.wrapper-->
             </div><!--.column-2-->
         <?php endif; ?>
-        <?php $watermark = get_field("row_2_watermark",131);?>
+        <?php $watermark = get_field("row_2_watermark",15);?>
         <aside class="column-2 blockquote">
             <div class="outer-wrapper">
                 <div class="inner-wrapper" <?php if($watermark) echo 'style="background-image: url('. $watermark['url'].');"';?>>
