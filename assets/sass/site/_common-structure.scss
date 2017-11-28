@@ -150,7 +150,7 @@ a.surrounding {
         min-width: 135px;
         text-transform: uppercase;
         text-align: center;
-        margin: 0 auto;
+        margin: 10px auto 0 auto;
         @media screen and (min-width: $tabwidth) {
           float: right;
           margin: 0;
@@ -160,6 +160,32 @@ a.surrounding {
         }
         a.surrounding {
           padding: 5px $margin-medium;
+        }
+      }
+      #cart-icon {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1;
+        @media screen and (min-width: $tabwidth) {
+          float: right;
+          font-size: 22px;
+          margin: 0 0 0 20px;
+        }
+        a {
+          position: relative;
+          text-decoration: none;
+          color: $color__eff-brown;
+          &:hover {
+            color: $color__eff-blue;
+          }
+          .num {
+            position: absolute;
+            left: 60%;
+            top: 45%;
+            color: white;
+            font-size: 8px;
+            @include translatexy(-50%,-50%);
+          }
         }
       }
       #site-navigation {
@@ -352,7 +378,7 @@ a.surrounding {
         font-size: 16px;
         text-transform: uppercase;
         text-align: center;
-        margin: 0 auto;
+        margin: 10px auto 0 auto;
         @media screen and (min-width: $tabwidth) {
           float: right;
           margin: 0;
@@ -366,6 +392,34 @@ a.surrounding {
             color: white;
             margin-right: 10px;
             font-size: 18px;
+          }
+        }
+      }
+      #cart-icon {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1;
+        @media screen and (min-width: $tabwidth) {
+          float: right;
+          font-size: 22px;
+        }
+        a {
+          position: relative;
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: $color__eff-brown;
+            .num {
+              color: white;
+            }
+          }
+          .num {
+            position: absolute;
+            left: 60%;
+            top: 45%;
+            color: $color__eff-brown;
+            font-size: 8px;
+            @include translatexy(-50%,-50%);
           }
         }
       }

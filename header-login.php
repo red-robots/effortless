@@ -28,6 +28,12 @@
 	<header id="masthead-login" class="site-header clear-bottom" role="banner">
         <div class="row-1">
             <div class="wrapper full-width-wrapper clear-bottom">
+                <div id="cart-icon" class="cart">
+                    <a href="<?php echo wc_get_cart_url();?>">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div class="num"></div><!--.num-->
+                    </a>
+                </div><!--.cart#cart-icon-->
                 <?php $account_link = get_field("account_link","option");
                 $account_text = get_field("account_text","option");
                 if($account_text&&$account_link):?>

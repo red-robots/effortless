@@ -60,3 +60,33 @@ if(!function_exists('bella_add_template_header')){
         wp_reset_postdata();
     }
 }
+if(!function_exists('bella_remove_x')){
+    add_filter('woocommerce_cart_item_remove_link', 'bella_remove_x', 10, 2);
+    function bella_remove_x($string, $cart_item_key) {
+        $string = str_replace('class="remove"', '', $string);
+        return str_replace('&times;', 'Remove', $string);
+    }
+}
+
+if(!function_exists('bella_ajax_get_cart_count')){
+    add_action( 'wp_ajax_bella_get_cart_count', 'bella_ajax_get_cart_count' );
+    add_action( 'wp_ajax_nopriv_bella_get_cart_count', 'bella_ajax_get_cart_count' );
+    function bella_ajax_get_cart_count() {
+        $response    = array(
+            'what'   => 'cart',
+            'action' => 'get_cart_count',
+            'data'   => WC()->cart->get_cart_contents_count(),
+        );
+        $xmlResponse = new WP_Ajax_Response( $response );
+        $xmlResponse->send();
+        die( 0 );
+    }
+}
+if(!function_exists('bella_return_to_shop')){
+    add_action('woocommerce_cart_collaterals','bella_return_to_shop');
+    function bella_return_to_shop() {
+        echo '<p class="return-to-shop"><a class="button wc-backward" href="' . 
+        esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ).'">'.
+         'Return to shop'.'</a></p>';
+    }
+}

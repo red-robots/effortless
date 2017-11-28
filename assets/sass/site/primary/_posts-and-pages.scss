@@ -50,8 +50,8 @@
           }
         }
         .copy {
-          font-size: 23px;
-          padding: 0 0 $margin-medium 0;
+          font-size: 25px;
+          padding: 0 0 30px 0;
           @media screen and (min-width: $tabwidth) {
             @include dropshadow;
             color: white;
@@ -677,6 +677,7 @@
       a.button, button[type=submit] {
         background-color: $color__eff-blue;
         border: 1px solid $color__eff-blue;
+        color:white;
         &:hover {
           background-color: $color__eff-brown;
           border: 1px solid $color__eff-brown;

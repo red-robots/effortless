@@ -258,4 +258,22 @@ jQuery(document).ready(function ($) {
             $this.addClass("toggled");
         }
     });
+    function update_cart_count(){
+        jQuery.post(
+            bellaajaxurl.url,
+            {
+                'action': 'bella_get_cart_count',
+                'data': '',
+            },
+            function (response) {
+                if ($(response).find("response_data").length > 0) {
+                    $text = $(response).find("response_data").eq(0).text();
+                    $('#cart-icon .num').html($text);
+                    console.log("loading");
+                }
+            }
+        );
+    }
+    update_cart_count();
+
 });// END #####################################    END
