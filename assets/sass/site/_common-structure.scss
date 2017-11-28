@@ -181,10 +181,14 @@ a.surrounding {
           .num {
             position: absolute;
             left: 60%;
-            top: 45%;
+            top: 47%;
             color: white;
             font-size: 8px;
             @include translatexy(-50%,-50%);
+            @media screen and (min-width: $tabwidth) {
+              left: 60%;
+              top: 45%;
+            }
           }
         }
       }
@@ -416,10 +420,14 @@ a.surrounding {
           .num {
             position: absolute;
             left: 60%;
-            top: 45%;
+            top: 47%;
             color: $color__eff-brown;
             font-size: 8px;
             @include translatexy(-50%,-50%);
+            @media screen and (min-width: $tabwidth) {
+              left: 60%;
+              top: 45%;
+            }
           }
         }
       }
