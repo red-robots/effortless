@@ -845,8 +845,9 @@ a.surrounding:hover{color:inherit}
 #colophon>.wrapper .site-info>.wrapper .sitemapbw ul li a:hover{color:#96a7a6}
 #colophon>.wrapper .site-info>.wrapper .sitemapbw ul li .sub-menu{margin:0;padding:0}
 @media screen and (min-width:700px){#colophon>.wrapper .site-info>.wrapper .sitemapbw ul li .sub-menu{padding:0 0 0 10px}
-}#colophon>.wrapper .social{min-width:70px}
-#colophon>.wrapper .social .facebook,#colophon>.wrapper .social .instagram{display:inline-block;margin:0 5px}
+}#colophon>.wrapper .social{min-width:70px;margin:20px 0 0 0;text-align:center}
+@media screen and (min-width:700px){#colophon>.wrapper .social{margin:0}
+}#colophon>.wrapper .social .facebook,#colophon>.wrapper .social .instagram{display:inline-block;margin:0 5px}
 #colophon>.wrapper .social .facebook a,#colophon>.wrapper .social .instagram a{font-size:20px;color:#8c7e78}
 #colophon>.wrapper .social .facebook a:hover,#colophon>.wrapper .social .instagram a:hover{color:#96a7a6}
 #colophon>.wrapper .email-signup{width:100%}

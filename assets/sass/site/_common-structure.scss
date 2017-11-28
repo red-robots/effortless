@@ -590,6 +590,11 @@ a.surrounding {
     }
     .social {
       min-width: 70px;
+      margin: 20px 0 0 0;
+      text-align: center;
+      @media screen and (min-width: $tabwidth) {
+        margin: 0;
+      }
       .facebook, .instagram {
         display: inline-block;
         margin: 0 5px;
