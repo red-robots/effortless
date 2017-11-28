@@ -105,3 +105,18 @@ function acstarter_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'acstarter_widgets_init' );
+
+/** from codex
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function wpdocs_excerpt_more( $more ) {
+  return sprintf( '...<br><br><a class="read-more" href="%1$s">%2$s<span>%3$s</span></a>',
+      get_permalink( get_the_ID() ),
+      'Read More',
+      '>'
+  );
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );

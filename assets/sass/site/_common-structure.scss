@@ -480,12 +480,14 @@ a.surrounding {
     padding: $margin-large $margin-medium;
     @media screen and (min-width: $tabwidth) {
       padding: 7% 5%;
+      @include flexbox();
+      @include flexbox-justify(space-between);
+      @include flexbox-align-content(flex-start);
+      @include flexbox-align-items(flex-start);
     }
     .site-info {
       width: 100%;
       @media screen and (min-width: $tabwidth) {
-        float: left;
-        width: 50%;
       }
       >.wrapper {
         max-width: 100%;
@@ -586,11 +588,23 @@ a.surrounding {
         }
       }
     }
+    .social {
+      min-width: 70px;
+      .facebook, .instagram {
+        display: inline-block;
+        margin: 0 5px;
+        a {
+          font-size: 20px;
+          color: $color__eff-brown;
+          &:hover {
+            color: $color__eff-blue;
+          }
+        } 
+      }
+    }
     .email-signup {
       width: 100%;
       @media screen and (min-width: $tabwidth) {
-        float: right;
-        width: 50%;
       }
       >.wrapper {
         text-align: center;

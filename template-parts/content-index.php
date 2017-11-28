@@ -208,4 +208,31 @@ if($popup_active && strcmp($popup_active,'yes')===0):?>
             <?php endif;//if for tag or copy or button text and link?>
         </section><!--.row-5-->
     <?php endif;//if for tag or image or copy or button text and link?>
+    <?php $args = array(
+        'posts_per_page'=>1,
+        'order'=>'ASC',
+        'orderby'=>'date',
+        'post_type'=>'post'
+    );
+    $query = new WP_Query($args);
+    if($query->have_posts()): $query->the_post();?>
+        <section class="row-6">
+            <?php if(has_post_thumbnail()):?>
+                <div class="col-1">
+                    <?php the_post_thumbnail('full');?>
+                </div><!--.col-1-->
+            <?php endif;?>
+            <div class="col-2">
+                <div class="wrapper">
+                    <header>
+                        <h3><?php the_date('m.d.Y');?></h3>
+                        <h2><?php the_title();?></h2>
+                    </header>
+                    <div class="copy">
+                        <?php the_excerpt();?>
+                    </div><!--.copy-->
+                </div><!--.wrapper-->
+            </div><!--.col-2-->
+        </section><!--.row-6-->
+    <?php endif;?>
 </article><!-- #post-## -->
