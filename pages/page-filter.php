@@ -3,7 +3,10 @@
  * Template Name: Filter
  *
  */
-
+if( !in_array( 'administrator', wp_get_current_user()->roles) ){
+	wp_redirect(get_bloginfo("url"));
+	exit;
+}
 get_header("login"); ?>
 
 	<div id="primary" class="content-area">
