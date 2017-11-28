@@ -269,7 +269,6 @@ jQuery(document).ready(function ($) {
                 if ($(response).find("response_data").length > 0) {
                     $text = $(response).find("response_data").eq(0).text();
                     $('#cart-icon .num').html($text);
-                    console.log("loading");
                 }
             }
         );
