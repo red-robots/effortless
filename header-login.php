@@ -18,7 +18,10 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <script src="https://use.typekit.net/vww2unj.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
+<?php $ga = get_field("google_analytics","option");
+if($ga):
+    echo $ga;
+endif;?>
 <?php wp_head(); ?>
 </head>
 
