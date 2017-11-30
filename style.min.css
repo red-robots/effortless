@@ -752,7 +752,7 @@ a.surrounding:hover{color:inherit}
 #masthead>.row-1{position:relative;width:100%;background-color:#f2f2f2}
 #masthead>.row-1>.wrapper{padding:10px 0}
 #masthead>.row-1>.wrapper .account.button{position:relative;color:white;background-color:#8c7e78;font-size:13px;width:135px;min-width:135px;text-transform:uppercase;text-align:center;margin:10px auto 0 auto}
-@media screen and (min-width:700px){#masthead>.row-1>.wrapper .account.button{float:right;margin:0}
+@media screen and (min-width:700px){#masthead>.row-1>.wrapper .account.button{float:right;margin:0 0 0 20px}
 }#masthead>.row-1>.wrapper .account.button:hover{background-color:rgba(140,126,120,0.8)}
 #masthead>.row-1>.wrapper .account.button a.surrounding{padding:5px 20px}
 #masthead>.row-1>.wrapper #cart-icon{text-align:center;font-size:30px;line-height:1}
