@@ -38,7 +38,14 @@ add_action('wp_head', 'mytheme_fontawesome');
 	Favicon.
 ---------------------------------------*/
 function mytheme_favicon() { 
- echo '<link rel="shortcut icon" href="' . get_bloginfo('stylesheet_directory') . '/images/favicon.ico" >'; 
+ echo '<link rel="apple-touch-icon" sizes="180x180" href="'.get_template_directory_uri().'/images/favicons/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="'.get_template_directory_uri().'/images/favicons/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="'.get_template_directory_uri().'/images/favicons/favicon-16x16.png">
+ <link rel="manifest" href="'.get_template_directory_uri().'/images/favicons/manifest.json">
+ <link rel="mask-icon" href="'.get_template_directory_uri().'/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+ <link rel="shortcut icon" href="'.get_template_directory_uri().'/images/favicons/favicon.ico">
+ <meta name="msapplication-config" content="'.get_template_directory_uri().'/images/favicons/browserconfig.xml">
+ <meta name="theme-color" content="#ffffff">'; 
 } 
 add_action('wp_head', 'mytheme_favicon');
 
