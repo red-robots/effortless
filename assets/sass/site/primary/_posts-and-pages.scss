@@ -858,13 +858,10 @@
     .copy {
       margin: 20px 0 0 0;
     }
-    .directions {
-
+    .directions, .notes, .quote {
+      margin: 20px 0 0 0;
     }
-    .notes {
-
-    }
-    blockquote.quote {
+    blockquote {
       font-family: "adobe-caslon-pro", serif;
       margin: 0;
     }
@@ -876,10 +873,24 @@
     @media screen and (min-width: $mobilelandscapewidth) {
       width: 50%;
       padding: 0 0 0 10px;
+      margin: 0;
     }
     @media screen and (min-width: $midwidth) {
       width: 22%;
       padding: 0;
+    }
+    a.pdf {
+      display: inline-block;
+      background-color: $color__eff-blue;
+      border: 1px solid $color__eff-blue;
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      &:hover {
+        color: $color__eff-blue;
+        background-color: transparent;
+      }
     }
     header {
       margin: 20px 0;
@@ -1034,6 +1045,7 @@
     #container {
       .item {
         width: 100%;
+        display: inline-block;
         margin: 1% 0;
         @media screen and (min-width: $mobilelandscapewidth) {
           width: calc(1/2*98%);
@@ -1131,10 +1143,6 @@
       }
       @media screen and (min-width: $mobilelandscapewidth) {
         width: 30%;
-      }
-      @media screen and (min-width: $midwidth) {
-        width: 20%;
-        max-width: 250px;
       }
     }
     >header {

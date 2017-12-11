@@ -6,21 +6,18 @@
  *
  * @package ACStarter
  */
-global $bella_url;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-recipe full-width-wrapper"); ?>>
-    <?php $post = get_post(549);
+    <?php $saved_post = $post;
+    $post = get_post(549);
     setup_postdata($post);
     $ingredients_title = get_field("ingredients_title");
     $directions_title = get_field("directions_title");
     $notes_title = get_field("notes_title");
     $quote_title = get_field("quote_title");
-    wp_reset_postdata();?>
-    <aside class="column-1">
-        <?php $bella_url = get_the_permalink(561);
-        get_template_part( 'template-parts/content', 'terms-hidden' );?>
-    </aside><!--.column-1-->
+    $post = $saved_post;
+    setup_postdata($post);?>
     <section class="column-2">
         <header>
             <h1><?php the_title();?></h1>

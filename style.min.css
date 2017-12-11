@@ -1069,11 +1069,14 @@ a.surrounding:hover{color:inherit}
 .template-recipe .column-2 header{margin:0 0 20px 0}
 .template-recipe .column-2 header h2{margin:0;color:#8c7e78;text-transform:uppercase;font-size:20px}
 .template-recipe .column-2 .copy{margin:20px 0 0 0}
-.template-recipe .column-2 blockquote.quote{font-family:"adobe-caslon-pro",serif;margin:0}
+.template-recipe .column-2 .directions,.template-recipe .column-2 .notes,.template-recipe .column-2 .quote{margin:20px 0 0 0}
+.template-recipe .column-2 blockquote{font-family:"adobe-caslon-pro",serif;margin:0}
 .template-recipe aside.column-3{-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2;width:100%;margin:0 0 20px 0}
-@media screen and (min-width:600px){.template-recipe aside.column-3{width:50%;padding:0 0 0 10px}
+@media screen and (min-width:600px){.template-recipe aside.column-3{width:50%;padding:0 0 0 10px;margin:0}
 }@media screen and (min-width:900px){.template-recipe aside.column-3{width:22%;padding:0}
-}.template-recipe aside.column-3 header{margin:20px 0}
+}.template-recipe aside.column-3 a.pdf{display:inline-block;background-color:#96a7a6;border:1px solid #96a7a6;color:white;padding:10px 15px;text-align:center;text-decoration:none}
+.template-recipe aside.column-3 a.pdf:hover{color:#96a7a6;background-color:transparent}
+.template-recipe aside.column-3 header{margin:20px 0}
 .template-recipe aside.column-3 header h2{margin:0;color:#96a7a6;text-transform:uppercase;font-size:20px}
 .template-recipe aside.column-3 .ingredients .ingredient{margin:20px 0;color:#96a7a6;font-size:16px}
 .template-recipe aside.column-3 .ingredients .ingredient:last-child{margin-bottom:0}
@@ -1105,7 +1108,7 @@ a.surrounding:hover{color:inherit}
 .template-filter .column-2 .sub-menu .terms .term:first-child{margin:0 10px 0 0}
 }.template-filter .column-2 .sub-menu .terms .term .name a{text-decoration:none;color:inherit}
 .template-filter .column-2 .sub-menu .terms .term .name a:hover{color:inherit}
-.template-filter .column-2 #container .item{width:100%;margin:1% 0}
+.template-filter .column-2 #container .item{width:100%;display:inline-block;margin:1% 0}
 @media screen and (min-width:600px){.template-filter .column-2 #container .item{width:calc(1/2*98%);margin:1% 0 1% 1%}
 }@media screen and (min-width:900px){.template-filter .column-2 #container .item{width:calc(1/4*96%);margin:1% 0 1% 1%}
 }.template-filter .column-2 #container .item a{color:inherit;text-decoration:none}
@@ -1126,7 +1129,6 @@ a.surrounding:hover{color:inherit}
 .template-menu .column-2 img.featured{display:block;width:100%;margin:20px 0 0 0}
 @media screen and (min-width:350px){.template-menu .column-2 img.featured{float:right;width:40%;margin:0}
 }@media screen and (min-width:600px){.template-menu .column-2 img.featured{width:30%}
-}@media screen and (min-width:900px){.template-menu .column-2 img.featured{width:20%;max-width:250px}
 }.template-menu .column-2>header{margin:0 0 20px 0}
 .template-menu .column-2>header h2{margin:0;color:#8c7e78;text-transform:uppercase;font-size:20px}
 .template-menu .column-2>header h2.shopping-list{color:#96a7a6}

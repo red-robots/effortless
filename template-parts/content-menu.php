@@ -43,7 +43,7 @@ global $bella_url;
         if($recipes):?>
             <div class="recipes copy">
                 <?php foreach($recipes as $row):
-                    if($row['recipe']||$row['text_recipe']):;?>
+                    if($row['recipe']||$row['text_recipe']):?>
                         <div class="recipe">
                             <?php if($row['text_recipe']):?>
                                 <?php echo $row['text_recipe'];?>
@@ -57,8 +57,9 @@ global $bella_url;
                     <?php endif;
                 endforeach;?>
             </div><!--.recipes-->
-        <?php endif;
-        if($description):?>
+        <?php endif;?>
+        <div class="clear"></div><!--.clear-->
+        <?php if($description):?>
             <?php if($description_title):?>
                 <header><h2><?php echo $description_title;?></h2></header>
             <?php endif;?>
@@ -109,3 +110,15 @@ global $bella_url;
         <?php endif;?>
     </section><!--.column-2-->
 </article><!-- #post-## -->
+<?php if($recipes):?>
+    <?php foreach($recipes as $row):
+        if($row['recipe']):
+            $post = get_post($row['recipe']->ID);
+            if($post):
+                setup_postdata($post);
+                get_template_part('template-parts/content', 'recipe-for-menu');
+            endif;
+            wp_reset_postdata();?>
+        <?php endif;
+    endforeach;?>
+<?php endif;?>

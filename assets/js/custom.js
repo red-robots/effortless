@@ -74,29 +74,31 @@ jQuery(document).ready(function ($) {
 		width: '80%', 
 		height: '80%'
 	});
-	
+    
+    /*
+	*
+	*	Equal Heights Divs
+	*
+	------------------------------------*/
+    $('.js-blocks').matchHeight();
+    
 	/*
 	*
 	*	Isotope with Images Loaded
 	*
 	------------------------------------*/
 	var $container = $('#container').imagesLoaded( function() {
-  	$container.isotope({
-    // options
-	 itemSelector: '.item',
-		  masonry: {
-			gutter: 0
-			}
- 		 });
+        $container.isotope({
+            // options
+            itemSelector: '.item',
+            masonry: {
+                gutter: 0
+            }
+        });
 	});
 
 	
-	/*
-	*
-	*	Equal Heights Divs
-	*
-	------------------------------------*/
-	$('.js-blocks').matchHeight();
+	
 
 	/*
 	*

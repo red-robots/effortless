@@ -45,75 +45,72 @@ global $post_type;
             <?php endif;?>
         </div><!--.sub-menu-->
         <?php $args = null;
-        $post_type = get_field("post_type");
-        if($post_type && !empty($post_type)):
-            if(!isset($_POST['search'])):
+        if(!isset($_POST['search'])):
+            $args = array(
+                'posts_per_page'=>12,
+                'paged'=>$paged,
+                'post_type'=>array('menu','recipe'),
+            );
+            $tax_params = array(
+                'relation' => 'AND',
+            );
+            $taxes = array();
+            if($filter_terms):
+                foreach($filter_terms as $term):
+                    $split = explode("-",$term);
+                    if(count($split)===2):
+                        $taxes[$split[0]][] = $split[1];    
+                    endif;
+                endforeach;
+            endif;
+            foreach($taxes as $key=>$value):
+                $tax_params[] = array(
+                    'taxonomy'=>$key,
+                    'field'=>'term_id',
+                    'terms'=>$value,
+                );
+            endforeach;
+            if(is_a($queried_object,'WP_Term')):
+                $tax_params[] = array(
+                    'taxonomy'=>'sub',
+                    'field'=>'slug',
+                    'terms'=>get_query_var( 'term' )
+                );
+            endif;
+            if(count($tax_params)>1):
+                $args['tax_query'] = $tax_params;
+            endif;
+        else: 
+            $prepare_args = $post_type;
+            $prepare_string = "SELECT ID, post_title FROM $wpdb->posts WHERE post_title LIKE '%%%s%%' AND (";
+            $max = count($post_type);
+            for($i = 1;$i<=$max;$i++):
+                $prepare_string .= " post_type = %s";
+                if($i<$max):
+                    $prepare_string.=" OR ";
+                else:
+                    $prepare_string.=" ";
+                endif;
+            endfor;
+            $prepare_string .= ")";
+            array_unshift($prepare_args,$_POST['search']);
+            array_unshift($prepare_args,$prepare_string);
+            $results = $wpdb->get_results(  call_user_func_array(array($wpdb, "prepare"),$prepare_args));
+            if($results):
+                $in = array();
+                foreach($results as $result):
+                    $in[] = $result->ID;
+                endforeach;
                 $args = array(
                     'posts_per_page'=>12,
                     'paged'=>$paged,
                     'post_type'=>$post_type,
+                    'post__in'=>$in
                 );
-                $tax_params = array(
-                    'relation' => 'AND',
-                );
-                $taxes = array();
-                if($filter_terms):
-                    foreach($filter_terms as $term):
-                        $split = explode("-",$term);
-                        if(count($split)===2):
-                            $taxes[$split[0]][] = $split[1];    
-                        endif;
-                    endforeach;
-                endif;
-                foreach($taxes as $key=>$value):
-                    $tax_params[] = array(
-                        'taxonomy'=>$key,
-                        'field'=>'term_id',
-                        'terms'=>$value,
-                    );
-                endforeach;
-                if(count($tax_params)>1):
-                    $args['tax_query'] = $tax_params;
-                endif;
-            else: 
-                $prepare_args = $post_type;
-                $prepare_string = "SELECT ID, post_title FROM $wpdb->posts WHERE post_title LIKE '%%%s%%' AND (";
-                $max = count($post_type);
-                for($i = 1;$i<=$max;$i++):
-                    $prepare_string .= " post_type = %s";
-                    if($i<$max):
-                        $prepare_string.=" OR ";
-                    else:
-                        $prepare_string.=" ";
-                    endif;
-                endfor;
-                $prepare_string .= ")";
-                array_unshift($prepare_args,$_POST['search']);
-                array_unshift($prepare_args,$prepare_string);
-                $results = $wpdb->get_results(  call_user_func_array(array($wpdb, "prepare"),$prepare_args));
-                if($results):
-                    $in = array();
-                    foreach($results as $result):
-                        $in[] = $result->ID;
-                    endforeach;
-                    $args = array(
-                        'posts_per_page'=>12,
-                        'paged'=>$paged,
-                        'post_type'=>$post_type,
-                        'post__in'=>$in
-                    );
-                endif;
             endif;
         endif;
         if($args):
             $query = new WP_Query($args);
-        else: 
-            if(is_a($queried_object,'WP_Term')):
-                $args = true;
-                $query = $wp_query;
-            endif;
-        endif;
-        if($args):
             if($query->have_posts()):?>
                 <div id="container">    
                     <?php while($query->have_posts()):$query->the_post();?>
