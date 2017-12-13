@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page-filter.php.
+ * Template part for displaying page content in page-filter-menus-recipes.php.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -8,24 +8,44 @@
  */
 global $bella_url;
 global $post_type;
+global $tax;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-filter full-width-wrapper"); ?>>
     <?php $filter_terms = null;
+    $queried_object = get_queried_object();
     if(isset($_GET['filter'])):
-        $filter_terms = explode(",",$_GET['filter']);
+        $filter_terms = explode(",",str_replace("%2C",",",$_GET['filter']));
     endif;?>
     <aside class="column-1">
-        <?php $bella_url = get_the_permalink();
+        <?php $bella_url = is_a($queried_object,'WP_Term') ? get_term_link($queried_object) : get_the_permalink();
         get_template_part( 'template-parts/content', 'terms-hidden' );?>
     </aside><!--.column-1-->
     <section class="column-2">
         <header>
-            <h1><?php the_title();?></h1>
+            <h1><?php echo is_a($queried_object,'WP_Term') ? $queried_object->name: get_the_title();?></h1>
             <?php get_template_part('template-parts/content', 'search-form');?>
         </header>
+        <div class="sub-menu">
+            <?php $terms = get_terms(array(
+                'taxonomy'=>$tax,
+                'hide_empty'=>false,
+            ));
+            if(!is_wp_error($terms)&&is_array($terms)&&!empty($terms)):?>
+                <div class="sub-terms terms">
+                    <?php foreach($terms as $term):?>
+                        <div class="term">
+                            <div class="name">
+                                <a href="<?php echo get_term_link($term);?>">
+                                    <?php echo $term->name;?>      
+                                </a>
+                            </div><!--.name-->
+                        </div><!--.term-->
+                    <?php endforeach;?>
+                </div><!--.from-terms-->
+            <?php endif;?>
+        </div><!--.sub-menu-->
         <?php $args = null;
-        $post_type = get_field("post_type");
         if($post_type && !empty($post_type)):
             if(!isset($_POST['search'])):
                 $args = array(
@@ -52,6 +72,13 @@ global $post_type;
                         'terms'=>$value,
                     );
                 endforeach;
+                if(is_a($queried_object,'WP_Term')):
+                    $tax_params[] = array(
+                        'taxonomy'=>$tax,
+                        'field'=>'slug',
+                        'terms'=>get_query_var( 'term' )
+                    );
+                endif;
                 if(count($tax_params)>1):
                     $args['tax_query'] = $tax_params;
                 endif;

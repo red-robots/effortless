@@ -1,12 +1,16 @@
 <?php
 /**
- * Template Name: Filter Resources
+ * Template Name: Sources & Resources
  *
  */
 if( !in_array( 'administrator', wp_get_current_user()->roles) ){
 	wp_redirect(get_bloginfo("url"));
 	exit;
 }
+global $post_type;
+global $tax;
+$tax = 'sub-2';
+$post_type = array('sources-resources');
 get_header("login"); ?>
 
 	<div id="primary" class="content-area">
@@ -15,7 +19,7 @@ get_header("login"); ?>
 			<?php
 			if( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'filter-resources' );
+				get_template_part( 'template-parts/content', 'filter' );
 
 			endif; // End of the loop.
 			?>

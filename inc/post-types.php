@@ -173,26 +173,6 @@ Custom Taxonomies     */
 
 function build_taxonomies() {
 // custom tax
-  register_taxonomy( 'other', array('menu','recipe','sources-resources','tips-quips','style-points'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'Other',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'other' ),
-			'_builtin' => true
-		) );
-    register_taxonomy( 'season', array('menu','recipe','sources-resources','tips-quips','style-points'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'Season',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'season' ),
-			'_builtin' => true
-    ) );
     register_taxonomy( 'from', array('menu','recipe','sources-resources','tips-quips','style-points'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
@@ -203,16 +183,6 @@ function build_taxonomies() {
 			'rewrite' => array( 'slug' => 'from' ),
 			'_builtin' => true
     ) );
-    register_taxonomy( 'when', array('menu','recipe','sources-resources','tips-quips','style-points'),
-		array(
-			'hierarchical' => true, // true = acts like categories false = acts like tags
-			'label' => 'Year',
-			'query_var' => true,
-			'show_admin_column' => true,
-			'public' => true,
-			'rewrite' => array( 'slug' => 'when' ),
-			'_builtin' => true
-    ) );
     register_taxonomy( 'sub', array('menu','recipe'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
@@ -221,6 +191,36 @@ function build_taxonomies() {
 			'show_admin_column' => true,
 			'public' => true,
 			'rewrite' => array( 'slug' => 'recipe-menu-sub' ),
+			'_builtin' => true
+		) );
+    register_taxonomy( 'sub-2', array('sources-resources'),
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'Sub',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'sources-resources-sub' ),
+			'_builtin' => true
+		) );
+    register_taxonomy( 'sub-3', array('tips-quips'),
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'Sub',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'tips-quips-sub' ),
+			'_builtin' => true
+		) );
+    register_taxonomy( 'sub-4', array('style-points'),
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'Sub',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'style-points-sub' ),
 			'_builtin' => true
 		) );
 } // End build taxonomies
