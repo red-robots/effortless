@@ -39,7 +39,8 @@ global $tax;
                     <?php foreach($terms as $term):?>
                         <div class="term">
                             <div class="name">
-                                <a href="<?php echo get_term_link($term);?>">
+                                <a href="<?php $link = get_term_link($term); 
+                                if(!is_wp_error($link)) echo $link;?>">
                                     <?php echo $term->name;?>      
                                 </a>
                             </div><!--.name-->
@@ -112,6 +113,35 @@ global $tax;
                         'post_type'=>$post_type,
                         'post__in'=>$in
                     );
+                    $tax_params = array(
+                        'relation' => 'AND',
+                    );
+                    $taxes = array();
+                    if($filter_terms):
+                        foreach($filter_terms as $term):
+                            $split = explode("-",$term);
+                            if(count($split)===2):
+                                $taxes[$split[0]][] = $split[1];    
+                            endif;
+                        endforeach;
+                    endif;
+                    foreach($taxes as $key=>$value):
+                        $tax_params[] = array(
+                            'taxonomy'=>$key,
+                            'field'=>'term_id',
+                            'terms'=>$value,
+                        );
+                    endforeach;
+                    if(is_a($queried_object,'WP_Term')&&$tax):
+                        $tax_params[] = array(
+                            'taxonomy'=>$tax,
+                            'field'=>'slug',
+                            'terms'=>get_query_var( 'term' )
+                        );
+                    endif;
+                    if(count($tax_params)>1):
+                        $args['tax_query'] = $tax_params;
+                    endif;
                 endif;
             endif;
         endif;
