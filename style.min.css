@@ -1156,8 +1156,15 @@ a.surrounding:hover{color:inherit}
 }.template-generic-single aside.column-3{-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2;width:100%;margin:0 0 20px 0}
 @media screen and (min-width:600px){.template-generic-single aside.column-3{width:50%;padding:0 0 0 10px}
 }@media screen and (min-width:900px){.template-generic-single aside.column-3{width:22%;padding:0}
-}.template-generic-single aside.column-3 header{margin:20px 0}
-.template-generic-single aside.column-3 header h2{margin:0;color:#96a7a6;text-transform:uppercase;font-size:20px}
+}.template-generic-single aside.column-3>header{margin:20px 0}
+.template-generic-single aside.column-3>header h2{margin:0;color:#96a7a6;text-transform:uppercase;font-size:20px}
+.template-generic-single aside.column-3>.item{margin:20px 0 0 0}
+.template-generic-single aside.column-3>.item:first-child{margin:0}
+.template-generic-single aside.column-3>.item a{text-decoration:none}
+.template-generic-single aside.column-3>.item img{width:100%;display:block}
+.template-generic-single aside.column-3>.item header{text-align:center}
+.template-generic-single aside.column-3>.item header h2{margin:10px 0 0 0;color:#96a7a6;text-transform:uppercase;font-size:20px}
+.template-generic-single aside.column-3>.item header h3{margin:10px 0 0 0;color:#96a7a6;text-transform:uppercase;font-size:18px}
 .post-type-archive-product #content{width:95%;padding:0;margin:0 auto}
 .post-type-archive-product #content header.woocommerce-products-header h1{text-transform:uppercase;font-size:30px;margin:0 0 20px 0;color:#96a7a6}
 @media screen and (min-width:700px){.post-type-archive-product #content header.woocommerce-products-header h1{font-size:40px}
