@@ -27,10 +27,13 @@ global $tax;
             <?php get_template_part('template-parts/content', 'search-form');?>
         </header>
         <div class="sub-menu">
-            <?php $terms = get_terms(array(
-                'taxonomy'=>$tax,
-                'hide_empty'=>false,
-            ));
+            <?php $terms = null;
+            if($tax):
+                $terms = get_terms(array(
+                    'taxonomy'=>$tax,
+                    'hide_empty'=>false,
+                ));
+            endif;
             if(!is_wp_error($terms)&&is_array($terms)&&!empty($terms)):?>
                 <div class="sub-terms terms">
                     <?php foreach($terms as $term):?>
@@ -72,7 +75,7 @@ global $tax;
                         'terms'=>$value,
                     );
                 endforeach;
-                if(is_a($queried_object,'WP_Term')):
+                if(is_a($queried_object,'WP_Term')&&$tax):
                     $tax_params[] = array(
                         'taxonomy'=>$tax,
                         'field'=>'slug',
