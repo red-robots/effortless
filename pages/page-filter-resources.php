@@ -19,7 +19,7 @@ get_header("login"); ?>
 			<?php
 			if( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'filter' );
+				get_template_part( 'template-parts/content', 'filter-sources-resources' );
 
 			endif; // End of the loop.
 			?>

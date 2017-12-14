@@ -151,18 +151,34 @@ global $tax;
                 <div class="container">    
                     <?php while($query->have_posts()):$query->the_post();?>
                         <div class="item js-blocks">
-                            <a href="<?php 
-                            if(isset($_GET['filter'])):
-                                echo add_query_arg('filter',$_GET['filter'],get_the_permalink());
-                            else:
-                                the_permalink();
-                            endif;?>">
+                            <?php $website_link = get_field("website_link");
+                            $pdf_link = get_field("pdf_link");
+                            if($pdf_link||$website_link):?>
+                                <a href="<?php if($pdf_link):
+                                    echo $pdf_link['url'];
+                                else:
+                                    echo $website_link;
+                                endif;?>" target="_blank">
+                            <?php endif;?>
                                 <?php $image = get_field("search_image");
                                 if($image):?>
                                     <img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
                                 <?php endif;?>
-                                <header><h2><?php the_title();?></h2></header>
-                            </a>
+                                <?php $company = get_field("company");
+                                $product_title = get_field("product_title");
+                                if($product_title||$company):?>
+                                    <header>
+                                        <?php if($company):?>
+                                            <h2><?php echo $company;?></h2>
+                                        <?php endif;
+                                        if($product_title):?>
+                                            <h3><?php echo $product_title;?></h3>
+                                        <?php endif;?>
+                                    </header>
+                                <?php endif;?>
+                            <?php if($pdf_link||$website_link):?>
+                                </a>
+                            <?php endif;?>
                         </div><!--.item-->
                     <?php endwhile;?>
                 </div><!--#container-->

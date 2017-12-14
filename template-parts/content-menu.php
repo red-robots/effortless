@@ -58,6 +58,11 @@ global $bella_url;
                 endforeach;?>
             </div><!--.recipes-->
         <?php endif;?>
+        <?php $pdf = get_field("pdf");
+        $pdf_text = get_field("pdf_text");
+        if($pdf):?>
+            <a class="pdf" href="<?php echo $pdf['url'];?>" target="_blank"><?php if($pdf_text) echo $pdf_text; else echo "Print Menu";?></a>
+        <?php endif;?>
         <div class="clear"></div><!--.clear-->
         <?php if($description):?>
             <?php if($description_title):?>
