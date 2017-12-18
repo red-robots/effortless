@@ -59,7 +59,7 @@ endif;?>
                 <?php $logo = get_field("logo","option");
                 if($logo):?>
                     <div class="logo">
-                        <a href="<?php echo get_bloginfo("url");?>" class="surrounding">
+                        <a href="<?php echo get_the_permalink(1368);?>" class="surrounding">
                             <img src="<?php echo $logo['url'];?>" alt="<?php echo $logo['alt'];?>">
                         </a>
                     </div><!--.logo-->
