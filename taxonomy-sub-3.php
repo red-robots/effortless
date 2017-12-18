@@ -13,6 +13,8 @@ if( !in_array( 'administrator', wp_get_current_user()->roles) ){
 }
 global $post_type;
 global $tax;
+global $from_tax;
+$from_tax = 'from-3';
 $tax = 'sub-3';
 $post_type = array('tips-quips');
 get_header("login"); ?>

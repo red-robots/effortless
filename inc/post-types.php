@@ -173,14 +173,44 @@ Custom Taxonomies     */
 
 function build_taxonomies() {
 // custom tax
-    register_taxonomy( 'from', array('menu','recipe','sources-resources','tips-quips','style-points'),
+    register_taxonomy( 'from', array('menu','recipe'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
 			'label' => 'From',
 			'query_var' => true,
 			'show_admin_column' => true,
 			'public' => true,
-			'rewrite' => array( 'slug' => 'from' ),
+			'rewrite' => array( 'slug' => 'recipe-menu-from' ),
+			'_builtin' => true
+    ) );
+    register_taxonomy( 'from-2', array('sources-resources'),
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'From',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'sources-resources-from' ),
+			'_builtin' => true
+    ) );
+    register_taxonomy( 'from-3', array('tips-quips'),
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'From',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'tips-quips-from' ),
+			'_builtin' => true
+    ) );
+    register_taxonomy( 'from-4', array('style-points'),
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'From',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'style-points-from' ),
 			'_builtin' => true
     ) );
     register_taxonomy( 'sub', array('menu','recipe'),

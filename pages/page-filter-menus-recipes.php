@@ -10,6 +10,8 @@ if( !in_array( 'administrator', wp_get_current_user()->roles) ){
 }
 global $post_type;
 global $tax;
+global $from_tax;
+$from_tax = 'from';
 $tax = 'sub';
 $post_type = array('menu','recipe');
 get_header("login"); ?>

@@ -9,6 +9,7 @@
 global $bella_url;
 global $post_type;
 global $tax;
+global $from_tax;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-filter full-width-wrapper"); ?>>
@@ -63,7 +64,7 @@ global $tax;
                 $taxes = array();
                 if($filter_terms):
                     foreach($filter_terms as $term):
-                        $split = explode("-",$term);
+                        $split = explode(";",$term);
                         if(count($split)===2):
                             $taxes[$split[0]][] = $split[1];    
                         endif;

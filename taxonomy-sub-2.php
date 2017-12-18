@@ -13,6 +13,8 @@ if( !in_array( 'administrator', wp_get_current_user()->roles) ){
 }
 global $post_type;
 global $tax;
+global $from_tax;
+$from_tax = 'from-2';
 $tax = 'sub-2';
 $post_type = array('sources-resources');
 get_header("login"); ?>
