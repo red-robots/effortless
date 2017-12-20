@@ -28,7 +28,7 @@ global $bella_url;
             foreach($gallery as $row):?>
                 <div class="item">
                     <?php if($row['link']):?>
-                        <a href="<?php echo $row['link'];?>">
+                        <a href="<?php echo $row['link'];?>" target="_blank">
                     <?php endif;?>
                         <?php if($row['image']):?>
                             <img src="<?php echo $row['image']['sizes']['large'];?>" alt="<?php echo $row['image']['alt'];?>">
@@ -47,7 +47,7 @@ global $bella_url;
                         </a>
                     <?php endif;?>
                 </div><!--.item-->
-        <?php endforeach;
+            <?php endforeach;
         endif;?>
     </aside><!--.column-3-->
 </article><!-- #post-## -->

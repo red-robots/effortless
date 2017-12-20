@@ -335,6 +335,15 @@ a.surrounding {
     background-color: $color__eff-blue;
     > .wrapper {
       padding: 5px 0;
+      a.return {
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        @media screen and (min-width: $tabwidth) {
+          float: left;
+        }
+      }
       .search-form {
         border: 1px solid white;
         border-radius: 0;  
@@ -403,9 +412,11 @@ a.surrounding {
         text-align: center;
         font-size: 30px;
         line-height: 1;
+        margin: 10px 0 0 0;
         @media screen and (min-width: $tabwidth) {
           float: right;
           font-size: 22px;
+          margin: 0;
         }
         a {
           position: relative;

@@ -31,6 +31,10 @@ endif;?>
 	<header id="masthead-login" class="site-header clear-bottom" role="banner">
         <div class="row-1">
             <div class="wrapper full-width-wrapper clear-bottom">
+                <?php $return_text = get_field("return_to_main_site_text","option");
+                if($return_text):?>
+                    <a class="return" href="<?php echo get_bloginfo("url");?>"><i class="fa fa-arrow-left"></i>&nbsp;<?php echo $return_text;?></a>
+                <?php endif;?>
                 <div id="cart-icon" class="cart">
                     <a href="<?php echo wc_get_cart_url();?>">
                         <i class="fa fa-shopping-cart"></i>

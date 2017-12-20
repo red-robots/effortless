@@ -790,7 +790,9 @@ a.surrounding:hover{color:inherit}
 #masthead-login{width:100%}
 #masthead-login>.row-1{position:relative;width:100%;background-color:#96a7a6}
 #masthead-login>.row-1>.wrapper{padding:5px 0}
-#masthead-login>.row-1>.wrapper .search-form{border:1px solid white;border-radius:0;margin:10px auto 0 auto;padding:0 10px 0 10px}
+#masthead-login>.row-1>.wrapper a.return{color:white;text-decoration:none;text-align:center;display:block}
+@media screen and (min-width:700px){#masthead-login>.row-1>.wrapper a.return{float:left}
+}#masthead-login>.row-1>.wrapper .search-form{border:1px solid white;border-radius:0;margin:10px auto 0 auto;padding:0 10px 0 10px}
 @media screen and (min-width:700px){#masthead-login>.row-1>.wrapper .search-form{float:right;margin:0}
 }#masthead-login>.row-1>.wrapper .search-form:before{font-family:'FontAwesome';content:'\f002';display:inline-block;color:white;margin-right:10px;font-size:16px;vertical-align:top}
 #masthead-login>.row-1>.wrapper .search-form label{line-height:1;font-size:13px;vertical-align:top}
@@ -803,8 +805,8 @@ a.surrounding:hover{color:inherit}
 @media screen and (min-width:700px){#masthead-login>.row-1>.wrapper .account.button{float:right;margin:0}
 }#masthead-login>.row-1>.wrapper .account.button a.surrounding{padding:0 20px}
 #masthead-login>.row-1>.wrapper .account.button a.surrounding:before{font-family:'FontAwesome';content:'\f007';display:inline-block;color:white;margin-right:10px;font-size:18px}
-#masthead-login>.row-1>.wrapper #cart-icon{text-align:center;font-size:30px;line-height:1}
-@media screen and (min-width:700px){#masthead-login>.row-1>.wrapper #cart-icon{float:right;font-size:22px}
+#masthead-login>.row-1>.wrapper #cart-icon{text-align:center;font-size:30px;line-height:1;margin:10px 0 0 0}
+@media screen and (min-width:700px){#masthead-login>.row-1>.wrapper #cart-icon{float:right;font-size:22px;margin:0}
 }#masthead-login>.row-1>.wrapper #cart-icon a{position:relative;color:white;text-decoration:none}
 #masthead-login>.row-1>.wrapper #cart-icon a:hover{color:#8c7e78}
 #masthead-login>.row-1>.wrapper #cart-icon a:hover .num{color:white}
@@ -1196,15 +1198,17 @@ a.surrounding:hover{color:inherit}
 .post-type-archive-product #content>ul.products>li form.cart button[type=submit]:hover{background-color:#8c7e78;border:1px solid #8c7e78}
 .template-members-landing{padding:20px 0}
 @media screen and (min-width:600px){.template-members-landing{padding:40px 0}
-}.template-members-landing>.row-2 .item{width:100%;display:block;margin:1% 0}
-@media screen and (min-width:600px){.template-members-landing>.row-2 .item{width:calc(1/2*96%);float:left;margin:1%}
-}@media screen and (min-width:900px){.template-members-landing>.row-2 .item{width:calc(1/4*92%);margin:1%}
-}.template-members-landing>.row-2 .item a{display:block;text-decoration:none;color:inherit}
-.template-members-landing>.row-2 .item a:hover{color:inherit}
-.template-members-landing>.row-2 .item header.top{padding:15px 20px;background-color:#96a7a6}
-.template-members-landing>.row-2 .item header.top h2{margin:0;color:white;font-family:"adobe-caslon-pro",serif;font-weight:500}
-.template-members-landing>.row-2 .item img{display:block;width:100%}
-.template-members-landing>.row-2 .item header h3{margin:20px 0 0 0;color:#96a7a6;text-transform:uppercase;font-size:18px}
+}.template-members-landing>.row-3{margin:20px 0 0 0}
+@media screen and (min-width:600px){.template-members-landing>.row-3{margin:40px 0 0 0}
+}.template-members-landing>.row-3 .item{width:100%;display:block;margin:1% 0}
+@media screen and (min-width:600px){.template-members-landing>.row-3 .item{width:calc(1/2*96%);float:left;margin:1%}
+}@media screen and (min-width:900px){.template-members-landing>.row-3 .item{width:calc(1/4*92%);margin:1%}
+}.template-members-landing>.row-3 .item a{display:block;text-decoration:none;color:inherit}
+.template-members-landing>.row-3 .item a:hover{color:inherit}
+.template-members-landing>.row-3 .item header.top{padding:15px 20px;background-color:#96a7a6}
+.template-members-landing>.row-3 .item header.top h2{margin:0;color:white;font-family:"adobe-caslon-pro",serif;font-weight:500}
+.template-members-landing>.row-3 .item img{display:block;width:100%}
+.template-members-landing>.row-3 .item header h3{margin:20px 0 0 0;color:#96a7a6;text-transform:uppercase;font-size:18px}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
