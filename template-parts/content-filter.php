@@ -89,7 +89,7 @@ global $from_tax;
                 endif;
             else: 
                 $prepare_args = $post_type;
-                $prepare_string = "SELECT ID, post_title FROM $wpdb->posts WHERE post_title LIKE '%%%s%%' AND (";
+                $prepare_string = "SELECT ID FROM $wpdb->posts WHERE post_title LIKE '%%%s%%' AND (";
                 $max = count($post_type);
                 for($i = 1;$i<=$max;$i++):
                     $prepare_string .= " post_type = %s";
@@ -99,7 +99,8 @@ global $from_tax;
                         $prepare_string.=" ";
                     endif;
                 endfor;
-                $prepare_string .= ")";
+                $prepare_string .= ") UNION SELECT object_id FROM $wpdb->term_relationships as r INNER JOIN $wpdb->terms as t ON t.term_id = r.term_taxonomy_id WHERE t.name LIKE '%%%s%%'";
+                $prepare_args[] = $_POST['search'];
                 array_unshift($prepare_args,$_POST['search']);
                 array_unshift($prepare_args,$prepare_string);
                 $results = $wpdb->get_results(  call_user_func_array(array($wpdb, "prepare"),$prepare_args));
