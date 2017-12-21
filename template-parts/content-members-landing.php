@@ -25,8 +25,8 @@
         $style_points_image = get_field("style_points_image");
         $menus_recipes_link = get_field("menus_recipes_link");
         $sources_resources_link = get_field("sources_resources_link");
-        $style_points_link = get_field("style_points_image");
-        $tips_quips_link = get_field("tips_quips_image");?>
+        $style_points_link = get_field("style_points_link");
+        $tips_quips_link = get_field("tips_quips_link");?>
         <?php if($menus_recipes_image&&$menus_recipes_text):
             if($menus_recipes_image):?>
                 <div class="item">
@@ -44,7 +44,8 @@
         <?php if($style_points_image&&$style_points_text):
             if($style_points_image):?>
                 <div class="item">
-                    <?php if($style_points_link):?>
+                    <?php if($style_points_link):
+                        var_dump($style_points_link);?>
                         <a href="<?php echo $style_points_link;?>">
                     <?php endif;?>
                         <header class="top"><h2><?php echo $style_points_text;?></h2></header>
