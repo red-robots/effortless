@@ -44,8 +44,7 @@
         <?php if($style_points_image&&$style_points_text):
             if($style_points_image):?>
                 <div class="item">
-                    <?php if($style_points_link):
-                        var_dump($style_points_link);?>
+                    <?php if($style_points_link):?>
                         <a href="<?php echo $style_points_link;?>">
                     <?php endif;?>
                         <header class="top"><h2><?php echo $style_points_text;?></h2></header>
