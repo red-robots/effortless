@@ -183,7 +183,7 @@ function build_taxonomies() {
 			'rewrite' => array( 'slug' => 'menu-from' ),
 			'_builtin' => true
     ) );
-    register_taxonomy( 'menu-tag',array('menu'), 
+    register_taxonomy( 'cpt-tag',array('menu','recipe','sources-resources','tips-quips','style-points'), 
     array( 
       'hierarchical' => false, // true = acts like categories false = acts like tags
       'label' => 'Tags',
@@ -203,16 +203,7 @@ function build_taxonomies() {
 			'rewrite' => array( 'slug' => 'recipe-from' ),
 			'_builtin' => true
     ) );
-    register_taxonomy( 'recipe-tag',array('recipe'), 
-    array( 
-      'hierarchical' => false, // true = acts like categories false = acts like tags
-      'label' => 'Tags',
-      'query_var' => true,
-      'show_admin_column' => true,
-      'public' => true,
-      'rewrite' => true,
-      '_builtin' => true
-    ) );
+    
     register_taxonomy( 'from-2', array('sources-resources'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
@@ -223,16 +214,7 @@ function build_taxonomies() {
 			'rewrite' => array( 'slug' => 'sources-resources-from' ),
 			'_builtin' => true
     ) );
-    register_taxonomy( 'sources-resources-tag',array('sources-resources'), 
-    array( 
-      'hierarchical' => false, // true = acts like categories false = acts like tags
-      'label' => 'Tags',
-      'query_var' => true,
-      'show_admin_column' => true,
-      'public' => true,
-      'rewrite' => true,
-      '_builtin' => true
-    ) );
+    
     register_taxonomy( 'from-3', array('tips-quips'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
@@ -243,16 +225,7 @@ function build_taxonomies() {
 			'rewrite' => array( 'slug' => 'tips-quips-from' ),
 			'_builtin' => true
     ) );
-    register_taxonomy( 'tips-quips-tag',array('tips-quips'), 
-    array( 
-      'hierarchical' => false, // true = acts like categories false = acts like tags
-      'label' => 'Tags',
-      'query_var' => true,
-      'show_admin_column' => true,
-      'public' => true,
-      'rewrite' => true,
-      '_builtin' => true
-    ) );
+    
     register_taxonomy( 'from-4', array('style-points'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
@@ -263,24 +236,24 @@ function build_taxonomies() {
 			'rewrite' => array( 'slug' => 'style-points-from' ),
 			'_builtin' => true
     ) );
-    register_taxonomy( 'style-points-tag',array('style-points'), 
-    array( 
-      'hierarchical' => false, // true = acts like categories false = acts like tags
-      'label' => 'Tags',
-      'query_var' => true,
-      'show_admin_column' => true,
-      'public' => true,
-      'rewrite' => true,
-      '_builtin' => true
-    ) );
-    register_taxonomy( 'sub', array('menu','recipe'),
+    register_taxonomy( 'sub', array('menu'),
 		array(
 			'hierarchical' => true, // true = acts like categories false = acts like tags
 			'label' => 'Sub',
 			'query_var' => true,
 			'show_admin_column' => true,
 			'public' => true,
-			'rewrite' => array( 'slug' => 'recipe-menu-sub' ),
+			'rewrite' => array( 'slug' => 'menu-sub' ),
+			'_builtin' => true
+		) );
+    register_taxonomy( 'sub-5', array('recipe'),
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'Sub',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'recipe-sub' ),
 			'_builtin' => true
 		) );
     register_taxonomy( 'sub-2', array('sources-resources'),
