@@ -6,7 +6,7 @@
  *
  * @package ACStarter
  */
-if( !in_array( 'administrator', wp_get_current_user()->roles) ){
+if( !in_array( 'administrator', wp_get_current_user()->roles)&&!in_array( 'subscriber', wp_get_current_user()->roles) ){
 	wp_redirect(get_bloginfo("url"));
 	exit;
 }
