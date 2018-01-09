@@ -208,11 +208,10 @@ if($popup_active && strcmp($popup_active,'yes')===0):?>
             <?php endif;//if for tag or copy or button text and link?>
         </section><!--.row-5-->
     <?php endif;//if for tag or image or copy or button text and link?>
-    <?php $args = array(
+    <?php $row_6_post = get_field("row_6_post");
+    $args = array(
+        'p'=>$row_6_post,
         'posts_per_page'=>1,
-        'order'=>'ASC',
-        'orderby'=>'date',
-        'post_type'=>'post'
     );
     $query = new WP_Query($args);
     if($query->have_posts()): $query->the_post();?>
