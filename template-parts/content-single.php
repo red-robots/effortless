@@ -19,17 +19,29 @@
                 </div><!--.wrapper-->
             </div><!--.column-2-->
         <?php endif; ?>
-        <?php $watermark = get_field("row_2_watermark");?>
-        <aside class="column-2 blockquote">
-            <div class="outer-wrapper">
-                <div class="inner-wrapper" <?php if($watermark) echo 'style="background-image: url('. $watermark['url'].');"';?>>
-                    <div class="list copy">
-                        <ul>
-                            <?php wp_get_archives(array('type'=>'monthly'));?>
-                        </ul>
-                    </div>
-                </div><!--.inner-wrapper-->
-            </div><!--.outer-wrapper-->
-        </aside><!--column-3-->
+        <?php $watermark = get_field("row_2_watermark");
+        $terms = get_the_terms($post,'category');
+        $is_dish = false;
+        if(!is_wp_error($terms)&&is_array($terms)&&!empty($terms)):
+            foreach($terms as $term):
+                if($term->term_id==353):
+                    $is_dish = true;
+                    break;
+                endif;
+            endforeach;
+        endif;
+        if(!$is_dish):?>
+            <aside class="column-2 blockquote">
+                <div class="outer-wrapper">
+                    <div class="inner-wrapper" <?php if($watermark) echo 'style="background-image: url('. $watermark['url'].');"';?>>
+                        <div class="list copy">
+                            <ul>
+                                <?php wp_get_archives(array('type'=>'monthly'));?>
+                            </ul>
+                        </div>
+                    </div><!--.inner-wrapper-->
+                </div><!--.outer-wrapper-->
+            </aside><!--column-3-->
+        <?php endif;?>
     </section><!--.row-2-->
 </article><!-- #post-## -->

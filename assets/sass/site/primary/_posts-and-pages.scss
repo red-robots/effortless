@@ -576,7 +576,7 @@
     /* see template header */
   }
   .row-2 {
-    
+    margin: $margin-large 0 0 0;
     @include flexbox();
     @include flexbox-justify(center);
     @include flexbox-align-content(center);
@@ -691,6 +691,7 @@
     /* see template header */
   }
   .row-2 {
+    margin: $margin-large 0 0 0;
     @include flexbox();
     @include flexbox-justify(center);
     @include flexbox-align-content(center);
