@@ -7,7 +7,11 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+if(in_category(353)):
+	get_header("login");
+else:
+	get_header();
+endif; ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
