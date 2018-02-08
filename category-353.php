@@ -6,6 +6,10 @@
  *
  * @package ACStarter
  */
+if( !in_array( 'administrator', wp_get_current_user()->roles)&&!in_array( 'subscriber', wp_get_current_user()->roles) ){
+	wp_redirect(get_permalink( get_option('woocommerce_myaccount_page_id')));
+	exit;
+}
 
 get_header("login"); ?>
 
