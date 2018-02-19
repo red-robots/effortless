@@ -41,6 +41,14 @@ endif;?>
                         <div class="num"></div><!--.num-->
                     </a>
                 </div><!--.cart#cart-icon-->
+                <?php $members_link = get_field("members_link","option");
+                if($members_link):?>
+                    <div class="members button">
+                        <a href="<?php echo $members_link;?>" class="surrounding">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </div>
+                <?php endif;?>
                 <?php $account_link = get_field("account_link","option");
                 $account_text = get_field("account_text","option");
                 if($account_text&&$account_link):?>

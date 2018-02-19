@@ -20,6 +20,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+$redirect_to = '';
+if(isset($_GET['redirect_to'])){
+	$redirect_to = $_GET['redirect_to'];
+}
 ?>
 
 <?php wc_print_notices(); ?>
@@ -53,6 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<p class="form-row">
 				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
+				<input type="hidden" name="redirect" value="<?php echo esc_url( '//'.$_SERVER['HTTP_HOST'].$redirect_to ); ?>" />
 				<input type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>" />
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
 					<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php _e( 'Remember me', 'woocommerce' ); ?></span>

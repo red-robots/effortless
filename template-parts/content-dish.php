@@ -21,6 +21,7 @@
                         <?php endwhile;?>
                     </ul>
                 </div><!--.wrapper-->
+                <?php pagi_posts_nav_no_query()?>
             </div><!--.column-2-->
         <?php endif; ?>
     </section><!--.row-2-->

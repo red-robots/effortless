@@ -21,6 +21,7 @@
                         <?php endwhile;?>
                     </ul>
                 </div><!--.wrapper-->
+                <?php pagi_posts_nav_no_query()?>
             </div><!--.column-2-->
         <?php endif; ?>
         <?php $watermark = get_field("row_2_watermark",15);?>

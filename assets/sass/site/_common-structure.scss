@@ -141,6 +141,23 @@ a.surrounding {
     background-color: $color__eff-light-grey;
     > .wrapper {
       padding: 10px 0;
+      text-align: center;
+      .members.button {
+        position: relative;
+        color: $color__eff-brown;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+        display: inline-block;
+        margin: 10px 10px 0 10px;
+        @media screen and (min-width: $tabwidth) {
+          float: right;
+          margin: 0 0 0 20px;
+        }
+        a {
+          font-size: 20px;
+        }
+      }
       .account.button {
         position: relative;
         color: white;
@@ -166,6 +183,8 @@ a.surrounding {
         text-align: center;
         font-size: 30px;
         line-height: 1;
+        display: inline-block;
+        margin: 10px 10px 0 10px;
         @media screen and (min-width: $tabwidth) {
           float: right;
           font-size: 22px;
@@ -333,6 +352,7 @@ a.surrounding {
     position: relative;
     width: 100%;
     background-color: $color__eff-blue;
+    text-align: center;
     > .wrapper {
       padding: 5px 0;
       a.return {
@@ -398,21 +418,38 @@ a.surrounding {
         }
         a.surrounding {
           padding: 0 $margin-medium;
-          &:before {
+          /*&:before {
             font-family: 'FontAwesome';
             content: '\f007';
             display: inline-block;
             color: white;
             margin-right: 10px;
             font-size: 18px;
-          }
+          }*/
+        }
+      }
+      .members.button {
+        position: relative;
+        color: white;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+        display: inline-block;
+        margin: 10px 10px 0 10px;
+        @media screen and (min-width: $tabwidth) {
+          float: right;
+          margin: 0 $margin-medium 0 0;
+        }
+        a {
+          font-size: 20px;
         }
       }
       #cart-icon {
         text-align: center;
         font-size: 30px;
         line-height: 1;
-        margin: 10px 0 0 0;
+        display: inline-block;
+        margin: 10px 10px 0 10px;
         @media screen and (min-width: $tabwidth) {
           float: right;
           font-size: 22px;

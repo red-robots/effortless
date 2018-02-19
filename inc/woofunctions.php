@@ -90,3 +90,54 @@ if(!function_exists('bella_return_to_shop')){
          'Return to shop'.'</a></p>';
     }
 }
+if(!function_exists('bella_woocommerce_clear_cart_url')) {
+	add_action('init', 'bella_woocommerce_clear_cart_url');
+	function bella_woocommerce_clear_cart_url() {
+		global $woocommerce;
+		if( isset($_REQUEST['clear-cart']) ) {
+			$woocommerce->cart->empty_cart();
+		}
+	}
+}
+if(!function_exists('bella_clear_cart')){
+	add_action( 'bella_woocommerce_after_cart_table', 'bella_clear_cart',10);
+	function bella_clear_cart() {
+		echo '<form action="" method="post">';
+		echo '<input type="submit" class="button" name="clear-cart" value="';
+		echo _e("Clear Cart","woocommerce");
+		echo '">';
+		echo '</form>';
+	}
+}
+if(!function_exists('bella_add_list_item_to_woo_account')){
+    add_filter ( 'woocommerce_account_menu_items', 'bella_add_list_item_to_woo_account' );
+    function bella_add_list_item_to_woo_account( $menu_links ){
+    
+        // we will hook "anyuniquetext123" later
+        $new = array( 'bella_member_section' => 'Members Section' );
+    
+        // array_slice() is good when you want to add an element between the other ones
+        $menu_links = array_slice( $menu_links, 0, 1, true ) 
+        + $new 
+        + array_slice( $menu_links, 1, NULL, true );
+    
+    
+        return $menu_links;
+    
+    
+    }
+}
+if(!function_exists('bella_add_woo_account_menu_hook')){
+    add_filter( 'woocommerce_get_endpoint_url', 'bella_add_woo_account_menu_hook', 10, 4 );
+    function bella_add_woo_account_menu_hook( $url, $endpoint, $value, $permalink ){
+    
+        if( $endpoint === 'bella_member_section' ) {
+    
+            // ok, here is the place for your custom URL, it could be external
+            $url = get_permalink(1368);
+    
+        }
+        return $url;
+    
+    }
+}

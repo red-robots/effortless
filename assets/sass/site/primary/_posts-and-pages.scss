@@ -686,7 +686,7 @@
     }
   }
 }
-.template-contact, .template-single, .template-archive {
+.template-contact, .template-single, .template-archive, .template-blog {
   .row-1 {
     /* see template header */
   }
@@ -740,12 +740,12 @@
             background-size: 100% auto;
           }
           blockquote, .list {
-            padding: 0 12%;
             font-family: "adobe-caslon-pro", serif;
             padding: 50px 0 $margin-large 0;
-            p {
+            header h2, p {
               color: white;
               font-size: 23px;
+              padding: 0 20px;
             }
             ul {
               margin: 0;
@@ -766,7 +766,84 @@
     }
   }
 }
-
+.template-blog {
+  >.row-2 {
+    >.column-1 {
+      >.wrapper {
+        >.post {
+          margin: $margin-extra-large 0;
+          position: relative;
+          @media screen and (min-width: $tabwidth) {
+            @include flexbox();
+            @include flexbox-justify(center);
+            @include flexbox-align-content(center);
+            @include flexbox-align-items(center);
+          }
+          @media screen and (min-width: 1400px) {
+            align-items: center;
+          }
+          >.col-1 {
+            width: 100%;
+            position: relative;
+            @media screen and (min-width: $tabwidth) {
+              width: 50%;
+            }
+            img {
+              width: 100%;
+              display: block;
+              @media screen and (min-width: $tabwidth) {
+                display: block;
+                padding: 0 0 0 20%;
+              }
+            }
+          }
+          >.col-2 {
+            width: 100%;
+            @media screen and (min-width: $tabwidth) {
+              width: 50%;
+            }
+            > .wrapper {
+              width: 80%;
+              margin: 0 auto;
+              padding: $margin-medium 0;
+              @media screen and (min-width: $tabwidth) {
+                padding: 8% 0;
+              }
+              header {
+                h3 {
+                  margin: 0 0 30px 0;
+                  color: $color__eff-blue;
+                  font-weight: 500;
+                  font-size: 27px;
+                }
+                h2 {
+                  margin: 0 0 10px 0;
+                  color: $color__eff-blue;
+                  font-weight: 500;
+                  font-size: 27px;
+                }
+              }
+              .copy {
+                font-size: 22px;
+                a {
+                  font-weight: 500;
+                  color: $color__eff-brown;
+                  text-transform: uppercase;
+                  span {
+                    margin: 0 0 0 8px;
+                    vertical-align: top;
+                    line-height: 1.1;
+                    display: inline-block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .template-sitemap, .error-404 {
   .row-1 {
     /* see template header */
@@ -1498,6 +1575,76 @@
           color: $color__eff-blue;
           text-transform: uppercase;
           font-size: 18px;
+        }
+      }
+    }
+  }
+  >.row-4 {
+    margin: $margin-extra-large 0;
+    position: relative;
+    @media screen and (min-width: $tabwidth) {
+      @include flexbox();
+      @include flexbox-justify(center);
+      @include flexbox-align-content(center);
+      @include flexbox-align-items(center);
+    }
+    @media screen and (min-width: 1400px) {
+      align-items: center;
+    }
+    >.col-1 {
+      width: 100%;
+      position: relative;
+      @media screen and (min-width: $tabwidth) {
+        width: 50%;
+      }
+      img {
+        width: 100%;
+        display: block;
+        @media screen and (min-width: $tabwidth) {
+          display: block;
+          padding: 0 0 0 20%;
+        }
+      }
+    }
+    >.col-2 {
+      width: 100%;
+      @media screen and (min-width: $tabwidth) {
+        width: 50%;
+      }
+      > .wrapper {
+        width: 80%;
+        margin: 0 auto;
+        padding: $margin-medium 0;
+        @media screen and (min-width: $tabwidth) {
+          padding: 8% 0;
+        }
+        header {
+          h3 {
+            margin: 0 0 30px 0;
+            color: $color__eff-blue;
+            font-weight: 500;
+            font-size: 27px;
+          }
+          h2 {
+            margin: 0 0 10px 0;
+            color: $color__eff-blue;
+            font-weight: 500;
+            font-size: 27px;
+          }
+        }
+        .copy {
+          font-size: 22px;
+          a {
+            font-weight: 500;
+            color: $color__eff-brown;
+            text-transform: uppercase;
+            span {
+              margin: 0 0 0 8px;
+              vertical-align: top;
+              line-height: 1.1;
+              display: inline-block;
+            }
+          }
         }
       }
     }
