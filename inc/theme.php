@@ -162,25 +162,3 @@ function get_template_part_string($start,$end){
   get_template_part($start,$end);
   return ob_get_clean();
 }
-
-/**
- * Redirect user after successful login.
- *
- * @param string $redirect_to URL to redirect to.
- * @param string $request URL the user is coming from.
- * @param object $user Logged user's data.
- * @return string
- */
-function my_login_redirect( $redirect_to, $user ) {
-	//is there a user to check?
-	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
-		if (in_array( 'subscriber', $user->roles )) {
-		    return get_the_permalink(1368);
-		} else {
-			return $redirect_to;
-		}
-	} else {
-		return $redirect_to;
-	}
-}
-add_filter( 'woocommerce_login_redirect', 'my_login_redirect', 10, 2 );
