@@ -22,6 +22,11 @@
 	  padding: 0 0 0 1%;
 	}
 }
+.navigation.blog {
+	@media screen and (min-width: $midwidth) {
+	  padding: 0;
+	}
+}
 .navigation li a,
 .navigation li a:hover,
 .navigation li.active a,
