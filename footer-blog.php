@@ -51,6 +51,8 @@
                     <?php endif;?>        
                 </div><!--.social-->
             <?php endif;?>
+            <div class="email-signup">
+            </div><!--.email-signup-->
 		</div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
