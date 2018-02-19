@@ -719,6 +719,7 @@ a.surrounding {
     }
     .email-signup {
       width: 100%;
+      min-height: 1px;
       @media screen and (min-width: $tabwidth) {
       }
       >.wrapper {
@@ -729,7 +730,6 @@ a.surrounding {
           float: right;
         }
         #mc_embed_signup {
-          min-height: 1px;
           form {
             #mc_embed_signup_scroll {
               h2 {
