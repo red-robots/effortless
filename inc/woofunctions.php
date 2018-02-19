@@ -149,5 +149,5 @@ if(!function_exists('bella_account_redirect')){
         }
         return $redirect;
     }
-    add_filter( 'woocommerce_login_redirect', 'bella_account_redirect', 10, 2 );
+    add_filter( 'woocommerce_login_redirect', 'bella_account_redirect', 1110, 2 );
 }
