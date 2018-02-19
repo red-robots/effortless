@@ -141,3 +141,13 @@ if(!function_exists('bella_add_woo_account_menu_hook')){
     
     }
 }
+if(!function_exists('bella_account_redirect')){
+    function bella_account_redirect( $redirect, $user ) {
+        if(isset($_GET['redirect_to'])){
+            $redirect_to = $_GET['redirect_to'];
+            return 'http://'.$_SERVER['HTTP_HOST'].$redirect_to;
+        }
+        return $redirect;
+    }
+    add_filter( 'woocommerce_login_redirect', 'bella_account_redirect', 10, 2 );
+}
