@@ -84,9 +84,9 @@
             <?php endif;
         endif;?>
     </section><!--.row-3-->
-    <?php $row_6_post = get_field("row_6_post",27);
+    <?php $dish_post = get_field("dish_post");
     $args = array(
-        'p'=>$row_6_post,
+        'p'=>$dish_post,
         'posts_per_page'=>1,
     );
     $query = new WP_Query($args);
