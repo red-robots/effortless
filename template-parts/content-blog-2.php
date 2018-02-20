@@ -53,7 +53,7 @@
                 <div class="inner-wrapper" <?php if($watermark) echo 'style="background-image: url('. $watermark['url'].');"';?>>
                     <?php $args = array(
                         'post_type'=>'post',
-                        'posts_per_page'=>10,
+                        'posts_per_page'=>-1,
                         'post__not_in'=>$current_posts,
                         'category__in'=>array(353)
                     );

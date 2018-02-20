@@ -60,7 +60,7 @@
                         <!--End mc_embed_signup-->
                         <?php $args = array(
                             'post_type'=>'post',
-                            'posts_per_page'=>10,
+                            'posts_per_page'=>-1,
                             'post__not_in'=>$current_post,
                             'category__not_in'=>array(353)
                         );
@@ -82,7 +82,7 @@
                     <?php else:?>
                         <?php $args = array(
                             'post_type'=>'post',
-                            'posts_per_page'=>10,
+                            'posts_per_page'=>-1,
                             'post__not_in'=>$current_post,
                             'category__in'=>array(353)
                         );
