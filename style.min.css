@@ -768,9 +768,11 @@ a.surrounding:hover{color:inherit}
 }#masthead>.row-1>.wrapper #site-navigation{display:none}
 @media screen and (min-width:700px){#masthead>.row-1>.wrapper #site-navigation{margin:0 auto;display:block;width:58%;padding:5px 0 0 0}
 }@media screen and (min-width:900px){#masthead>.row-1>.wrapper #site-navigation{width:68%}
-}@media screen and (min-width:1200px){#masthead>.row-1>.wrapper #site-navigation{width:75%}
+}@media screen and (min-width:1200px){#masthead>.row-1>.wrapper #site-navigation{width:100%}
 }#masthead>.row-1>.wrapper #site-navigation ul{margin:0;padding:0;text-align:center}
-#masthead>.row-1>.wrapper #site-navigation ul li{display:inline-block;margin-right:30px}
+@media screen and (min-width:700px){#masthead>.row-1>.wrapper #site-navigation ul{text-align:left}
+}@media screen and (min-width:1200px){#masthead>.row-1>.wrapper #site-navigation ul{text-align:center}
+}#masthead>.row-1>.wrapper #site-navigation ul li{display:inline-block;margin-right:30px}
 #masthead>.row-1>.wrapper #site-navigation ul li:last-child{margin-right:0}
 #masthead>.row-1>.wrapper #site-navigation ul li a{color:#8c7e78;text-decoration:none;font-size:17px;text-transform:uppercase}
 #masthead>.row-1>.wrapper #site-navigation ul li a:hover{color:#8c7e78;font-weight:600}

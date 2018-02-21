@@ -223,12 +223,18 @@ a.surrounding {
           width: 68%;
         }
         @media screen and (min-width: 1200px) {
-          width: 75%;
+          width: 100%;
         }
         ul {
           margin: 0;
           padding: 0;
           text-align: center;
+          @media screen and (min-width: $tabwidth) {
+            text-align: left;
+          }
+          @media screen and (min-width: 1200px) {
+            text-align: center;
+          }
           li {
             display: inline-block;
             margin-right: $margin-large;
