@@ -41,6 +41,7 @@ function acstarter_setup() {
     'sitemapbw' => esc_html__( 'Sitemap BW', 'acstarter' ),
     'account' => esc_html__( 'Account', 'acstarter' ),
     'login' => esc_html__( 'Login', 'acstarter' ),
+    'myaccount' => esc_html__( 'My Account', 'acstarter' ),
   ) );
 
   /*

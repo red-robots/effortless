@@ -17,6 +17,7 @@ if(!function_exists('bella_remove_hooks')){
         remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
         remove_action('woocommerce_before_shop_loop','woocommerce_result_count',20);
         remove_action('woocommerce_before_shop_loop','woocommerce_catalog_ordering',30);
+        remove_action( 'woocommerce_account_navigation', 'woocommerce_account_navigation',10 );
         if(class_exists('WC_Force_Sells')){
             $instance = WC_Force_Sells::get_instance();
             remove_action( 'woocommerce_after_add_to_cart_button', array( $instance, 'show_force_sell_products' ) );
@@ -150,4 +151,13 @@ if(!function_exists('bella_account_redirect')){
         return $redirect;
     }
     add_filter( 'woocommerce_login_redirect', 'bella_account_redirect', 1110, 2 );
+}
+
+if(!function_exists('bella_add_my_account_navigation')){ 
+    add_action( 'woocommerce_account_navigation', 'bella_add_my_account_navigation',0 );
+    function bella_add_my_account_navigation() {
+        echo '<nav class="woocommerce-MyAccount-navigation">';
+	        wp_nav_menu( array( 'theme_location' => 'myaccount' ) );
+        echo "</nav>";
+    }
 }

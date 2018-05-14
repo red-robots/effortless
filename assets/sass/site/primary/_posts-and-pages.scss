@@ -659,6 +659,7 @@
             padding: 50px 0 $margin-large 0;
             p {
               color: white;
+              font-style: italic;
               font-size: 23px;
             }
           }
@@ -806,6 +807,9 @@
                 }
               }
             }
+          }
+          blockquote p {
+            font-style: italic;
           }
           blockquote, .list {
             font-family: "adobe-caslon-pro", serif;
@@ -1012,6 +1016,9 @@
     blockquote {
       font-family: "adobe-caslon-pro", serif;
       margin: 0;
+      p {
+        font-style: italic;
+      }
     }
   }
   aside.column-3 {
