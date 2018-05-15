@@ -52,7 +52,7 @@ if(!function_exists('bella_change_image_shown')){
 add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_single_excerpt', 0 );
 
 if(!function_exists('bella_add_template_header')){
-    add_action('woocommerce_before_shop_loop','bella_add_template_header', 0);
+    //add_action('woocommerce_before_shop_loop','bella_add_template_header', 0);
     function bella_add_template_header(){
         global $post;
         $post = get_post(632);
