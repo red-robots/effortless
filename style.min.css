@@ -1039,7 +1039,7 @@ a.surrounding:hover{color:inherit}
 @media screen and (min-width:900px){.template-about .row-2 aside.column-3>.outer-wrapper>.inner-wrapper,.template-page .row-2 aside.column-3>.outer-wrapper>.inner-wrapper{background-size:100% auto}
 }.template-about .row-2 aside.column-3>.outer-wrapper>.inner-wrapper blockquote,.template-page .row-2 aside.column-3>.outer-wrapper>.inner-wrapper blockquote{font-family:"adobe-caslon-pro",serif;padding:50px 0 30px 0}
 .template-about .row-2 aside.column-3>.outer-wrapper>.inner-wrapper blockquote p,.template-page .row-2 aside.column-3>.outer-wrapper>.inner-wrapper blockquote p{color:white;font-style:italic;font-size:23px}
-.template-one-column .row-2>.wrapper{padding:0 0 20px 0}
+.template-one-column .row-2>.wrapper{padding:0 0 20px 0;text-align:center}
 @media screen and (min-width:700px){.template-one-column .row-2>.wrapper{padding:0 4% 20px 4%}
 }.template-one-column .row-2>.wrapper a.button,.template-one-column .row-2>.wrapper button[type=submit]{background-color:#96a7a6;border:1px solid #96a7a6;color:white}
 .template-one-column .row-2>.wrapper a.button:hover,.template-one-column .row-2>.wrapper button[type=submit]:hover{background-color:#8c7e78;border:1px solid #8c7e78}

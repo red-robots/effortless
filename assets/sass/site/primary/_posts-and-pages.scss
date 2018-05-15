@@ -670,8 +670,9 @@
 }
 .template-one-column {
   .row-2 {
-    > .wrapper {
+    >.wrapper {
       padding: 0 0 $margin-medium 0;
+      text-align: center;
       @media screen and (min-width: $tabwidth) {
         padding: 0 4% $margin-medium 4%;
       }
