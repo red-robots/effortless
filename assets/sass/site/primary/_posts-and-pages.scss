@@ -1728,3 +1728,24 @@
     }
   }
 }
+section.testimonials {
+  width: 100%;
+  background-color: $color__eff-blue;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  .testimonial {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    @media screen and (min-width: $deskwidth) {
+      width: 80%;
+    }
+  }
+}
