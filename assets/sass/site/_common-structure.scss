@@ -216,14 +216,18 @@ a.surrounding {
         @media screen and (min-width: $tabwidth) {
           margin: 0 auto;
           display: block;
-          width: 58%;
+          // width: 58%;
+          width: 100%;
           padding: $margin-tiny 0 0 0;
+          clear: both;
         }
         @media screen and (min-width: $midwidth) {
-          width: 68%;
+          // width: 68%;
+          width: 100%;
         }
         @media screen and (min-width: 1200px) {
           width: 100%;
+          clear: none;
         }
         ul {
           margin: 0;
@@ -237,18 +241,32 @@ a.surrounding {
           }
           li {
             display: inline-block;
-            margin-right: $margin-large;
+            // margin-right: $margin-large;
+            margin-right: 20px;
+            font-size: 16px;
+            @media screen and (min-width: $tabwidth) {
+              margin-right: 20px;
+              font-size: 16px;
+            }
+            @media screen and (min-width: $midwidth) {
+              margin-right: 20px;
+              font-size: 16px;
+            }
+            @media screen and (min-width: $deskwidth) {
+              margin-right: 20px;
+              font-size: 16px;
+            }
             &:last-child {
               margin-right: 0;
             }
             a {
               color: $color__eff-brown;
               text-decoration: none;
-              font-size: 17px;
+              
               text-transform: uppercase;
               &:hover {
                 color: $color__eff-brown;
-                font-weight: 600;
+                // font-weight: 600;
               }
 
             }
