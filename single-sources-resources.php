@@ -7,9 +7,14 @@
  * @package ACStarter
  */
 
-wp_redirect(get_the_permalink(583));
-exit;
-get_header("login"); ?>
+// Use to be part of the members section
+// wp_redirect(get_the_permalink(583));
+// exit;
+// get_header("login"); 
+
+get_header();
+
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
