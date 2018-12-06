@@ -15,8 +15,8 @@ $from_tax = 'from-2';
 $tax = 'sub-2';
 $post_type = array('sources-resources');
 
-global $query_string;
-query_posts( $query_string . '&posts_per_page=-1' );
+// global $query_string;
+
 
 
 // get_header("login"); 
@@ -29,11 +29,12 @@ get_header();
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			if( have_posts() ) : the_post();
+			query_posts( '&posts_per_page=-1' );
+			if( have_posts() ) : while( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'filter-sources-resources' );
 
-			endif; // End of the loop.
+			endwhile; endif; // End of the loop.
 			?>
 
 		</main><!-- #main -->
