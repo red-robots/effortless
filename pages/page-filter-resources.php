@@ -14,6 +14,11 @@ global $from_tax;
 $from_tax = 'from-2';
 $tax = 'sub-2';
 $post_type = array('sources-resources');
+
+global $query_string;
+query_posts( $query_string . '&posts_per_page=-1' );
+
+
 // get_header("login"); 
 
 get_header(); 
