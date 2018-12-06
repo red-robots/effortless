@@ -17,10 +17,10 @@ global $from_tax;
 $from_tax = 'from';
 $tax = 'sub';
 $post_type = array('menu');
-global $query_string;
-query_posts( $query_string . '&posts_per_page=-1' );
+// global $query_string;
+// query_posts( $query_string . '&posts_per_page=-1' );
 
-get_header("login"); ?>
+get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
