@@ -54,7 +54,7 @@ global $from_tax;
         if($post_type && !empty($post_type)):
             if(!isset($_POST['search'])):
                 $args = array(
-                    'posts_per_page'=>12,
+                    'posts_per_page'=> -1,
                     'paged'=>$paged,
                     'post_type'=>$post_type,
                 );
@@ -184,7 +184,7 @@ global $from_tax;
                         </div><!--.item-->
                     <?php endwhile;?>
                 </div><!--#container-->
-                <?php pagi_posts_nav($query);
+                <?php //pagi_posts_nav($query);
                 wp_reset_postdata();
             endif;
         endif;?>

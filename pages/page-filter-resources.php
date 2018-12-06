@@ -29,12 +29,12 @@ get_header();
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			query_posts( '&posts_per_page=-1' );
-			if( have_posts() ) : while( have_posts() ) : the_post();
+			
+			if( have_posts() ) :  the_post();
 
 				get_template_part( 'template-parts/content', 'filter-sources-resources' );
 
-			endwhile; endif; // End of the loop.
+		 endif; // End of the loop.
 			?>
 
 		</main><!-- #main -->
