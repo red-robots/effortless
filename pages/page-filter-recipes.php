@@ -4,7 +4,7 @@
  *
  */
 
-if( !in_array( 'administrator', wp_get_current_user()->roles)&&!in_array( 'subscriber', wp_get_current_user()->roles) ){
+if( !in_array( 'administrator', wp_get_current_user()->roles)&&!in_array( 'complimentary_membership', wp_get_current_user()->roles) ){
 	$redirect_to = $_SERVER['REQUEST_URI'];
 	wp_redirect(esc_url(add_query_arg( 'redirect_to', $redirect_to , get_permalink( get_option('woocommerce_myaccount_page_id')))));
 	exit;
