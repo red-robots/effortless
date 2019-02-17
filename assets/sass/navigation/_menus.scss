@@ -1,0 +1,136 @@
+.nav-misc-wrapper {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -999;
+	&.opennav {
+		z-index: 1000;
+	}
+	.navi-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+		background:rgba(0,0,0,.85);
+		opacity: 0;
+		@include transition(all ease-out .3s);
+	}
+	&.opennav .navi-overlay {
+		opacity: 1;
+	}
+}
+.navi-misc {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 320px;
+	height: 100%;
+	background: #FFF;
+	z-index: 200;
+	overflow: auto;
+	transition: transform .5s ease,-webkit-transform .5s ease;
+	transform: translateX(-100%);
+	.inner {
+		padding: 18px 25px;
+	}
+	ul {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: $color__eff-brown;
+		outline: none;
+		@include transition(all ease-out .3s);
+		&:hover {
+			opacity: 0.65;
+		}
+	}
+	.menu {
+		margin-top: 50px;
+	}
+	.menu > li > a {
+		font-size: 20px;
+		padding: 12px 0;
+		border-bottom: 1px dotted $color__eff-brown;
+		position: relative;
+	}
+	.menu > li.menu-item-has-children > a:before,
+	.menu > li.menu-item-has-children > a:after {
+		content: "";
+		display: block;
+		width: 12px;
+		height: 1px;
+		background: $color__eff-brown;
+		position: absolute;
+		right: 0;
+		top: 31px;
+	}
+	.menu > li.menu-item-has-children > a:before {
+		transform: translateY(-9px) rotate(-45deg);
+	}
+	.menu > li.menu-item-has-children > a:after {
+		top: 13px;
+    	right: 8px;
+		transform: translateY(9px) rotate(45deg);
+	}
+	.menu > li.menu-item-has-children.open > a:before {
+		top: 13px;
+		transform: translateY(9px) rotate(45deg);
+	}
+	.menu > li.menu-item-has-children.open > a:after {
+		top: 31px;
+		transform: translateY(-9px) rotate(-45deg);
+	}
+	.menu li ul a {
+		padding: 6px 10px;
+	}
+	.menu li ul {
+		display: none;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		border-bottom: 1px dotted $color__eff-brown;
+	}
+	.closenav {
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 16px;
+		right: 20px;
+		cursor: pointer;
+	}
+	.closenav span,
+	.closenav span:before,
+	.closenav span:after {
+		display: block;
+		width: 100%;
+	}
+	.closenav span {
+		height: 100%;
+	}
+	.closenav span:after,
+	.closenav span:before {
+		content:"";
+		height: 2px;
+		background: $color__eff-brown;
+		position: absolute;
+	}
+	.closenav span:before {
+		top: 0;
+		transform: translateY(9px) rotate(45deg);
+	}
+	.closenav span:after {
+		top: 18px;
+		transform: translateY(-9px) rotate(-45deg);
+	}
+}
+.opennav .navi-misc {
+	transform: translateX(0);
+}

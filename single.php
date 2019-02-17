@@ -33,8 +33,4 @@ endif; ?>
 	</div><!-- #primary -->
 
 <?php
-if(in_category(353)):
-	get_footer();
-else:
-	get_footer('blog');
-endif;
+get_footer();

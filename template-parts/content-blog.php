@@ -9,40 +9,81 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("template-blog full-width-wrapper"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("template-blog blogPosts full-width-wrapper"); ?>>
     <?php get_template_part("template-parts/content","template-header");?>
     <section class="row-2 clear-bottom">
+
+        <?php 
+        $args2 = array(
+            'post_type'=>'post',
+            'posts_per_page'=>1,
+            'category__not_in'=>array(353)
+        );
+        $recent_post = new WP_Query($args2);
+        ?>
+
+
         <?php $args = array(
             'post_type'=>'post',
-            'posts_per_page'=>3,
+            'posts_per_page'=>10,
             'paged'=>$paged,
             'category__not_in'=>array(353)
         );
+        $pagenum = ($paged) ? $paged : 1;
         $current_posts = array();
+        $recent_post_id = 0;
         $query = new WP_Query($args);
         if ($query->have_posts()): ?>
-            <div class="column-1">
-                <div class="wrapper copy">
+            <div class="column-1 home-blogs">
+                <div class="wrapper clear">
+
+                    <?php if($pagenum==1) { ?>
+                    <?php while($recent_post->have_posts()): $recent_post->the_post(); 
+                        $recent_post_id = get_the_ID(); ?>
+                        <div id="post_<?php echo $recent_post_id; ?>" class="recent-post-item">
+                            <?php if(has_post_thumbnail()) { ?>
+                                <div class="postcol post-image"><?php the_post_thumbnail('full');?></div>
+                            <?php } ?>
+                            <div class="postcol textcontent <?php echo (has_post_thumbnail()) ? 'has-image':'no-image';?>">
+                                <div class="inside clear">
+                                    <div class="date"><?php the_date('F d, Y');?></div>
+                                    <h2 class="maintitle"><?php the_title();?></h2>
+                                    <div class="excerpt"><?php the_excerpt();?></div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endwhile; wp_reset_postdata(); ?>
+                    <?php } ?>
+
+                    <div class="row-posts flex-container clear">
                     <?php while($query->have_posts()): $query->the_post(); $current_posts[] = get_the_ID();?>
-                        <section class="post">
-                            <?php if(has_post_thumbnail()):?>
-                                <div class="col-1">
-                                    <?php the_post_thumbnail('full');?>
-                                </div><!--.col-1-->
-                            <?php endif;?>
-                            <div class="col-2">
-                                <div class="wrapper">
-                                    <header>
-                                        <h3><?php the_date('m.d.Y');?></h3>
-                                        <h2><?php the_title();?></h2>
-                                    </header>
-                                    <div class="copy">
-                                        <?php the_excerpt();?>
-                                    </div><!--.copy-->
-                                </div><!--.wrapper-->
-                            </div><!--.col-2-->
-                        </section><!--.post-->
+                        <?php
+                        $post_id = get_the_ID();  
+                        $thumbnail_id = get_post_thumbnail_id();
+                        $image = wp_get_attachment_image_src($thumbnail_id,'medium_large'); 
+                        $title = get_the_title(); 
+                        $post_title = shortenText($title,40);
+                        if($post_id!==$recent_post_id) { ?>
+                            <div class="col col-3">
+                                <div class="inside clear">
+                                    <a class="pagelink" href="<?php the_permalink(); ?>" title="<?php echo $title; ?>">
+                                        <?php if($image) { ?>
+                                        <span class="imagediv" style="background-image:url('<?php echo $image[0]; ?>');">
+                                            <?php the_post_thumbnail('medium_large');  ?>
+                                        </span>
+                                        <?php } else { ?>
+                                            <span class="imagediv" style="background-image:url('<?php echo get_bloginfo('template_url')?>/images/no-image.gif');"></span>
+                                        <?php } ?>
+                                        <span class="description clear js-blocks">
+                                            <h3 class="title thin"><?php echo $post_title; ?></h3>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        <?php } ?>
                     <?php endwhile;?>
+                    </div><!--.row-posts-->
+
                 </div><!--.wrapper-->
             </div><!--.column-1-->
             <?php wp_reset_postdata();

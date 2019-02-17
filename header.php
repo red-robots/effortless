@@ -28,6 +28,8 @@ endif;?>
 <body <?php body_class(); ?>>
 <div id="page" class="site clear">
 
+    <?php get_template_part( 'template-parts/navigation-misc'); ?>
+
 	<header id="masthead" class="site-header clear-bottom" role="banner">
         <div class="row-1 the-top-navigation">
             <div class="wrapper full-width-wrapper clear-bottom">

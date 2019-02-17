@@ -302,4 +302,22 @@ jQuery(document).ready(function ($) {
     }
     update_cart_count();
 
+    $(".burgerMenu").on("click",function(e){
+        e.preventDefault();
+        $('.nav-misc-wrapper').addClass('opennav');
+    });
+
+    $("#closeNavMisc").on("click",function(e){
+        e.preventDefault();
+        $('.nav-misc-wrapper').removeClass('opennav');
+        $("#navMisc li.menu-item-has-children").removeClass('open');
+    });
+
+    $("#navMisc li.menu-item-has-children").on("click",function(e){
+        e.preventDefault();
+        $(this).toggleClass('open');
+        $(this).find('>ul').slideToggle();
+    });
+
+
 });// END #####################################    END

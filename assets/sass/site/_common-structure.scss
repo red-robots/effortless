@@ -974,3 +974,6 @@ a.surrounding {
 :-moz-placeholder { /* Firefox 18- */
   color: #d2d2d2;
 }
+body.modal-open {
+  overflow: hidden;
+}
