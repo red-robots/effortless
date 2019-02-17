@@ -2142,16 +2142,19 @@ section.testimonials {
     opacity: 0;
     visibility: hidden;
     text-align: center;
+    overflow: hidden;
     @include transition(all ease .3s);
   }
   .txtwrap {
-    display: inline-block;
+    display: block;
     position: relative;
     padding: 10px 30px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
     font-weight: 300;
+    width: 100%;
+    box-sizing: border-box;
   }
   .icon {
     display: inline-block;

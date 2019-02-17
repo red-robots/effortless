@@ -51,11 +51,12 @@ $setup = get_instagram_setup();
                                     var img = v.images;
                                     var img_src = img.standard_resolution.url;
                                     var caption = v.caption.text;
+                                    var caption_excerpt = stringTruncate(caption,60);
                                     var instalink = v.link;
                                     content += '<div class="col col-4"><div class="instagram-image-div clear"><a class="instalink" href="'+instalink+'" target="_blank"><img src="'+img_src+'" alt="" />';
                                         content += '<span class="icon"><i class="fas fa-chevron-circle-right"></i></span>';
                                     if(caption) {
-                                        content += '<span class="caption"><span class="txtwrap">'+caption+'</span></span>';
+                                        content += '<span class="caption"><span class="txtwrap">'+caption_excerpt+'</span></span>';
                                     }
                                     content += '</a></div></div>';
                                 });
@@ -71,6 +72,11 @@ $setup = get_instagram_setup();
                     }
                 });
             }
+
+            var stringTruncate = function(str, length){
+              var dots = str.length > length ? '...' : '';
+              return str.substring(0, length)+dots;
+            };
         });
     </script>
     <?php }  
