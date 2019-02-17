@@ -28,7 +28,7 @@ jQuery(document).ready(function ($) {
             inline:true, 
             href:"#eff-embed-signup",
             opacity:.8,
-            close: '<i class="far fa-times-circle"></i>'
+            close: '<i class="fas fa-times-circle"></i>'
             }
 
 
