@@ -1409,7 +1409,8 @@ section.testimonials .testimonial{width:90%;margin:0 auto;font-size:18px;line-he
 .blogPosts .col{margin-bottom:35px}
 @media screen and (min-width:700px){.blogPosts .col-3{width:50%}
 }@media screen and (min-width:900px){.blogPosts .col-3{width:33.333%}
-}.comment-content a{word-wrap:break-word}
+}.subscribe-pop-up #cboxClose{background-image:none !important;color:#87a6a2 !important}
+.comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
 .infinity-end.neverending .site-footer{display:block}

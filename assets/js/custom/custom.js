@@ -21,14 +21,15 @@ jQuery(document).ready(function ($) {
             var width = window.innerWidth*0.5 > 960 ? "960px" : "50%";
             width = window.innerWidth < 600 ? "95%": width;
             var cboxOptions = {
-            width: width,
-            // height: '95%',
-            // maxWidth: '960px',
-            // maxHeight: '960px',
-            inline:true, 
-            href:"#eff-embed-signup",
-            opacity:.8,
-            close: '<i class="fas fa-times-circle"></i>'
+                width: width,
+                // height: '95%',
+                // maxWidth: '960px',
+                // maxHeight: '960px',
+                inline:true, 
+                href:"#eff-embed-signup",
+                opacity:.8,
+                close: '<i class="fas fa-times-circle"></i>',
+                className:'subscribe-pop-up'
             }
 
 
