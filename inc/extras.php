@@ -27,3 +27,52 @@ function acstarter_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'acstarter_body_classes' );
+
+function shortenText($str, $limit, $brChar = ' ', $pad = '...')  {
+    if (empty($str) || strlen($str) <= $limit) {
+        return $str;
+    }
+    $output = substr($str, 0, ($limit+1));
+    $brCharPos = strrpos($output, $brChar);
+    $output = substr($output, 0, $brCharPos);
+    $output = preg_replace('#\W+$#', '', $output);
+    $output .= $pad;
+    return $output;
+}
+
+function my_custom_admin_head() { ?>
+	<style type="text/css">
+		/* Homepage Slider */
+		.acf-field-5c6923e818202 .acf-gallery-side-data .media-types-required-info,
+		.acf-field-5c6923e818202 .acf-gallery-side-info .acf-gallery-edit,
+		.acf-field-5c6923e818202 .acf-gallery-side-data [data-name="caption"],
+		.acf-field-5c6923e818202 .acf-gallery-side-data [data-name="alt"] {
+			display: none!important;
+		}
+		.acf-field-5c6923db18201 .acf-gallery-side-data textarea {
+			height: 90px;
+		}
+	</style>	
+<?php }
+add_action( 'admin_head', 'my_custom_admin_head' );
+
+function get_page_id_by_slug($slug,$status='publish') {
+	global $wpdb;
+	if(empty($slug)) return 0;
+	$result = $wpdb->get_row( "SELECT ID FROM $wpdb->posts WHERE post_name = '".$slug."' AND post_status='".$status."'" );
+	return ($result) ? $result->ID : 0;
+}
+
+function get_instagram_setup() {
+	global $wpdb;
+	$result = $wpdb->get_row( "SELECT option_value FROM $wpdb->options WHERE option_name = 'sb_instagram_settings'" );
+	if($result) {
+		$option = ($result->option_value) ? @unserialize($result->option_value) : false;
+	} else {
+		$option = '';
+	}
+	return $option;
+}
+
+
+

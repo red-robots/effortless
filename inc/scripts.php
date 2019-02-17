@@ -10,6 +10,13 @@ function acstarter_scripts() {
 		wp_enqueue_script('jquery');
 
 	wp_enqueue_script( 
+			'jquery-easing', 
+			get_template_directory_uri() . '/assets/js/vendors/jquery.easing.min.js', 
+			array('jquery'), '20120206', 
+			true 
+		);
+
+	wp_enqueue_script( 
 			'acstarter-blocks', 
 			get_template_directory_uri() . '/assets/js/vendors.js', 
 			array('jquery'), '20120206', 

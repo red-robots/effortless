@@ -26,11 +26,12 @@ endif;?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<div id="page" class="site clear">
 
 	<header id="masthead" class="site-header clear-bottom" role="banner">
-        <div class="row-1">
+        <div class="row-1 the-top-navigation">
             <div class="wrapper full-width-wrapper clear-bottom">
+                <a class="burgerMenu" href="#"><span></span></a>
                 <div id="cart-icon" class="cart">
                     <a href="<?php echo wc_get_cart_url();?>">
                         <i class="fa fa-shopping-cart"></i>
@@ -85,4 +86,4 @@ endif;?>
             </div><!--.wrapper-->
         </div><!--.row-3-->
 	</header><!-- #masthead -->
-	<div id="content" class="site-content wrapper">
+	<div id="content" class="site-content clear">

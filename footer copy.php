@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrapper clear">
+		<div class="wrapper full-width-wrapper">
 			<div class="site-info clear-bottom">
                 <div class="wrapper">
                     <nav class="account">
@@ -31,7 +31,26 @@
                     </nav>
                 </div><!--.wrapper-->
             </div><!-- .site-info -->
-
+            <?php $facebook = get_field("facebook_link","option");
+            $instagram = get_field("instagram_link","option");
+            if($instagram||$facebook):?>
+                <div class="social">
+                    <?php if($facebook):?>
+                        <div class="facebook">
+                            <a href="<?php echo $facebook;?>">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div><!--.facebook-->
+                    <?php endif;
+                    if($instagram):?>
+                        <div class="instagram">
+                            <a href="<?php echo $instagram;?>">
+                                <i class="fab fa-instagram"></i>                    
+                            </a>
+                        </div><!--.instagram-->
+                    <?php endif;?>        
+                </div><!--.social-->
+            <?php endif;?>
             <div class="email-signup clear-bottom">
                 <div class="wrapper">
                     <?php $signuptext = get_field("signup_header_text","option");?>

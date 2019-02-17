@@ -25,7 +25,7 @@
   */
 
 var project             = 'DAS'; // Project Name.
-var projecturl          = 'http://localhost:80/das'; // Project URL. Could be something like localhost:8888.
+var projecturl          = 'http://localhost/ac/effortless/'; // Project URL. Could be something like localhost:8888.
 
 
 var styleSRC            = './assets/sass/style.scss'; // Path to main .scss file.
@@ -179,7 +179,7 @@ gulp.task( 'vendorsJs', function() {
 	//gulp.src( jsVendorSRC )
 	gulp.src( [
 		'./assets/js/vendors/nicescroll.min.js',
-		'./assets/js/vendors/flexslider.js',
+		'./assets/js/vendors/jquery.flexslider.js',
 		'./assets/js/vendors/blocks.js',
 		'./assets/js/vendors/colorbox.js',
 		'./assets/js/vendors/isotope.js',

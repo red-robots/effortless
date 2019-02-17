@@ -14,7 +14,7 @@
 
 get_header(); ?>
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main clear" role="main">
 		<?php $post = get_post(27);
 		if($post):
 			setup_postdata($post);

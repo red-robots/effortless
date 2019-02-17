@@ -1,3 +1,7 @@
+.mid_wrapper, .clear {clear: both;}
+.mid_wrapper:before, .mid_wrapper:after, .clear:before,.clear:after {content: " "; display: table; }
+.mid_wrapper:after, .clear:after {clear: both;}
+.mid_wrapper, .clear {*zoom: 1;}
 .clear-bottom {
   &:after {
     clear: both;
@@ -5,6 +9,12 @@
     display: block;
   }
 
+}
+
+.mid_wrapper {
+  margin: 0  auto;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .copy {
@@ -140,7 +150,7 @@ a.surrounding {
     width: 100%;
     background-color: $color__eff-light-grey;
     > .wrapper {
-      padding: 10px 0;
+      padding: 6px 0 10px;
       text-align: center;
       .members.button {
         position: relative;
@@ -242,31 +252,31 @@ a.surrounding {
           li {
             display: inline-block;
             // margin-right: $margin-large;
-            margin-right: 20px;
+            margin-right: 0;
             font-size: 16px;
             @media screen and (min-width: $tabwidth) {
-              margin-right: 20px;
+              margin-right: 0;
               font-size: 16px;
             }
             @media screen and (min-width: $midwidth) {
-              margin-right: 20px;
-              font-size: 16px;
-            }
-            @media screen and (min-width: $deskwidth) {
-              margin-right: 20px;
+             margin-right: 0;
               font-size: 16px;
             }
             &:last-child {
               margin-right: 0;
             }
             a {
+              display: inline-block;
+              padding-left: 15px;
+              padding-right: 15px;
               color: $color__eff-brown;
               text-decoration: none;
-              
               text-transform: uppercase;
+              font-size: 15px;
+              @include transition(all ease-out .3s);
               &:hover {
-                color: $color__eff-brown;
-                // font-weight: 600;
+                opacity: 0.6;
+                //color: $color__eff-brown;
               }
 
             }
@@ -611,9 +621,10 @@ a.surrounding {
 #colophon {
   background-color: $color__eff-light-grey;
   >.wrapper {
-    padding: $margin-large $margin-medium;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 35px 0;
     @media screen and (min-width: $tabwidth) {
-      padding: 7% 5%;
       @include flexbox();
       @include flexbox-justify(space-between);
       @include flexbox-align-content(flex-start);
@@ -749,7 +760,7 @@ a.surrounding {
       >.wrapper {
         text-align: center;
         @media screen and (min-width: $tabwidth) {
-          max-width: 50%;
+          width: 187px;
           text-align: left;
           float: right;
         }
@@ -798,18 +809,20 @@ a.surrounding {
               }
               input[type="submit"]{
                 display: inline-block;
-                margin-top: 8px;
+                margin-top: 0;
                 border: none;
                 background: none;
+                text-shadow: none;
+                -webkit-appearance: none;
                 box-shadow: none;
-                border-radius: 0px;
-                padding: $margin-small $margin-medium;
+                border-radius: 0;
+                padding: 8px 10px;
                 background-color: $color__eff-blue;
                 color: white;
-                font-size: 18px;
+                font-size: 16px;
                 text-transform: uppercase;
                 text-align: center;
-                min-width: 130px;
+                min-width: 110px;
                 line-height: 1;
                 &:hover {
                   background-color: $color__eff-brown;
@@ -946,4 +959,18 @@ a.surrounding {
       }
     }
   }
+}
+.text-center {text-align:center;}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #d2d2d2;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #d2d2d2;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #d2d2d2;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #d2d2d2;
 }

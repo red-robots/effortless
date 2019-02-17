@@ -37,7 +37,7 @@ add_filter('login_headerurl','loginpage_custom_link');
 	Font Awesome
 ---------------------------------------*/
 function mytheme_fontawesome() {
-    echo '<script src="https://use.fontawesome.com/4945cee666.js"></script>';
+    echo '<script defer src="'. get_bloginfo( 'template_url' ) . '/assets/svg-with-js/js/fontawesome-all.js"></script>';
 }
 add_action('wp_head', 'mytheme_fontawesome');
 /*-------------------------------------

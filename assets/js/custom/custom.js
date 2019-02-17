@@ -64,6 +64,43 @@ jQuery(document).ready(function ($) {
 		animation: "slide",
 	}); // end register flexslider
 	
+
+    $('#home_slideshow').flexslider({
+        animation: "slide",
+        useCSS: false,
+        directionNav: false,
+        touch: true,  
+        start: function(slider) {
+            var count, current, slide;
+            slide = slider.currentSlide;
+            count = slider.count;
+            current = slider.slides.eq(slider.currentSlide);
+            current.find('.caption').addClass('fadeIn');
+        },
+        before: function(slider) {
+            var current, first, next, prev;
+            current = slider.slides.eq(slider.currentSlide);
+            prev = slider.slides.eq(slider.currentSlide - 1);
+            next = slider.slides.eq(slider.animatingTo);
+            first = slider.slides.eq(0);
+            current.find('.caption').removeClass('fadeIn');
+            prev.find('.caption').removeClass('fadeIn');
+            next.find('.caption').addClass('fadeIn');
+            return first.find('.caption').removeClass('fadeIn');
+        },
+        after: function(slider) {
+            var current, slide;
+            slide = slider.currentSlide;
+            current = slider.slides.eq(slider.currentSlide);
+            return current.find('.caption').addClass('fadeIn');
+        },
+        end: function(slider) {
+            var first;
+            first = slider.slides.eq(0);
+            return first.find('.caption').addClass('fadeIn');
+        }
+    }); 
+
 	/*
 	*
 	*	Colorbox
