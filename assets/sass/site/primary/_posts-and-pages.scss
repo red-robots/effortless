@@ -1909,6 +1909,10 @@ section.testimonials {
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
+    margin-bottom: 20px;
+    @media screen and (min-width: $tabwidth) {
+      margin-bottom: 0;
+    }
   }
   .col-3 {
     @media screen and (min-width: $tabwidth) {
@@ -2066,7 +2070,10 @@ section.testimonials {
   padding-bottom: 50px;
   .buttondiv {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
+    @media screen and (min-width: $tabwidth) {
+      margin-top: 30px;
+    }
   }
   .buttondiv .btn {
     display: inline-block;
