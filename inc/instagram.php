@@ -1,7 +1,4 @@
 <?php if( is_home() || is_front_page() ) { 
-//$pageID = get_page_id_by_slug('homepage','private');
-// $section_title = get_field('section_title_6',$pageID);
-// $instagram_link = get_field('instagram_link','option'); 
 $setup = get_instagram_setup();
     if($setup) {
         $num_photos = ($setup['sb_instagram_num']) ? $setup['sb_instagram_num'] : 4;
@@ -41,7 +38,6 @@ $setup = get_instagram_setup();
                     type: 'GET',
                     data: {access_token: token, count: num_photos},
                     success: function(response){
-                        console.log(response);
                         if(response.data!=undefined) {
                             var obj = response.data;
                             var content = '<section class="section instagram-feeds-section"><div class="mid_wrapper">';

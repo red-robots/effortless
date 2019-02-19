@@ -18,16 +18,33 @@ if ( $sources->have_posts() ) {  ?>
 		<div class="flex-container row clear">
 			<?php while ( $sources->have_posts() ) : $sources->the_post(); 
 			$post_id = get_the_ID();  
-			$thumbnail_id = get_post_thumbnail_id();
-			$image = wp_get_attachment_image_src($thumbnail_id,'medium_large'); 
+			// $thumbnail_id = get_post_thumbnail_id();
+			// $image = wp_get_attachment_image_src($thumbnail_id,'medium_large'); 
 			$title = get_the_title(); 
-			$post_title = shortenText($title,40); ?>
+			$post_title = shortenText($title,40); 
+			$search_image = get_field('search_image');
+			$source_link = get_field('website_link');
+			$site_url = get_site_url();
+			$parts_a = parse_url($site_url);
+			$the_host = $parts_a['host'];
+			$target = '';
+			if($source_link) {
+				$s_url = $source_link;
+				$parts_b = parse_url($s_url);
+				$n_the_host = $parts_b['host'];
+				if($the_host!=$n_the_host) {
+					$target = ' target="_blank"';
+				}
+			} else {
+				$source_link = '#';
+			}
+			?>
 			<div class="col col-4">
 				<div class="inside clear">
-					<a class="pagelink" href="<?php the_permalink(); ?>" title="<?php echo $title; ?>">
-						<?php if($image) { ?>
-	                    <span class="imagediv" style="background-image:url('<?php echo $image[0]; ?>');">
-	                        <?php the_post_thumbnail('medium_large');  ?>
+					<a class="pagelink" href="<?php echo $source_link; ?>" title="<?php echo $title; ?>"<?php echo $target; ?>>
+						<?php if($search_image) { ?>
+	                    <span class="imagediv" style="background-image:url('<?php echo $search_image["url"]; ?>');">
+	                        <img src="<?php echo $search_image["sizes"]["medium_large"]; ?>" alt="<?php echo $search_image["title"]; ?>" />
 	                    </span>
 	                    <?php } else { ?>
 	                    	<span class="imagediv" style="background-image:url('<?php echo get_bloginfo('template_url')?>/images/no-image.gif');"></span>
