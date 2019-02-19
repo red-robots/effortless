@@ -67,7 +67,7 @@ if($popup_active && strcmp($popup_active,'yes')===0):?>
     </div>
     <?php get_template_part( 'template-parts/home-blogs' ); ?>
     <?php get_template_part( 'template-parts/home-sources' ); ?>
-    <?php get_template_part( 'template-parts/home-people-say' ); ?>
+    <?php get_template_part( 'template-parts/home-testimonial' ); ?>
     <?php /* INSTAGRAM = see footer.php */ ?>
     <div id="instagram_feeds" class="instagram_feeds clear"></div>
 

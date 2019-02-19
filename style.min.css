@@ -1300,7 +1300,7 @@ body.modal-open{overflow:hidden}
 .template-members-landing>.row-4>.col-2>.wrapper .copy{font-size:22px}
 .template-members-landing>.row-4>.col-2>.wrapper .copy a{font-weight:500;color:#8c7e78;text-transform:uppercase}
 .template-members-landing>.row-4>.col-2>.wrapper .copy a span{margin:0 0 0 8px;vertical-align:top;line-height:1.1;display:inline-block}
-section.testimonials{width:100%;background-color:#90b0ac;color:#fff;padding:50px 0;text-align:center}
+section.testimonials{width:100%;background-color:#90b0ac;color:#fff;padding:50px 0;text-align:center;min-height:100px;overflow:hidden}
 section.testimonials h2{font-size:22px;margin-top:0;text-transform:uppercase;font-weight:normal}
 section.testimonials .testimonial{width:90%;margin:0 auto;font-size:18px;line-height:1.2;font-weight:300}
 @media screen and (min-width:1200px){section.testimonials .testimonial{width:80%}

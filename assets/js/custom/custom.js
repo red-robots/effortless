@@ -45,6 +45,7 @@ jQuery(document).ready(function ($) {
             });            
         }
     }
+
 	/*
 	*
 	*	Current Page Active
@@ -64,6 +65,14 @@ jQuery(document).ready(function ($) {
 	$('.flexslider').flexslider({
 		animation: "slide",
 	}); // end register flexslider
+
+    $('.testimonial-slider').flexslider({
+        animation: "slide",
+        smoothHeight: true,
+        controlNav: false,               
+        directionNav: false,
+        slideshowSpeed: 10000
+    }); 
 	
 
     $('#home_slideshow').flexslider({
