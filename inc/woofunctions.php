@@ -187,7 +187,7 @@ function add_view_custom_button() {
     // Output the custom button linked to the product
     if( !is_product() ) {
     echo '<div class="buttondiv">
-        <a class="button single_add_to_cart_button button alt" href="' . esc_attr( $product->get_permalink() ) . '">' . __('View product') . '</a>
+        <a class="button single_add_to_cart_button button alt" href="' . esc_attr( $product->get_permalink() ) . '">' . __('View') . '</a>
     </div>';
     }
 }
