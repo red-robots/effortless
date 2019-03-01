@@ -4,10 +4,10 @@
  *
  */
 
+$search_placeholder = get_field('search_placeholder');
 $type = get_field('post_type');
 $post_type = ($type) ? $type[0] : '--NA--';
 
-$search_placeholder = 'Menu';
 $taxonomy = cpt_taxonomies($post_type);
 $posts_per_page = default_post_per_page();
 $total_pages = 0;
@@ -31,7 +31,7 @@ get_header(); ?>
 		        		<header>
 				            <h1 class="page-title"><?php the_title(); ?></h1>
 				            <form class="bella-search cpt-search-form" action="<?php get_permalink(); ?>" method="GET">
-				   				 <input type="text" name="search" placeholder="Search <?php echo $search_placeholder ?>" value="<?php echo $search; ?>" />
+				   				 <input type="text" name="search" placeholder="<?php echo $search_placeholder ?>" value="<?php echo $search; ?>" />
 							</form>
 						</header>
 
