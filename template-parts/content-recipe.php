@@ -7,6 +7,7 @@
  * @package ACStarter
  */
 global $bella_url;
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-recipe full-width-wrapper"); ?>>

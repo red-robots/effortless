@@ -8,6 +8,22 @@
  *
  * @package ACStarter
  */
+if( is_archive() ) {
+    $queried = get_queried_object();
+    /* FILTER PAGE */    
+    $queried = get_queried_object();
+    $current_taxonomy = ( isset($queried->taxonomy) && $queried->taxonomy ) ? $queried->taxonomy : '';
+    $term_slug = ( isset($queried->slug) && $queried->slug ) ? $queried->slug : '';
+    $taxonomies = cpt_taxonomies();
+
+    if( in_array($current_taxonomy, $taxonomies) ) {
+        $page_url = get_archive_url_by_field('post_type',$term_slug,$current_taxonomy);
+        if($page_url) {
+            wp_redirect( $page_url );
+            exit;
+        }
+    }
+}
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>

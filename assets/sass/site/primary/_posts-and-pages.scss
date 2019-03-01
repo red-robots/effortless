@@ -1100,6 +1100,10 @@
       margin: 0;
       @include flexbox-flex(1,1,auto);
     }
+    &.fullwidth {
+      margin: 0 auto;
+      padding: 0 0;
+    }
     > header {
       @include flexbox();
       @include flexbox-justify(flex-start);
@@ -1107,7 +1111,7 @@
       @include flexbox-align-items(flex-start);
       @include flexbox-direction(column);
       @media screen and (min-width: $midwidth) {
-        padding: 0 0 0 1%;
+        padding: 0 0;
         @include flexbox-justify(space-between);
         @include flexbox-align-content(center);
         @include flexbox-align-items(center);
@@ -1166,7 +1170,7 @@
       .terms {
         margin: 10px 0;
         @media screen and (min-width: $midwidth) {
-          padding: 0 0 0 1%;
+          padding: 0 0;
           margin: 0;
         }
         .term {
@@ -1193,14 +1197,22 @@
               }
             }
           }
+          &.current .name a {
+            color: $color__eff-brown;
+            opacity: 0.4;
+          }
         }
+
       }
     }
     .container {
+      @media screen and (min-width: $mobilelandscapewidth) {
+        margin-left: -1%;
+      }
       .item {
         width: 100%;
         display: block;
-        margin: 1% 0;
+        margin: 0 0 30px;
         @media screen and (min-width: $mobilelandscapewidth) {
           width: calc(1/2*98%);
           float: left;
@@ -2335,7 +2347,58 @@ section.testimonials {
     }
   }
 }
+
 .subscribe-pop-up #cboxClose {
   background-image: none!important;
   color: #87a6a2!important;
+}
+
+.default-temp {
+  .page-title {
+    color: $color__eff-blue;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+.pagination {
+  margin-bottom: 40px;
+  a,span {
+    display: inline-block;
+    font-size: 15px;
+    padding: 0 10px;
+    border: 1px solid $color__eff-blue;
+    line-height: 28px;
+  }
+  a {
+    text-decoration: none;
+    color: $color__eff-blue;
+    background: transparent;
+    @include transition(all ease-out .3s);
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  .current {
+    color: #FFF;
+    background: $color__eff-blue;
+  }
+
+}
+
+.with-pagination .template-filter {
+  padding-bottom: 30px;
+}
+
+.cpt-search-form {
+  input:focus {
+    outline: none;
+  }
+  input {
+    border: none;
+    padding: 0 0;
+    line-height: 25px;
+    margin: 0 0;
+  }
 }

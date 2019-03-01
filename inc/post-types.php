@@ -208,9 +208,8 @@ function build_taxonomies() {
       'menu_name' => 'Status',
       'plural'    => 'Status',
       'single'    => 'Status',
-      'hierarchical' => false,
-      'rewrite' => true,
-      'taxonomy'  => 'cpt-status'
+      'taxonomy'  => 'cpt-status',
+      'rewrite' => array( 'slug' => 'cpt-status' )
     ),
     
   );
