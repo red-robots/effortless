@@ -1426,6 +1426,7 @@ section.testimonials .testimonial{width:90%;margin:0 auto;font-size:18px;line-he
 .with-pagination .template-filter{padding-bottom:30px}
 .cpt-search-form input:focus{outline:0}
 .cpt-search-form input{border:0;padding:0;line-height:25px;margin:0}
+.logintoptxt p{margin-top:0}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
