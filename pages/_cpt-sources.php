@@ -135,9 +135,10 @@ get_header(); ?>
 										$company = get_field('company');
 										$product_title = get_field('product_title');
 										$entry_title = ($company) ? $company : get_the_title();
+										$pagelink = get_field('website_link');
 									?>
 									<div class="item js-blocks<?php echo $the_cats?>">
-										<a href="<?php the_permalink(); ?>">
+										<a href="<?php echo $pagelink; ?>" target="_blank">
 				                        	<?php if ( $img ) {  ?>
 				                        		<img src="<?php echo $image_url?>" alt="<?php echo $img['title'];?>" />
 				                        	<?php } else { ?>
