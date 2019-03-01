@@ -973,7 +973,7 @@ body.modal-open{overflow:hidden}
 }@media screen and (min-width:700px){.template-index>.row-2{background-color:#f2f2f2;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-size:auto 60%;background-position:right bottom;background-repeat:no-repeat}
 }.template-index>.row-2>.column-1{width:100%}
 @media screen and (min-width:700px){.template-index>.row-2>.column-1{width:35%}
-}@media screen and (min-width:1100px){.template-index>.row-2>.column-1{width:25%}
+}@media screen and (min-width:1100px){.template-index>.row-2>.column-1{width:24.8%}
 }.template-index>.row-2>.column-1 img{width:70%;display:block;margin:0 auto 15px auto}
 @media screen and (min-width:700px){.template-index>.row-2>.column-1 img{width:100%;margin:0}
 }.template-index>.row-2>.column-2{width:100%;position:relative;padding:20px;background-size:auto 60%;background-position:right bottom;background-repeat:no-repeat;background-color:#f2f2f2}
@@ -1337,8 +1337,8 @@ section.testimonials .testimonial{width:90%;margin:0 auto;font-size:18px;line-he
 @media screen and (min-width:700px){.flex-container{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 }.flex-container .col{box-sizing:border-box;padding-left:15px;padding-right:15px;text-align:center;margin-bottom:20px}
 @media screen and (min-width:700px){.flex-container .col{margin-bottom:0}
-}@media screen and (min-width:700px){.flex-container .col-3{width:33.333%}
-}@media screen and (min-width:700px){.flex-container .col-4{width:25%}
+}@media screen and (min-width:700px){.flex-container .col-3{width:33%}
+}@media screen and (min-width:700px){.flex-container .col-4{width:24.9%}
 }.flex-container .inside{background:#90b0ac;color:#FFF;height:100%}
 .flex-container .imagediv img{width:100%;height:auto;display:block;float:left}
 @media screen and (min-width:700px){.flex-container .imagediv img{display:none}
@@ -1363,7 +1363,7 @@ section.testimonials .testimonial{width:90%;margin:0 auto;font-size:18px;line-he
 .subscribe-section .subsc-title1{font-size:22px;text-transform:uppercase;margin-bottom:3px}
 .subscribe-section .form-wrapper{text-align:center;padding-left:30px;padding-right:30px}
 .subscribe-section .mc-field-group{display:inline-block;width:100%;margin-bottom:10px}
-@media screen and (min-width:700px){.subscribe-section .mc-field-group{width:25%;margin:0 20px}
+@media screen and (min-width:700px){.subscribe-section .mc-field-group{width:24.9%;margin:0 20px}
 }.subscribe-section .mc-field-group input{width:100%;text-align:left;height:36px;line-height:36px;padding:0 10px;border-radius:0;outline:0;border:0;box-shadow:0 0 0 3px transparent;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .subscribe-section .mc-field-group input:focus{box-shadow:0 0 0 3px rgba(163,239,250,0.65)}
 .subscribe-section .response{margin:15px 0 0;width:100%;float:left}
@@ -1415,7 +1415,7 @@ section.testimonials .testimonial{width:90%;margin:0 auto;font-size:18px;line-he
 .blogPosts .read-more:hover{color:#FFF;background:#8c7e78}
 .blogPosts .col{margin-bottom:35px}
 @media screen and (min-width:700px){.blogPosts .col-3{width:50%}
-}@media screen and (min-width:900px){.blogPosts .col-3{width:33.333%}
+}@media screen and (min-width:900px){.blogPosts .col-3{width:33%}
 }.subscribe-pop-up #cboxClose{background-image:none !important;color:#87a6a2 !important}
 .default-temp .page-title{color:#90b0ac;font-size:30px;text-transform:uppercase;margin:0}
 .pagination{margin-bottom:40px}
