@@ -627,6 +627,8 @@ a.surrounding {
 }
 #colophon {
   background-color: $color__eff-light-grey;
+  padding-left: 20px;
+  padding-right: 20px;
   >.wrapper {
     margin: 0 auto;
     max-width: 1200px;
@@ -636,6 +638,8 @@ a.surrounding {
       @include flexbox-justify(space-between);
       @include flexbox-align-content(flex-start);
       @include flexbox-align-items(flex-start);
+      padding-left: 0;
+      padding-right: 0;
     }
     .site-info {
       width: 100%;

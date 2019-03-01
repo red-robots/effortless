@@ -2451,8 +2451,104 @@ section.testimonials {
   .quantity .qty {
     line-height: 33px;
     font-size: 16px;
+    border-radius: 0px;
   }
   .related div.quantity {
     display: none;
   }
+
+  div.product div.images .flex-control-thumbs {
+    column-count: 8;
+    column-gap: 10px;
+    padding-top: 20px;
+    @media screen and (min-width: $tabwidth) {
+      column-count: 4;
+    }
+    @media screen and (min-width: $midwidth) {
+      column-count: 8;
+    }
+    li {
+      padding: 0 0;
+      margin: 0 0 10px;
+      -webkit-column-break-inside: avoid;
+      clear: none;
+      float: left;
+      width: 100%;
+      img {
+        border: 1px solid #ccc;
+      }
+    }
+  }
+  .productname {
+    margin: 0 0 10px;
+    font-weight: 400;
+  }
+  .summary .quantity .qty {
+    margin-right: 15px;
+  }
+  .summary .woocommerce-tabs {
+    margin-top: 50px;
+  }
+
+  .template-single .row-2 .column-1 {
+    width: 95%;
+    @media screen and (min-width: $tabwidth) {
+      width: 90%;
+    }
+    @media screen and (min-width: $midwidth) {
+      width: 95%;
+    }
+  }
 }
+
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+  width: 100%;
+  margin-bottom: 20px;
+  float: left;
+  @media screen and (min-width: $tabwidth) {
+    width: 46%;
+    margin-bottom: 0;
+  }
+}
+
+.woocommerce #content div.product div.summary, 
+.woocommerce div.product div.summary, 
+.woocommerce-page #content div.product div.summary, 
+.woocommerce-page div.product div.summary {
+  width: 100%;
+  float: left;
+  @media screen and (min-width: $tabwidth) {
+    width: 50%;
+    float: right;
+  }
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+  &:before,&:after {
+    border-color: $color__eff-blue;
+  }
+  li {
+    border-radius: 0;
+    border-color: $color__eff-blue;
+    &:before {
+      border-bottom-right-radius: 0;
+    }
+    &:after {
+      border-bottom-left-radius: 0;
+    }
+    &:before,&:after {
+      border-color: $color__eff-blue;
+    }
+    &.active a, a {
+      font-weight: 300;
+      color: $color__eff-blue;
+      padding: .4em 0;
+    }
+
+
+  }
+  
+}
+
+
+

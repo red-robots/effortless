@@ -55,6 +55,7 @@ get_header( 'shop' ); ?>
 		 * @hooked woocommerce_get_sidebar - 10
 		 */
 		do_action( 'woocommerce_sidebar' );
+		//remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 	?>
 
 <?php get_footer( 'shop' );

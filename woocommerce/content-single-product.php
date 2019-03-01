@@ -63,10 +63,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 * @hooked woocommerce_template_single_sharing - 50
 			 * @hooked WC_Structured_Data::generate_product_data() - 60
 			 */
+			echo '<h1 class="productname">'.strip_tags(get_the_title()).'</h1>';
+			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 			do_action( 'woocommerce_single_product_summary' );
-		?>
 
-	</div><!-- .summary -->
+		?>
 
 	<?php
 		/**
@@ -76,8 +77,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * @hooked woocommerce_upsell_display - 15
 		 * @hooked woocommerce_output_related_products - 20
 		 */
+
+		//remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 		do_action( 'woocommerce_after_single_product_summary' );
 	?>
+
+	</div><!-- .summary -->
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
