@@ -2406,3 +2406,53 @@ section.testimonials {
 .logintoptxt p {
   margin-top: 0;
 }
+
+.page-template.woocommerce ul.products li.product {
+  width: 100%;
+  @media screen and (min-width: $tabwidth) {
+    width: 48%;
+  }
+  .price {
+    width: 100%;
+  }
+  form.cart, .buttondiv {
+    margin: 0 0;
+    width: 100%;
+    @media screen and (min-width: $tabwidth) {
+      width: auto;
+      display: inline-block!important;
+    }
+  }
+  .button {
+    box-shadow: none;
+    text-shadow: none;
+    font-family: $font__main;
+    font-weight: bold;
+    width: 180px;
+    text-shadow: none;
+    color: #FFF;
+    opacity: 1;
+    @media screen and (min-width: $tabwidth) {
+      width: 150px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+.woocommerce button.button.alt,
+.woocommerce a.button.alt {
+  background-color: $color__eff-blue;
+  @include transition(all ease-out .3s);
+  &:hover {
+    background-color: $color__eff-brown;
+  }
+}
+.single-product.woocommerce {
+  .quantity .qty {
+    line-height: 33px;
+    font-size: 16px;
+  }
+  .related div.quantity {
+    display: none;
+  }
+}

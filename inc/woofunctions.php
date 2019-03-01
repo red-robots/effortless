@@ -176,3 +176,24 @@ if(!function_exists('bella_add_my_account_navigation')){
         echo "</nav>";
     }
 }
+
+add_action('woocommerce_after_shop_loop_item', 'add_view_custom_button', 10 );
+function add_view_custom_button() {
+    global $product;
+
+    // Not for variable and grouped products that doesn't have an "add to cart" button
+    if( $product->is_type('variable') || $product->is_type('grouped') ) return;
+
+    // Output the custom button linked to the product
+    if( !is_product() ) {
+    echo '<div class="buttondiv">
+        <a class="button single_add_to_cart_button button alt" href="' . esc_attr( $product->get_permalink() ) . '">' . __('View product') . '</a>
+    </div>';
+    }
+}
+
+function wc_remove_all_quantity_fields( $return, $product ) {
+
+    return (!is_product()) ? true : false;
+}
+add_filter( 'woocommerce_is_sold_individually', 'wc_remove_all_quantity_fields', 10, 2 );

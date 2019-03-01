@@ -1427,6 +1427,17 @@ section.testimonials .testimonial{width:90%;margin:0 auto;font-size:18px;line-he
 .cpt-search-form input:focus{outline:0}
 .cpt-search-form input{border:0;padding:0;line-height:25px;margin:0}
 .logintoptxt p{margin-top:0}
+.page-template.woocommerce ul.products li.product{width:100%}
+@media screen and (min-width:700px){.page-template.woocommerce ul.products li.product{width:48%}
+}.page-template.woocommerce ul.products li.product .price{width:100%}
+.page-template.woocommerce ul.products li.product form.cart,.page-template.woocommerce ul.products li.product .buttondiv{margin:0;width:100%}
+@media screen and (min-width:700px){.page-template.woocommerce ul.products li.product form.cart,.page-template.woocommerce ul.products li.product .buttondiv{width:auto;display:inline-block !important}
+}.page-template.woocommerce ul.products li.product .button{box-shadow:none;text-shadow:none;font-family:"hypatia-sans-pro",sans-serif;font-weight:bold;width:180px;text-shadow:none;color:#FFF;opacity:1}
+@media screen and (min-width:700px){.page-template.woocommerce ul.products li.product .button{width:150px;margin-left:10px;margin-right:10px}
+}.woocommerce button.button.alt,.woocommerce a.button.alt{background-color:#90b0ac;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+.woocommerce button.button.alt:hover,.woocommerce a.button.alt:hover{background-color:#8c7e78}
+.single-product.woocommerce .quantity .qty{line-height:33px;font-size:16px}
+.single-product.woocommerce .related div.quantity{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
