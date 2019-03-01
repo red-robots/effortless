@@ -136,6 +136,10 @@ get_header(); ?>
 										$product_title = get_field('product_title');
 										$entry_title = ($company) ? $company : get_the_title();
 										$pagelink = get_field('website_link');
+										$pdf_link = get_field("pdf_link");
+										if($pdf_link) {
+											$pagelink = $pdf_link['url'];
+										}
 									?>
 									<div class="item js-blocks<?php echo $the_cats?>">
 										<a href="<?php echo $pagelink; ?>" target="_blank">
