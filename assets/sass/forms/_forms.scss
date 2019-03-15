@@ -1,3 +1,16 @@
 @import "buttons";
 
 @import "fields";
+
+.indicates-required {display: none;}
+.mc-field-group {
+	width: 100%;
+	float: left;
+	margin: 0 0 15px 0;
+}
+#mc-embedded-subscribe {
+	box-shadow: none;
+	background:n #90b0ac;
+	border-radius: 0;
+	text-shadow: none;
+}
