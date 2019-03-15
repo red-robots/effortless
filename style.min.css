@@ -621,7 +621,7 @@ select{border:1px solid #ccc}
 input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"]{padding:3px}
 textarea{padding-left:3px;width:100%}
 .indicates-required{display:none}
-.mc-field-group{width:100%;float:left;margin:0 0 15px 0}
+#mc_embed_signup .mc-field-group{width:100%;float:left;margin:0 0 15px 0 !important}
 #mc-embedded-subscribe{box-shadow:none;background:n #90b0ac;border-radius:0;text-shadow:none}
 a{color:#0999f3}
 a:hover,a:focus,a:active{color:midnightblue}

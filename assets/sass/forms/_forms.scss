@@ -3,10 +3,10 @@
 @import "fields";
 
 .indicates-required {display: none;}
-.mc-field-group {
+#mc_embed_signup .mc-field-group {
 	width: 100%;
 	float: left;
-	margin: 0 0 15px 0;
+	margin: 0 0 15px 0 !important;
 }
 #mc-embedded-subscribe {
 	box-shadow: none;
