@@ -81,7 +81,8 @@
 		}
 		#cboxClose {
 			text-indent: 0;
-			color: white;
+			// color: white;
+			color: #96a7a6;
 			font-size: 30px;
 		}
         
@@ -92,7 +93,11 @@
         #cboxPrevious:hover{background-position:-0px -50px;}
         #cboxNext{left:90px; background-position:-50px -0px;}
         #cboxNext:hover{background-position:-50px -50px;}
-        #cboxClose{right:0;top:-50px; background-position:-100px -0px;}
+        #cboxClose{
+        	right:0;
+        	top:30px; 
+        	background-position:-100px -0px;
+        }
         #cboxClose:hover{background-position:-100px -50px;}
 
         .cboxSlideshow_on #cboxSlideshow{background-position:-125px 0px; right:27px;}

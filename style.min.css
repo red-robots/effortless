@@ -693,13 +693,13 @@ a:hover,a:active{outline:0}
 #cboxTitle{position:absolute;bottom:-25px;left:-999px;text-align:left;width:60%;font-weight:bold;color:#fff;padding:4% 20% 8% 20%;line-height:1.3;font-size:20px}
 #cboxCurrent{position:absolute;bottom:-25px;left:58px;font-weight:bold;color:#7c7c7c}
 #cboxPrevious,#cboxNext,#cboxSlideshow,#cboxClose{border:0;padding:0;margin:0;overflow:visible;position:absolute;top:10px;background:url(images/controls-new.png);background-size:150px 100px;background-repeat:no-repeat;width:50px;height:50px;text-indent:-9999px;box-shadow:none}
-#cboxClose{text-indent:0;color:white;font-size:30px}
+#cboxClose{text-indent:0;color:#96a7a6;font-size:30px}
 #cboxPrevious:active,#cboxNext:active,#cboxSlideshow:active,#cboxClose:active{outline:0}
 #cboxPrevious{left:20px;background-position:-0 -0}
 #cboxPrevious:hover{background-position:-0 -50px}
 #cboxNext{left:90px;background-position:-50px -0}
 #cboxNext:hover{background-position:-50px -50px}
-#cboxClose{right:0;top:-50px;background-position:-100px -0}
+#cboxClose{right:0;top:30px;background-position:-100px -0}
 #cboxClose:hover{background-position:-100px -50px}
 .cboxSlideshow_on #cboxSlideshow{background-position:-125px 0;right:27px}
 .cboxSlideshow_on #cboxSlideshow:hover{background-position:-150px 0}
