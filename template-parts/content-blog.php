@@ -93,6 +93,12 @@
             <div class="outer-wrapper">
                 <div class="inner-wrapper" <?php if($watermark) echo 'style="background-image: url('. $watermark['url'].');"';?>>
                     <?php $signuptext = get_field("signup_header_text_blog","option");?>
+
+                    <div class="sidewrap">
+                        <?php get_search_form(); ?>
+                    </div>
+                    
+
                     <!-- Begin MailChimp Signup Form -->
                     <div id="mc_embed_signup">
                         <form action="//myeffortlessentertaing.us14.list-manage.com/subscribe/post?u=959a4d7fabeafa2e758654125&amp;id=20b4e3c60e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

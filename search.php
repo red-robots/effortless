@@ -23,19 +23,29 @@ get_header(); ?>
                         </header><!--.template-header-->
 					<?php endif; 
 					wp_reset_postdata();?>
-                    <div class="copy row-2">
-						<?php if(have_posts()):?>
-							<ul>
-								<?php while(have_posts()):the_post();?>
-									<li><a href="<?php the_permalink();?>"><?php the_title();?></a></li>
-								<?php endwhile;?>
-							</ul>
-						<?php endif;?>
-						<header><h2>Sitemap</h2></header>
-						<nav class="sitemap">
-                            <?php wp_nav_menu( array( 'theme_location' => 'sitemap' ) ); ?>
-                        </nav>
-                    </div><!-- .copy -->
+                    <section class="colw">      
+                        <div class="copy row-2 searchpage">
+    						<?php if(have_posts()):?>
+    							<ul>
+    								<?php while(have_posts()):the_post();?>
+    									<li><a href="<?php the_permalink();?>">
+                                            <h2><?php the_title();?></h2>
+                                                <div class="ex"><?php the_excerpt(); ?></div>
+                                            </a></li>
+    								<?php endwhile;?>
+    							</ul>
+    						<?php endif;?>
+    						<!-- <header><h2>Sitemap</h2></header>
+    						<nav class="sitemap">
+                                <?php wp_nav_menu( array( 'theme_location' => 'sitemap' ) ); ?>
+                            </nav> -->
+                        </div><!-- .copy -->
+                    </section> 
+                    <section class="coln">
+                        <div class="sidewrap">
+                            <?php get_search_form(); ?>
+                        </div>
+                    </section>
                 </section><!-- .error-404 -->
             <?php endif;//if post?>
 		</main><!-- #main -->

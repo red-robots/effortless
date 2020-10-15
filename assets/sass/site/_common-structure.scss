@@ -23,7 +23,92 @@
     padding-right: 0;
   }
 }
+.sidewrap {
+  padding: 20px;
 
+  button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+  input.search-field {
+    padding: 10px;
+    border-radius: 0;
+  }
+  input.search-submit {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: #8c7e78;
+  }
+}
+.colw {
+  width: 100%;
+  float: left;
+  @media screen and (min-width: $tabwidth) {
+    width: 67%;
+  }
+}
+.coln {
+  width: 100%;
+  float: right;
+  @media screen and (min-width: $tabwidth) {
+    width: 26%;
+  }
+}
+.copy.searchpage {
+  li {
+    list-style: none;
+    margin: 0 0 20px 0;
+    border-bottom: 2px solid #8c7e78;
+    width: 100%;
+    float: left;
+    a {
+      padding: 20x;
+      display: block;
+      &:hover {
+
+      }
+    }
+  }
+}
 .copy {
   font-size: 18px;
   color: $color__eff-brown;
