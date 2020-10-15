@@ -39,6 +39,8 @@
         <?php if ( !is_product() ) {
             $watermark = get_field("row_2_watermark");?>
             <aside class="column-2 blockquote">
+
+
                 <div class="outer-wrapper">
                     <div class="inner-wrapper" <?php if($watermark) echo 'style="background-image: url('. $watermark['url'].');"';?>>
                         <?php $terms = get_the_terms($post,'category');
@@ -53,6 +55,12 @@
                             endforeach;
                         endif;
                         if(!$is_dish):?>
+
+                            <div class="sidewrap">
+                                <?php get_search_form(); ?>
+                            </div>
+
+                    
                             <?php $signuptext = get_field("signup_header_text_blog","option");?>
                             <!-- Begin MailChimp Signup Form -->
                             <div id="mc_embed_signup">

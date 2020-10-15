@@ -33,6 +33,7 @@ get_header(); ?>
                                                 <div class="ex"><?php the_excerpt(); ?></div>
                                             </a></li>
     								<?php endwhile;?>
+                                    <?php pagi_posts_nav_no_query(); ?>
     							</ul>
     						<?php endif;?>
     						<!-- <header><h2>Sitemap</h2></header>
